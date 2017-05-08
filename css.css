@@ -6,7 +6,11 @@ main *{
 }
 h1{
   /*font-weight: 200 !important;*/
+  margin: 0 0 5px 0;
   font-size: 2rem;
+}
+.margin-bot{
+    margin-bottom: 40px;
 }
 main{
   display: flex;
