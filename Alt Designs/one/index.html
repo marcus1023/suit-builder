@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Builder</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./css.css">
+  <link rel="shortcut icon" href="https://hobbule.com/Static/Images/Hobbies/233.png">
+</head>
+<body>
+  <main>
+    <section class="build-full">
+      <h1>Chaos</h1>
+      <p>Create your own uique style</p>
+      <section class="build-wrap">
+        <section class="color-picker">
+          <div onclick="colorPickerPannelSet('measurements')" class="color-nav-1">Measurements</div>
+          <div onclick="colorPickerPannelSet('colors')" class="color-nav-2">Color Picker</div>
+          <div id="color-picker-measurements" class="color-picker-measurements">
+
+            testing
+
+          </div>
+          <div id="color-picker-colors" class="color-picker-colors">
+            <div id="color-single-left arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdown('left-upper-arm')">
+                <h4>Left Upper Arm</h4>
+                <div class="color-single-display" style="background: red"></div>
+                <p>Red</p>
+                <img src="./img/double-down-arrow.svg"/>
+              </div>
+              <div id="color-picker-dorpdown-left-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelect('la-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: lightblue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelect('la-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: lightgreen"></div>
+                  <p>Green</p>
+                </div>
+                <div onclick="colorPickerSelect('la-red')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-right-arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdown('right-upper-arm')">
+                <h4>Right Upper Arm</h4>
+                <div class="color-single-display" style="background: red"></div>
+                <p>Red</p>
+                <img src="./img/double-down-arrow.svg"/>
+              </div>
+              <div id="color-picker-dorpdown-right-upper-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelect('rua-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: lightblue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelect('rua-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: lightgreen"></div>
+                  <p>Green</p>
+                </div>
+                <div onclick="colorPickerSelect('rua-red')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="suit-display">
+          <div class="suit-display-front suit-display-img">
+            <img src="./img/Hybrid1/h1-outline.png" />
+          </div>
+          <div class="suit-display-back suit-display-img">
+            <img src="./img/Hybrid1/h1-outline.png" />
+          </div>
+          <div class="builder-btns">
+            <div class="builder-btn">Save Colors</div>
+            <div class="builder-btn">Reset Designer</div>
+          </div>
+        </section>
+        <section class="contact-form">
+          <div class="cf-input">
+            <p>Full Name</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Email</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Phone</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Address</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>City</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>State/Provence</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Country</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Favorite Animal</p>
+            <input class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input-submit">Save and Send Design</div>
+        </section>
+      </section>
+    </section>
+  </main>
+</body>
+<script src="./js.js"></script>
+</html>

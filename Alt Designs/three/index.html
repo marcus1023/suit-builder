@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Builder</title>
+  <link rel="stylesheet" href="./css.css">
+  <link rel="shortcut icon" href="https://hobbule.com/Static/Images/Hobbies/233.png">
+</head>
+<body>
+  <main>
+    <section class="build-wrap">
+      <!-- Left sife form -->
+      <div class="side-form">
+        <h1>Left Side</h1>
+        <div class="select-wrap">
+          <h4>Front Left Arm</h4>
+          <select class="select-field" onchange="scheduleA.call(this, event)" id="front-left-arm-val">
+            <option value="" >Select One</option>
+            <option value="" >Red</option>
+            <option value="" >Green</option>
+            <option value="" >Blue</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <h4>Front Left Sholder</h4>
+          <select class="select-field" onchange="scheduleB.call(this, event)" id="front-left-sholder-val">
+            <option value="" >Select One</option>
+            <option value="" >Red</option>
+            <option value="" >Green</option>
+            <option value="" >Blue</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <h4>Front Left Collar</h4>
+          <select class="select-field" onchange="scheduleC.call(this, event)" id="front-left-collar-val">
+            <option value="" >Select One</option>
+            <option value="" >Red</option>
+            <option value="" >Green</option>
+            <option value="" >Blue</option>
+          </select>
+        </div>
+      </div>
+      <!-- Center template for view-->
+      <Section class="suit-images">
+        <div class="suit-outline">
+          <h4>Front</h4>
+          <div class="suit-outline-front">
+            <img class="suit-piece red" id="front-left-arm" src="./img/summer2/front-left-arm.png" />
+            <img class="suit-piece red" id="front-left-sholder" src="./img/summer2/front-left-sholder.png" />
+            <img class="suit-piece red" id="front-left-collar" src="./img/summer2/front-left-collar.png" />
+          </div>
+        </div>
+        <div class="suit-outline">
+          <img src="./img/summer2/outline-back.png"/>
+        </div>
+      </Section>
+      <!-- Right sife form -->
+      <div class="side-form">
+        <h1>Right Side</h1>
+        <div class="select-wrap">
+          <h4>Right Arm Top</h4>
+          <select class="select-field">
+            <option value="" >Select One</option>
+            <option value="" >Red</option>
+            <option value="" >Green</option>
+            <option value="" >Blue</option>
+          </select>
+        </div>
+        <div class="select-wrap">
+          <h4>Right Arm Bottom</h4>
+          <select class="select-field">
+            <option value="" >Select One</option>
+            <option value="" >Red</option>
+            <option value="" >Green</option>
+            <option value="" >Blue</option>
+          </select>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="./js.js"></script>
+</html>
