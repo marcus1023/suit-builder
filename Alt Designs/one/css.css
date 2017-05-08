@@ -272,16 +272,16 @@ h1{
 /*Dropdowns*/
 
 .picker-dropdown{
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   display: none;
-  width: 102%;
+  width: 21%;
   border: 1px solid black;
   border-radius: 3px;
-  top: -1.4%;
-  left: -1.4%;
+  top:15.45%;
+  left: 3.2%;
   height: auto;
   z-index: 1;
   background: white;
@@ -291,7 +291,7 @@ h1{
 .color-single-dropdown{
   width: 90%;
   z-index: 8;
-  margin: 5px;
+  margin: 3px;
 }
 .picker-dropdown-p{
   margin: 5px !important;
@@ -329,6 +329,12 @@ h1{
   position: absolute;
   top: 53px;
   left: 55.7px;
+}
+#sholders-svg{
+  width: 91.9px;
+  position: absolute;
+  top: 43px;
+  left: 76.7px;
 }
 .suit-titles{
   position: absolute;

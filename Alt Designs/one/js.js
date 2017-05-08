@@ -80,15 +80,16 @@ function colorPickerSelect(color){
     dropdownCtrl = true
   }
 }
-// Save suit options - make sure you require them to watch the video and add measurements before 
+// Save suit options - make sure you require them to watch the video and add measurements before
 
 
 
 
 
 //testing
-function testSVG(){
-  alert("Acknowledge to modify object color.");
-  var object = document.getElementById("right-upper-arm-SVG");
-  object.setAttribute("fill", "green");
+function test(){
+  let value = {}
+  value.rightArm = "right arm " + document.getElementById("right-upper-arm-title").innerHTML
+  value.leftArm = "right arm " + document.getElementById("left-upper-arm-title").innerHTML
+  console.log(value)
 }
