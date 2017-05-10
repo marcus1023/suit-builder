@@ -997,7 +997,7 @@ h1{
       margin: 0 0 0 -55px;
     }
     #front-stitching{
-      margin: -30px 0 0 50px;
+      margin:-62px 0 0 50px;
       height: 205px;
     }
     .color-picker{
@@ -1009,5 +1009,15 @@ h1{
       min-height: 100vh;
       width: 90%;
       margin-left: 41px;
+    }
+    .suit-display-back{
+      margin: -290px 0 0 0;
+    }
+    .suit-display-img img{
+      margin:-73px 0 0 16px;
+    }
+    .suit-display-back-images{
+      display: flex;
+      margin:-161px 0 0 33px;
     }
   }
