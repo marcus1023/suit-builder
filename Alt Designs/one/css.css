@@ -215,60 +215,70 @@ h1{
   height: 60%;
 }
 #front-right-wing{
+  z-index: 1;
   height: 29%;
   position: absolute;
   top: 304px;
   left: 153px;
 }
 #front-left-wing{
+  z-index: 1;
   height: 32%;
   position: absolute;
   top: 291px;
   left: -52px;
 }
 #back-left-stripe{
+  z-index: 1;
   position: absolute;
       height: 49%;
       top: 232px;
       left: 35px;
 }
 #back-right-stripe{
+  z-index: 1;
   height: 44.6%;
   position: absolute;
   top: 244px;
   left: 137px;
 }
 #back-right-arm{
+  z-index: 1;
   position: absolute;
   height: 15.7%;
   top: 255px;
   left: 169px;
 }
 #back-left-arm{
+  z-index: 1;
   position: absolute;
   height: 20%;
   top: 309px;
   left: -79px;
 }
 #back-back{
+  z-index: 1;
   position: absolute;
   height: 51.5%;
   top: 229px;
   left: 51px;
 }
 #back-collar{
+  z-index: 1;
   position: absolute;
   height: 4.1%;
   top: 210px;
   left: 79px;
 }
 #back-left-top-arm{
+  z-index: 1;
   position: absolute;
   height: 17%;
   top: 241px;
   left: -23px;
 }
 #back-righ-top-arm{
+  z-index: 1;
   position: absolute;
   height: 19.7%;
   top: 314px;
@@ -336,6 +346,12 @@ left: 0px;
   left: 3px;
   width: 26%;
 
+}
+#back-stitching{
+  width: 148%;
+position: absolute;
+top: 207px;
+left: -82px;
 }
 #front-left-top-wing{
   top: 118px;
@@ -704,67 +720,76 @@ h1{
   z-index: 3;
 }
 .suit-display-img img{
-  z-index: 0;
   position: absolute;
 top: 119px;
 left: -67px;
   height: 60%;
 }
 #front-right-wing{
+  z-index: 2 !important;
   height: 29%;
   position: absolute;
   top: 304px;
   left: 153px;
 }
 #front-left-wing{
+  z-index: 2 !important;
   height: 32%;
   position: absolute;
   top: 291px;
   left: -52px;
 }
 #back-left-stripe{
+  z-index: 2 !important;
   position: absolute;
       height: 49%;
       top: 232px;
       left: 35px;
 }
 #back-right-stripe{
+  z-index: 2 !important;
   height: 44.6%;
   position: absolute;
   top: 244px;
   left: 137px;
 }
 #back-right-arm{
+  z-index: 2 !important;
   position: absolute;
   height: 15.7%;
   top: 255px;
   left: 169px;
 }
 #back-left-arm{
+  z-index: 2 !important;
   position: absolute;
   height: 20%;
   top: 309px;
   left: -79px;
 }
 #back-back{
+  z-index: 2 !important;
   position: absolute;
   height: 51.5%;
   top: 229px;
   left: 51px;
 }
 #back-collar{
+  z-index: 2 !important;
   position: absolute;
   height: 4.1%;
   top: 210px;
   left: 79px;
 }
 #back-left-top-arm{
+  z-index: 2 !important;
   position: absolute;
   height: 17%;
   top: 241px;
   left: -23px;
 }
 #back-righ-top-arm{
+  z-index: 2 !important;
   position: absolute;
   height: 19.7%;
   top: 314px;
@@ -775,60 +800,72 @@ left: -67px;
   width: 20%;
 }
 #front-write-wing{
+  z-index: 2 !important;
   left: 220px;
   top: 123px;
   width: 41%;
 }
 #front-write-wing2{
+  z-index: 2 !important;
   left: 220px;
   top: 123px;
   width: 41%;
 }
 #front-chest-left{
+  z-index: 2 !important;
   top: 70px;
   left: 132px;
   width: 17.5%;
 }
 #front-chest-right{
+  z-index: 2 !important;
   top: 61px;
   left: 168px;
   width: 23.2%;
 }
 #front-chest-around{
+  z-index: 2 !important;
   top: 69px;
   left: 124px;
   width: 48.2%;
 }
 #front-right-arm-top{
+  z-index: 2 !important;
   top: 77px;
   left: 234px;
   width: 24.5%;
 }
 #front-bottom-right-arm{
+  z-index: 2 !important;
   top: 120px;
   left: 289px;
   width: 22%;
 }
 #front-collar{
+  z-index: 2 !important;
   top: 47px;
   left: 156px;
   width: 18%;
 }
 #front-left-top-arm{
+  z-index: 2 !important;
   top: 80px;
   left: 76px;
 }
 #front-left-arm{
+  z-index: 2 !important;
   top: 101px;
   left: 3px;
   width: 26%;
 
 }
 #front-left-top-wing{
+  z-index: 2 !important;
   top: 118px;
   left: 20px;
   width: 46%;
 }
+
 .suit-display-img{
   position: relative;
   display: flex;
@@ -953,19 +990,8 @@ left: -67px;
   margin: 0 0 0 72px;
   height: 100%;
 }
-#upper-left-arm-svg{
-  width: 27.9px;
-  position: absolute;
-  top: 54px;
-  left: 160.7px;
-}
-#upper-right-arm-svg{
-  width: 27.9px;
-  position: absolute;
-  top: 53px;
-  left: 55.7px;
-}
-#sholders-svg{
+
+
   width: 91.9px;
   position: absolute;
   top: 43px;
@@ -977,7 +1003,16 @@ left: -67px;
   font-size: 1.5rem;
   /* margin: 200px; */
 }
-
+.zDex-1{
+  z-index: 2 !important;
+}
+#fthisfinbackimage{
+  margin-left: -40px;
+}
+#suit-titles-back{
+  top:210px;
+  left: 130px;
+}
   @media screen and (max-width: 780px) {
     .zDex-1{
       z-index: 2 !important;
@@ -1026,5 +1061,11 @@ left: -67px;
     .suit-display-back-images{
       display: flex;
       margin:-161px 0 0 33px;
+    }
+    #suit-titles-back{
+      position: absolute;
+    }
+    #fthisfinbackimage{
+      margin-left: 0 -200px 0 0;
     }
   }
