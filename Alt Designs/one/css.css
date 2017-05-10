@@ -278,7 +278,9 @@ h1{
   z-index: 0;
   position: absolute;
   height: 49%;
-  margin: 44px 0 0 0px;
+  top: 44px;
+left: 0px;
+
 }
 .single-suit-image{
   z-index: 1;
@@ -761,11 +763,6 @@ h1{
   top: 314px;
   left: 221px;
 }
-/*#front-stitching{
-  position: absolute;
-  height: 49%;
-  margin: -62px 0 0 123px;
-}*/
 .single-suit-image{
   position: absolute;
   width: 20%;
@@ -997,7 +994,6 @@ h1{
       margin: 0 0 0 -55px;
     }
     #front-stitching{
-      margin:-62px 0 0 50px;
       height: 205px;
     }
     .color-picker{
