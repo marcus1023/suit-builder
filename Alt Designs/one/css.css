@@ -275,11 +275,13 @@ h1{
   left: 221px;
 }
 #front-stitching{
+  z-index: 0;
   position: absolute;
   height: 49%;
-  margin: -62px 0 0 50px
+  margin: -12px 0 0 50px
 }
 .single-suit-image{
+  z-index: 1;
   position: absolute;
   width: 20%;
 }
@@ -995,8 +997,8 @@ h1{
       margin: 0 0 0 -55px;
     }
     #front-stitching{
-      margin: -31px 0 0 -5px;
-      height: 207px;
+      margin: -30px 0 0 50px;
+      height: 205px;
     }
     .color-picker{
       min-height: 100vh;
