@@ -418,6 +418,7 @@ left: 0px;
   position: fixed;
   display: flex;
   flex-direction: column;
+
   align-items: center;
   display: none;
   width: 21%;
@@ -982,7 +983,7 @@ left: -67px;
       z-index: 2 !important;
     }
     .build-wrap{
-      flex-direction: column;
+      flex-wrap: wrap;
       min-height: 370vh;
       margin: 0 0 0 0;
     }
@@ -1013,7 +1014,7 @@ left: -67px;
     .contact-form{
       min-height: 100vh;
       width: 90%;
-      margin-left: 41px;
+      margin-left: 0 0 0 0;
     }
     .suit-display-back{
       margin: -290px 0 0 0;
