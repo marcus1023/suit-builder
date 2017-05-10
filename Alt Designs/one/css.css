@@ -215,8 +215,8 @@ h1{
 #front-right-wing{
   height: 29%;
   position: absolute;
-  top: 302px;
-  left: 151px;
+  top: 304px;
+  left: 153px;
 }
 #front-left-wing{
   height: 32%;
@@ -233,14 +233,14 @@ h1{
 #back-right-stripe{
   height: 44.6%;
   position: absolute;
-  top: 243px;
-  left: 134px;
+  top: 244px;
+  left: 137px;
 }
 #back-right-arm{
   position: absolute;
   height: 15.7%;
-  top: 253px;
-  left: 167px;
+  top: 255px;
+  left: 169px;
 }
 #back-left-arm{
   position: absolute;
@@ -297,9 +297,9 @@ h1{
   width: 17.5%;
 }
 #front-chest-right{
-  top: 60px;
-   left: 167px;
-   width: 23.5%;
+  top: 61px;
+  left: 168px;
+  width: 23.2%;
 }
 #front-chest-around{
   top: 69px;
@@ -342,7 +342,16 @@ h1{
   justify-content: center;
   align-items: center;
   width: 245px;
-  height: 60vh;
+  height: 420px;
+}
+@-moz-document url-prefix() {
+  #front-stitching {
+      position: absolute;
+      height: 49%;
+      margin: -126px 0 0 101px;
+  }
+
+
 }
 .builder-input-half:first-child{
   margin: 0 0 0 2%;
