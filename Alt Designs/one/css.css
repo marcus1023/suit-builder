@@ -975,7 +975,7 @@ h1{
   @media screen and (max-width: 780px) {
     .build-wrap{
       flex-direction: column;
-      min-height: 330vh;
+      min-height: 370vh;
       margin: 0 0 0 0;
     }
     .build-full{
