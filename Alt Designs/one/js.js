@@ -24,7 +24,7 @@ function colorPickerDropdown(position){
     return
   }
   if(position === 'right-lower-arm' && dropdownCtrl === true){
-    document.getElementById('color-picker-dorpdown-right-arm').style.display = 'flex'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'flex'
     dropdownCtrl = false
     return
   }
@@ -48,6 +48,21 @@ function colorPickerDropdown(position){
     dropdownCtrl = false
     return
   }
+  if(position === 'body-left' && dropdownCtrl === true){
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'flex'
+    dropdownCtrl = false
+    return
+  }
+  if(position === 'collar' && dropdownCtrl === true){
+    document.getElementById('color-picker-dropdown-collar').style.display = 'flex'
+    dropdownCtrl = false
+    return
+  }
+  if(position === 'body-right' && dropdownCtrl === true){
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'flex'
+    dropdownCtrl = false
+    return
+  }
 }
 function run(){
   dropdownCtrl = true
@@ -64,7 +79,7 @@ function colorPickerSelect(color){
     document.getElementById('color-picker-dorpdown-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lua-n-green'){
+  if(color === 'lua-neon-green'){
     document.getElementById('left-upper-arm-label').style.background = '#29f04f'
     document.getElementById("left-upper-arm-title").innerHTML = "Neon Green";
     document.getElementById('front-left-top-arm').style.fill = '#29f04f'
@@ -171,7 +186,7 @@ function colorPickerSelect(color){
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'rua-n-green'){
+  if(color === 'rua-neon-green'){
     document.getElementById('right-upper-arm-label').style.background = '#29f04f'
     document.getElementById("right-upper-arm-title").innerHTML = "Neon Green";
     document.getElementById('front-right-arm-top').style.fill = '#29f04f'
@@ -278,7 +293,7 @@ function colorPickerSelect(color){
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'lla-n-green'){
+  if(color === 'lla-neon-green'){
     document.getElementById('left-lower-arm-label').style.background = '#29f04f'
     document.getElementById("left-lower-arm-title").innerHTML = "Neon Green";
     document.getElementById('front-left-arm').style.fill = '#29f04f'
@@ -377,216 +392,216 @@ function colorPickerSelect(color){
     dropdownCtrl = true
   }
   //right lower arm control
-  if(color === 'lla-aqua'){
+  if(color === 'rla-aqua'){
     document.getElementById('right-lower-arm-label').style.background = '#129793'
     document.getElementById("right-lower-arm-title").innerHTML = "Aqua";
     document.getElementById('front-bottom-right-arm').style.fill = '#129793'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'lla-n-green'){
+  if(color === 'rla-neon-green'){
     document.getElementById('right-lower-arm-label').style.background = '#29f04f'
     document.getElementById("right-lower-arm-title").innerHTML = "Neon Green";
     document.getElementById('front-bottom-right-arm').style.fill = '#29f04f'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-hot-pink'){
+  if(color === 'rla-hot-pink'){
     document.getElementById('right-lower-arm-label').style.background = '#e929f0'
     document.getElementById("right-lower-arm-title").innerHTML = "Hot Pink";
     document.getElementById('front-bottom-right-arm').style.fill = '#e929f0'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-yellow'){
+  if(color === 'rla-yellow'){
     document.getElementById('right-lower-arm-label').style.background = 'yellow'
     document.getElementById("right-lower-arm-title").innerHTML = "Yellow";
     document.getElementById('front-bottom-right-arm').style.fill = 'yellow'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-maroon'){
+  if(color === 'rla-maroon'){
     document.getElementById('right-upper-arm-label').style.background = '#cb0039'
     document.getElementById("right-upper-arm-title").innerHTML = "Maroon";
     document.getElementById('front-bottom-right-arm').style.fill = '#cb0039'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-grey'){
+  if(color === 'rla-grey'){
     document.getElementById('right-upper-arm-label').style.background = '#969696'
     document.getElementById("right-upper-arm-title").innerHTML = "Grey";
     document.getElementById('front-bottom-right-arm').style.fill = '#969696'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-navy'){
+  if(color === 'rla-navy'){
     document.getElementById('right-lower-arm-label').style.background = '#152c91'
     document.getElementById("right-lower-arm-title").innerHTML = "Navy";
     document.getElementById('front-bottom-right-arm').style.fill = '#152c91'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-purple'){
+  if(color === 'rla-purple'){
     document.getElementById('right-lower-arm-label').style.background = 'purple'
     document.getElementById("right-lower-arm-title").innerHTML = "Purple";
     document.getElementById('front-bottom-right-arm').style.fill = 'purple'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-darkGreen'){
+  if(color === 'rla-darkGreen'){
     document.getElementById('right-lower-arm-label').style.background = 'Green'
     document.getElementById("right-lower-arm-title").innerHTML = "Green";
     document.getElementById('front-bottom-right-arm').style.fill = 'Green'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-darkGrey'){
+  if(color === 'rla-darkGrey'){
     document.getElementById('right-lower-arm-label').style.background = '#494949'
     document.getElementById("right-lower-arm-title").innerHTML = "Dark Grey";
     document.getElementById('front-bottom-right-arm').style.fill = '#494949'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-blue'){
+  if(color === 'rla-blue'){
     document.getElementById('right-lower-arm-label').style.background = 'blue'
     document.getElementById("right-lower-arm-title").innerHTML = "Blue";
     document.getElementById('front-bottom-right-arm').style.fill = 'blue'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-lime'){
+  if(color === 'rla-lime'){
     document.getElementById('right-lower-arm-label').style.background = '#09b600'
     document.getElementById("right-lower-arm-title").innerHTML = "Lime";
     document.getElementById('front-bottom-right-arm').style.fill = '#09b600'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-white'){
+  if(color === 'rla-white'){
     document.getElementById('right-lower-arm-label').style.background = 'White'
     document.getElementById("right-lower-arm-title").innerHTML = "White";
     document.getElementById('front-bottom-right-arm').style.fill = 'White'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-black'){
+  if(color === 'rla-black'){
     document.getElementById('right-lower-arm-label').style.background = 'Black'
     document.getElementById("right-lower-arm-title").innerHTML = "Black";
     document.getElementById('front-bottom-right-arm').style.fill = 'Black'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lla-teal'){
+  if(color === 'rla-teal'){
     document.getElementById('right-lower-arm-label').style.background = '#00b692'
     document.getElementById("right-lower-arm-title").innerHTML = "Teal";
     document.getElementById('front-bottom-right-arm').style.fill = '#00b692'
-    document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
+    document.getElementById('color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrl = true
   }
   //left wing control
   if(color === 'lw-aqua'){
     document.getElementById('left-wing-label').style.background = '#129793'
     document.getElementById("left-wing-title").innerHTML = "Aqua";
-    document.getElementById('front-write-wing').style.fill = '#129793'
+    document.getElementById('front-left-top-wing').style.fill = '#129793'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'lw-n-green'){
+  if(color === 'lw-neon-green'){
     document.getElementById('left-wing-label').style.background = '#29f04f'
     document.getElementById("left-wing-title").innerHTML = "Neon Green";
-    document.getElementById('front-write-wing').style.fill = '#29f04f'
+    document.getElementById('front-left-top-wing').style.fill = '#29f04f'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-hot-pink'){
     document.getElementById('left-wing-label').style.background = '#e929f0'
     document.getElementById("left-wing-title").innerHTML = "Hot Pink";
-    document.getElementById('front-write-wing').style.fill = '#e929f0'
+    document.getElementById('front-left-top-wing').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-yellow'){
     document.getElementById('left-wing-label').style.background = 'yellow'
     document.getElementById("left-wing-title").innerHTML = "Yellow";
-    document.getElementById('front-write-wing').style.fill = 'yellow'
+    document.getElementById('front-left-top-wing').style.fill = 'yellow'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-maroon'){
     document.getElementById('left-wing-label').style.background = '#cb0039'
     document.getElementById("left-wing-title").innerHTML = "Maroon";
-    document.getElementById('front-write-wing').style.fill = '#cb0039'
+    document.getElementById('front-left-top-wing').style.fill = '#cb0039'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-grey'){
     document.getElementById('left-wing-label').style.background = '#969696'
     document.getElementById("left-wing-title").innerHTML = "Grey";
-    document.getElementById('front-write-wing').style.fill = '#969696'
+    document.getElementById('front-left-top-wing').style.fill = '#969696'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-navy'){
     document.getElementById('left-wing-label').style.background = '#152c91'
     document.getElementById("left-wing-title").innerHTML = "Navy";
-    document.getElementById('front-write-wing').style.fill = '#152c91'
+    document.getElementById('front-left-top-wing').style.fill = '#152c91'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-purple'){
     document.getElementById('left-wing-label').style.background = 'purple'
     document.getElementById("left-wing-title").innerHTML = "Purple";
-    document.getElementById('front-write-wing').style.fill = 'purple'
+    document.getElementById('front-left-top-wing').style.fill = 'purple'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-darkGreen'){
     document.getElementById('left-wing-label').style.background = 'Green'
     document.getElementById("left-wing-title").innerHTML = "Green";
-    document.getElementById('front-write-wing').style.fill = 'Green'
+    document.getElementById('front-left-top-wing').style.fill = 'Green'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-darkGrey'){
     document.getElementById('left-wing-label').style.background = '#494949'
     document.getElementById("left-wing-title").innerHTML = "Dark Grey";
-    document.getElementById('front-write-wing').style.fill = '#494949'
+    document.getElementById('front-left-top-wing').style.fill = '#494949'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-blue'){
     document.getElementById('left-wing-label').style.background = 'blue'
     document.getElementById("left-wing-title").innerHTML = "Blue";
-    document.getElementById('front-write-wing').style.fill = 'blue'
+    document.getElementById('front-left-top-wing').style.fill = 'blue'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-lime'){
     document.getElementById('left-wing-label').style.background = '#09b600'
     document.getElementById("left-wing-title").innerHTML = "Lime";
-    document.getElementById('front-write-wing').style.fill = '#09b600'
+    document.getElementById('front-left-top-wing').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-white'){
     document.getElementById('left-wing-label').style.background = 'White'
     document.getElementById("left-wing-title").innerHTML = "White";
-    document.getElementById('front-write-wing').style.fill = 'White'
+    document.getElementById('front-left-top-wing').style.fill = 'White'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-black'){
     document.getElementById('left-wing-label').style.background = 'Black'
     document.getElementById("left-wing-title").innerHTML = "Black";
-    document.getElementById('front-write-wing').style.fill = 'Black'
+    document.getElementById('front-left-top-wing').style.fill = 'Black'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
   if(color === 'lw-teal'){
     document.getElementById('left-wing-label').style.background = '#00b692'
     document.getElementById("left-wing-title").innerHTML = "Teal";
-    document.getElementById('front-write-wing').style.fill = '#00b692'
+    document.getElementById('front-left-top-wing').style.fill = '#00b692'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -599,7 +614,7 @@ function colorPickerSelect(color){
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'rw-n-green'){
+  if(color === 'rw-neon-green'){
     document.getElementById('right-wing-label').style.background = '#29f04f'
     document.getElementById("right-wing-title").innerHTML = "Neon Green";
     document.getElementById('front-write-wing').style.fill = '#29f04f'
@@ -706,7 +721,7 @@ function colorPickerSelect(color){
     dropdownCtrl = true
     console.log(dropdownCtrl)
   }
-  if(color === 'bw-n-green'){
+  if(color === 'bw-neon-green'){
     document.getElementById('body-wrap-label').style.background = '#29f04f'
     document.getElementById("body-wrap-title").innerHTML = "Neon Green";
     document.getElementById('front-chest-around').style.fill = '#29f04f'
@@ -802,6 +817,327 @@ function colorPickerSelect(color){
     document.getElementById("body-wrap-title").innerHTML = "Teal";
     document.getElementById('front-chest-around').style.fill = '#00b692'
     document.getElementById('color-picker-dropdown-body-wrap').style.display = 'none'
+    dropdownCtrl = true
+  }
+  //Body Left control
+  if(color === 'bl-aqua'){
+    document.getElementById('body-left-label').style.background = '#129793'
+    document.getElementById("body-left-title").innerHTML = "Aqua";
+    document.getElementById('front-chest-left').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-left-wrap').style.display = 'none'
+    dropdownCtrl = true
+    console.log(dropdownCtrl)
+  }
+  if(color === 'bl-neon-green'){
+    document.getElementById('body-left-label').style.background = '#29f04f'
+    document.getElementById("body-left-title").innerHTML = "Neon Green";
+    document.getElementById('front-chest-left').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-left-wrap').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-hot-pink'){
+    document.getElementById('body-left-label').style.background = '#e929f0'
+    document.getElementById("body-left-title").innerHTML = "Hot Pink";
+    document.getElementById('front-chest-left').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-yellow'){
+    document.getElementById('body-left-label').style.background = 'yellow'
+    document.getElementById("body-left-title").innerHTML = "Yellow";
+    document.getElementById('front-chest-left').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-maroon'){
+    document.getElementById('body-left-label').style.background = '#cb0039'
+    document.getElementById("body-left-title").innerHTML = "Maroon";
+    document.getElementById('front-chest-left').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-grey'){
+    document.getElementById('body-left-label').style.background = '#969696'
+    document.getElementById("body-left-title").innerHTML = "Grey";
+    document.getElementById('front-chest-left').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-navy'){
+    document.getElementById('body-left-label').style.background = '#152c91'
+    document.getElementById("body-left-title").innerHTML = "Navy";
+    document.getElementById('front-chest-left').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-purple'){
+    document.getElementById('body-left-label').style.background = 'purple'
+    document.getElementById("body-left-title").innerHTML = "Purple";
+    document.getElementById('front-chest-left').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-darkGreen'){
+    document.getElementById('body-left-label').style.background = 'Green'
+    document.getElementById("body-left-title").innerHTML = "Green";
+    document.getElementById('front-chest-left').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-darkGrey'){
+    document.getElementById('body-left-label').style.background = '#494949'
+    document.getElementById("body-left-title").innerHTML = "Dark Grey";
+    document.getElementById('front-chest-left').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-blue'){
+    document.getElementById('body-left-label').style.background = 'blue'
+    document.getElementById("body-left-title").innerHTML = "Blue";
+    document.getElementById('front-chest-left').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-lime'){
+    document.getElementById('body-left-label').style.background = '#09b600'
+    document.getElementById("body-left-title").innerHTML = "Lime";
+    document.getElementById('front-chest-left').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-white'){
+    document.getElementById('body-left-label').style.background = 'White'
+    document.getElementById("body-left-title").innerHTML = "White";
+    document.getElementById('front-chest-left').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-black'){
+    document.getElementById('body-left-label').style.background = 'Black'
+    document.getElementById("body-left-title").innerHTML = "Black";
+    document.getElementById('front-chest-left').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bl-teal'){
+    document.getElementById('body-left-label').style.background = '#00b692'
+    document.getElementById("body-left-title").innerHTML = "Teal";
+    document.getElementById('front-chest-left').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-body-left').style.display = 'none'
+    dropdownCtrl = true
+  }
+  //Body Right control
+  if(color === 'br-aqua'){
+    document.getElementById('body-right-label').style.background = '#129793'
+    document.getElementById("body-right-title").innerHTML = "Aqua";
+    document.getElementById('front-chest-right').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+    console.log(dropdownCtrl)
+  }
+  if(color === 'br-neon-green'){
+    document.getElementById('body-right-label').style.background = '#29f04f'
+    document.getElementById("body-right-title").innerHTML = "Neon Green";
+    document.getElementById('front-chest-right').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-hot-pink'){
+    document.getElementById('body-right-label').style.background = '#e929f0'
+    document.getElementById("body-right-title").innerHTML = "Hot Pink";
+    document.getElementById('front-chest-right').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-yellow'){
+    document.getElementById('body-right-label').style.background = 'yellow'
+    document.getElementById("body-right-title").innerHTML = "Yellow";
+    document.getElementById('front-chest-right').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-maroon'){
+    document.getElementById('body-right-label').style.background = '#cb0039'
+    document.getElementById("body-right-title").innerHTML = "Maroon";
+    document.getElementById('front-chest-right').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-grey'){
+    document.getElementById('body-right-label').style.background = '#969696'
+    document.getElementById("body-right-title").innerHTML = "Grey";
+    document.getElementById('front-chest-right').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-navy'){
+    document.getElementById('body-right-label').style.background = '#152c91'
+    document.getElementById("body-right-title").innerHTML = "Navy";
+    document.getElementById('front-chest-right').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-purple'){
+    document.getElementById('body-right-label').style.background = 'purple'
+    document.getElementById("body-right-title").innerHTML = "Purple";
+    document.getElementById('front-chest-right').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-darkGreen'){
+    document.getElementById('body-right-label').style.background = 'Green'
+    document.getElementById("body-right-title").innerHTML = "Green";
+    document.getElementById('front-chest-right').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-darkGrey'){
+    document.getElementById('body-right-label').style.background = '#494949'
+    document.getElementById("body-right-title").innerHTML = "Dark Grey";
+    document.getElementById('front-chest-right').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-blue'){
+    document.getElementById('body-right-label').style.background = 'blue'
+    document.getElementById("body-right-title").innerHTML = "Blue";
+    document.getElementById('front-chest-right').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-lime'){
+    document.getElementById('body-right-label').style.background = '#09b600'
+    document.getElementById("body-right-title").innerHTML = "Lime";
+    document.getElementById('front-chest-right').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-white'){
+    document.getElementById('body-right-label').style.background = 'White'
+    document.getElementById("body-right-title").innerHTML = "White";
+    document.getElementById('front-chest-right').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-black'){
+    document.getElementById('body-right-label').style.background = 'Black'
+    document.getElementById("body-right-title").innerHTML = "Black";
+    document.getElementById('front-chest-right').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'br-teal'){
+    document.getElementById('body-right-label').style.background = '#00b692'
+    document.getElementById("body-right-title").innerHTML = "Teal";
+    document.getElementById('front-chest-right').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-body-right').style.display = 'none'
+    dropdownCtrl = true
+  }
+  //Collar
+  if(color === 'c-aqua'){
+    document.getElementById('collar-label').style.background = '#129793'
+    document.getElementById("collar-title").innerHTML = "Aqua";
+    document.getElementById('front-collar').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+    console.log(dropdownCtrl)
+  }
+  if(color === 'c-neon-green'){
+    document.getElementById('collar-label').style.background = '#29f04f'
+    document.getElementById("collar-title").innerHTML = "Neon Green";
+    document.getElementById('front-collar').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-hot-pink'){
+    document.getElementById('collar-label').style.background = '#e929f0'
+    document.getElementById("collar-title").innerHTML = "Hot Pink";
+    document.getElementById('front-collar').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-yellow'){
+    document.getElementById('collar-label').style.background = 'yellow'
+    document.getElementById("collar-title").innerHTML = "Yellow";
+    document.getElementById('front-collar').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-maroon'){
+    document.getElementById('collar-label').style.background = '#cb0039'
+    document.getElementById("collar-title").innerHTML = "Maroon";
+    document.getElementById('front-collar').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-grey'){
+    document.getElementById('collar-label').style.background = '#969696'
+    document.getElementById("collar-title").innerHTML = "Grey";
+    document.getElementById('front-collar').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-navy'){
+    document.getElementById('collar-label').style.background = '#152c91'
+    document.getElementById("collar-title").innerHTML = "Navy";
+    document.getElementById('front-collar').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-purple'){
+    document.getElementById('collar-label').style.background = 'purple'
+    document.getElementById("collar-title").innerHTML = "Purple";
+    document.getElementById('front-collar').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-darkGreen'){
+    document.getElementById('collar-label').style.background = 'Green'
+    document.getElementById("collar-title").innerHTML = "Green";
+    document.getElementById('front-collar').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-darkGrey'){
+    document.getElementById('collar-label').style.background = '#494949'
+    document.getElementById("collar-title").innerHTML = "Dark Grey";
+    document.getElementById('front-collar').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-blue'){
+    document.getElementById('collar-label').style.background = 'blue'
+    document.getElementById("collar-title").innerHTML = "Blue";
+    document.getElementById('front-collar').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-lime'){
+    document.getElementById('collar-label').style.background = '#09b600'
+    document.getElementById("collar-title").innerHTML = "Lime";
+    document.getElementById('front-collar').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-white'){
+    document.getElementById('collar-label').style.background = 'White'
+    document.getElementById("collar-title").innerHTML = "White";
+    document.getElementById('front-collar').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-black'){
+    document.getElementById('collar-label').style.background = 'Black'
+    document.getElementById("collar-title").innerHTML = "Black";
+    document.getElementById('front-collar').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'c-teal'){
+    document.getElementById('collar-label').style.background = '#00b692'
+    document.getElementById("collar-title").innerHTML = "Teal";
+    document.getElementById('front-collar').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
     dropdownCtrl = true
   }
 }
