@@ -204,9 +204,137 @@ h1{
   margin: 0 0 0 5px;
   border: 1px solid rgba(0,0,0, .3);
 }
+.suit-display-img .img2{
+  margin: -80px 0 0 100px;
+  height: 60%;
+}
 .suit-display-img img{
-  margin: 50px 0 0 0;
-  height: 95%;
+  margin: 260px 0 0 -50px;
+  height: 60%;
+}
+#front-right-wing{
+  height: 29%;
+position: absolute;
+top: 299px;
+left: 149px;
+}
+#front-left-wing{
+  height: 32%;
+  position: absolute;
+  top: 288px;
+  left: -43px;
+}
+#back-left-stripe{
+  position: absolute;
+  height: 49%;
+  top: 232px;
+  left: 38px;
+}
+#back-right-stripe{
+  height: 44.6%;
+  position: absolute;
+  top: 243px;
+  left: 134px;
+}
+#back-right-arm{
+  position: absolute;
+  height: 15.7%;
+  top: 253px;
+  left: 164px;
+}
+#back-left-arm{
+  position: absolute;
+  height: 20%;
+      top: 304px;
+      left: -68px;
+}
+#back-back{
+  position: absolute;
+  height: 51.5%;
+  top: 229px;
+  left: 53px;
+}
+#back-collar{
+  position: absolute;
+  height: 4.1%;
+  top: 212px;
+  left: 80px;
+}
+#back-left-top-arm{
+  position: absolute;
+  height: 17%;
+  top: 241px;
+  left: -16px;
+}
+#back-righ-top-arm{
+  position: absolute;
+  height: 19.7%;
+  top: 309px;
+  left: 214px;
+}
+#front-stitching{
+  position: absolute;
+  height: 52%;
+  margin: -50px 0 0 50px;
+}
+.single-suit-image{
+  position: absolute;
+  width: 20%;
+}
+#front-write-wing{
+  left: 220px;
+  top: 123px;
+  width: 41%;
+}
+#front-write-wing2{
+  left: 220px;
+  top: 123px;
+  width: 41%;
+}
+#front-chest-left{
+  top: 70px;
+  left: 132px;
+  width: 17.5%;
+}
+#front-chest-right{
+  top: 60px;
+   left: 167px;
+   width: 23.5%;
+}
+#front-chest-around{
+  top: 69px;
+  left: 124px;
+  width: 48.2%;
+}
+#front-right-arm-top{
+  top: 77px;
+  left: 234px;
+  width: 24.5%;
+}
+#front-bottom-right-arm{
+  top: 120px;
+  left: 289px;
+  width: 22%;
+}
+#front-collar{
+  top: 47px;
+  left: 156px;
+  width: 18%;
+}
+#front-left-top-arm{
+  top: 80px;
+  left: 76px;
+}
+#front-left-arm{
+  top: 101px;
+  left: 3px;
+  width: 26%;
+
+}
+#front-left-top-wing{
+  top: 118px;
+  left: 20px;
+  width: 46%;
 }
 .suit-display-img{
   position: relative;
@@ -314,6 +442,7 @@ h1{
 }
 .suit-images{
   position: absolute;
+  z-index: 5;
   top:0;
   width: 245px;
   height: 100%;
