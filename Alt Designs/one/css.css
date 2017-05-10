@@ -700,7 +700,7 @@ h1{
   height: 60%;
 }
 .indexOne{
-  z-index: 1;
+  z-index: 3;
 }
 .suit-display-img img{
   z-index: 0;
@@ -978,6 +978,9 @@ left: -67px;
 }
 
   @media screen and (max-width: 780px) {
+    .zDex-1{
+      z-index: 2 !important;
+    }
     .build-wrap{
       flex-direction: column;
       min-height: 370vh;
@@ -1016,7 +1019,8 @@ left: -67px;
       margin: -290px 0 0 0;
     }
     .suit-display-img img{
-      margin:-73px 0 0 16px;
+      top: -37px;
+      left: -34px;
     }
     .suit-display-back-images{
       display: flex;
