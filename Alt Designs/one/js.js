@@ -1149,8 +1149,11 @@ function colorPickerSelect(color){
 
 //testing
 function test(){
-  let value = {}
-  value.rightArm = "right arm " + document.getElementById("right-upper-arm-title").innerHTML
-  value.leftArm = "right arm " + document.getElementById("left-upper-arm-title").innerHTML
-  console.log(value)
+  let leftUpperArm = "Left Upper Arm: " + document.getElementById("left-upper-arm-title").innerHTML
+  let rightUpperArm = "Right Upper Arm: " + document.getElementById("right-upper-arm-title").innerHTML
+
+  let allFrontValues = leftUpperArm + rightUpperArm
+  document.getElementById("form-front-info").getElementsByClassName("generic-name")[0].thesethings[3].value = allFrontValues
+
+  console.log(allFrontValues)
 }
