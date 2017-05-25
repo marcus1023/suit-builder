@@ -6,6 +6,7 @@
   <title>Builder</title>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./css.css">
+  <link rel="stylesheet" href="./camera-back.css">
   <link rel="shortcut icon" href="https://hobbule.com/Static/Images/Hobbies/233.png">
 </head>
 <body>
@@ -15,11 +16,87 @@
       <p id="build-wrapp">Create your own unique style and fly in style</p>
       <section class="build-wrap">
         <section class="color-picker">
-          <div onclick="colorPickerPannelSet('measurements')" class="color-nav-1">Measurements</div>
-          <div onclick="colorPickerPannelSet('colors')" class="color-nav-2">Front</div>
-          <div onclick="colorPickerPannelSet('colors')" class="color-nav-3">Back</div>
+          <div onclick="colorPickerPannelSet('measurements')" class="color-nav-1" id="color-nav-1">Measurements</div>
+          <div onclick="colorPickerPannelSet('colors')" class="color-nav-2" id="color-nav-2">Front</div>
+          <div onclick="colorPickerPannelSet('colors-back')" class="color-nav-3" id="color-nav-3">Back</div>
           <div id="color-picker-measurements" class="color-picker-measurements">
-            testing measure
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4 >Jacket Legnth</h4>
+                <input id="measure-jacket-legnth" class="single-measure-input" />
+              </div>
+              <div class="measurement-wrap">
+                <h4 >Sholder to Sholder</h4>
+                <input id="measure-sholder-sholder" class="single-measure-input" />
+              </div>
+            </div>
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4 >Full Arm (bent 90Deg)</h4>
+                <input id="measure-full-arm" class="single-measure-input" />
+              </div>
+              <div class="measurement-wrap">
+                <h4 >Sholder to Elbow</h4>
+                <input id="measure-sholder-elbow" class="single-measure-input" />
+              </div>
+            </div>
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4 >Elbow to Wrist</h4>
+                <input id="measure-elbow-wrist" class="single-measure-input" />
+              </div>
+              <div class="measurement-wrap">
+                <h4 >Chest Length</h4>
+                <input id="measure-chest-legnth" class="single-measure-input" />
+              </div>
+            </div>
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4 >Bicept Circumference</h4>
+                <input id="measure-bicept-cur" class="single-measure-input" />
+              </div>
+              <div class="measurement-wrap">
+                <h4>Forearm Circumference</h4>
+                <input id="measure-forearm-cur" class="single-measure-input" />
+              </div>
+            </div>
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4 >Wrist Circumference</h4>
+                <input id="measure-wrist-cur"  class="single-measure-input" />
+              </div>
+              <div class="measurement-wrap">
+                <h4>Waist Circumference</h4>
+                <input id="measure-waist-cur" class="single-measure-input" />
+              </div>
+            </div>
+            <div class="measurement-set">
+              <div class="measurement-wrap">
+                <h4>Trouser Waist Circumference</h4>
+                <input id="measure-trouser-cur" class="single-measure-input" />
+              </div>
+              <div id="color-single-fab" class="color-single">
+                <div class="color-single-wrap" onclick="colorPickerDropdownBack('fab')">
+                  <h4>Select Fabric</h4>
+                  <div id="select-fab-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                  <p id="select-fab-title">Select</p>
+                  <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+                </div>
+                <div id="color-picker-dropdown-fab" class="picker-dropdown left-armdropdown">
+                  <p class="picker-dropdown-p">Select Color</p>
+                  <div onclick="colorPickerSelectBack('fab-taslan')" class="color-single color-single-dropdown">
+                    <p>Taslan</p>
+                  </div>
+                  <div onclick="colorPickerSelectBack('fab-polycot')" class="color-single color-single-dropdown">
+                    <p>Polycotton</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="measurement-set">
+              SUIT FITTING
+Measure lengths to your preferred fitting as your suit will be made to the measurements provided.
+            </div>
           </div>
           <div id="color-picker-colors" class="color-picker-colors">
             <div id="color-single-left-upper-arm" class="color-single">
@@ -35,11 +112,11 @@
                   <div class="color-single-display" style="background: aqua"></div>
                   <p>Auqa</p>
                 </div>
-                <div onclick="colorPickerSelect('lua-n-green')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelect('lua-neon-green')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: #53ef4b"></div>
                   <p>Neon Green</p>
                 </div>
-                <div onclick="colorPickerSelect('lua-hot--hot-pink')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelect('lua-hot-pink')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: pink"></div>
                   <p>Hot Pink</p>
                 </div>
@@ -110,7 +187,7 @@
                   <div class="color-single-display" style="background: #53ef4b"></div>
                   <p>Neon Green</p>
                 </div>
-                <div onclick="colorPickerSelect('rua-hot--hot-pink')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelect('rua-hot-pink')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: pink"></div>
                   <p>Hot Pink</p>
                 </div>
@@ -718,7 +795,7 @@
                   <div class="color-single-display" style="background: #a2e978"></div>
                   <p>Lime</p>
                 </div>
-                <div onclick="colorPickerSelect('bl-white')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelect('br-white')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: White"></div>
                   <p>White</p>
                 </div>
@@ -732,6 +809,789 @@
                 </div>
               </div>
             </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('lineing')">
+                <h4>Lineing</h4>
+                <div id="lineing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="lineing-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="color-picker-dropdown-lineing" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('line-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelect('line-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('line-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="color-picker-colors-back" class="color-picker-colors">
+            <div id="color-single-left-upper-arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('left-upper-arm')">
+                <h4>Left Upper Arm t</h4>
+                <div id="back-left-upper-arm-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-left-upper-arm-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-left-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('lua-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lua-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-right-arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('right-upper-arm')">
+                <h4>Right Upper Arm</h4>
+                <div id="back-right-upper-arm-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-right-upper-arm-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-right-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('rua-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-hot--hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rua-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lower-left-arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('left-lower-arm')">
+                <h4>Left Lower Arm</h4>
+                <div id="back-left-lower-arm-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-left-lower-arm-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-lower-left-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('lla-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lla-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lower-right-arm" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('right-lower-arm')">
+                <h4>Right Lower Arm</h4>
+                <div id="back-right-lower-arm-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-right-lower-arm-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-right-left-arm" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('rla-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelect('rla-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelect('rla-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rla-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-left-wing" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('left-wing')">
+                <h4>Left Wing</h4>
+                <div id="back-left-wing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-left-wing-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-left-wing" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('lw-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('lw-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-right-wing" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('right-wing')">
+                <h4>Right Wing</h4>
+                <div id="back-right-wing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-right-wing-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-right-wing" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('rw-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('rw-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-body-wrap" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('body-wrap')">
+                <h4>Body Wrap</h4>
+                <div id="back-body-wrap-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-body-wrap-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-body-wrap" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('bw-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bw-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-collar" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('collar')">
+                <h4>Collar</h4>
+                <div id="back-collar-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-collar-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-collar" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('c-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('c-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-body-left" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('body-left')">
+                <h4>Body Left</h4>
+                <div id="back-body-left-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-body-left-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-body-left" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('bl-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blhot-hot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-body-right" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('body-right')">
+                <h4>Body Right</h4>
+                <div id="back-body-right-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-body-right-title">Select</p>
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
+              </div>
+              <div id="back-color-picker-dropdown-body-right" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('br-aqua')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-neon-green')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brhot-pink')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-yellow')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-maroon')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bl-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('br-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="suit-display">
@@ -739,7 +1599,7 @@
             <section class="suit-images front-suit-images">
               <svg id="front-bottom-right-arm" fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.19 145.14"><title>right-arm</title><g id="ZGK0ND.tif"><path d="M63,80.5c-6.48-2-10.06-6.88-13.11-12.55Q29.32,29.67,8.54-8.49c-2.68-5-4.59-10.41-9-14.25-1.51-1.3-3-2.59-4.63-3.8-1.37-1-1.57-1.83.15-2.69,14.58-7.28,24.3-19.1,31.25-33.5,1.19-2.46,1.33-2.52,3-.3A323.41,323.41,0,0,1,60.46-10.8,399.61,399.61,0,0,1,83.18,48.06c1.27,4.22,2.3,8.51,3.42,12.78A7.72,7.72,0,0,0,88,64v1A52.47,52.47,0,0,1,75.92,75.25,108.92,108.92,0,0,1,65.5,80.5Z" transform="translate(6.19 64.64)"/></g></svg>
               <svg id="front-left-arm"fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113.42 75"><title>back-right-wing</title><g id="g2I6DY.tif"><path d="M-41,7.5h2a40.45,40.45,0,0,1,.95,4.38c.75,7,1.3,14.07,2.16,21.08A33.79,33.79,0,0,0-28,51.5V52c-2.92.65-5.83,1.3-8.75,1.94-13.73,3-27.43,6.09-41,9.61-14,3.63-28,7.38-41.39,13-3.8,1.59-7.79,3-10.83,6h-1.5A32.44,32.44,0,0,1-138.67,69c-.84-3.12-1.41-6.32-2.07-9.5-1.25-6-1.24-6,4.18-9.14.36-.21.72-.42,1.09-.61,25.13-13.43,51.32-24.52,77.66-35.28C-52.21,12.13-46.4,10.3-41,7.5Z" transform="translate(141.42 -7.5)"/></g></svg>
-              <svg id="front-left-top-arm" id="front-write-wing" fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.05 78.04"><title>back-right-wing</title><g id="yyTzU7.tif"><path d="M83-31.5c.63.13,1.81-.54,1.5,1A22.45,22.45,0,0,0,83.38-28C79.88-16.87,78.93-5.36,78.54,6.22c-.24,7.34.43,14.63.94,21.94.24,3.52-.2,3.78-3.55,4.41-5.56,1-11.09,2.2-16.64,3.31C48.21,38.09,37.1,40.25,26,42.54c-6.18,1.28-12.46,2.11-18.53,4H4A37.08,37.08,0,0,1-1.36,34c-.81-3.64-1.43-7.32-2.14-11V12.5c1-4.12,1-8.4,1.77-12.57A5.25,5.25,0,0,1,2.13-4.6q36.28-13,73.16-24.19C77.89-29.58,80.67-29.92,83-31.5Z" transform="translate(3.5 31.54)"/></g></svg>
+              <svg id="front-left-top-arm" fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.05 78.04"><title>back-right-wing</title><g id="yyTzU7.tif"><path d="M83-31.5c.63.13,1.81-.54,1.5,1A22.45,22.45,0,0,0,83.38-28C79.88-16.87,78.93-5.36,78.54,6.22c-.24,7.34.43,14.63.94,21.94.24,3.52-.2,3.78-3.55,4.41-5.56,1-11.09,2.2-16.64,3.31C48.21,38.09,37.1,40.25,26,42.54c-6.18,1.28-12.46,2.11-18.53,4H4A37.08,37.08,0,0,1-1.36,34c-.81-3.64-1.43-7.32-2.14-11V12.5c1-4.12,1-8.4,1.77-12.57A5.25,5.25,0,0,1,2.13-4.6q36.28-13,73.16-24.19C77.89-29.58,80.67-29.92,83-31.5Z" transform="translate(3.5 31.54)"/></g></svg>
               <svg id="front-left-top-wing"  fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.53 184.09"><title>back-right-wing</title><g id="JTiL48.tif"><path d="M118.5,100c-7.61-6.66-12.75-15.33-18.76-23.27-9.2-12.15-18-24.61-27.82-36.27-9.23-11-19.44-20.61-32.85-26.67C25.33,7.59,12.54-.47-.25-8.47-14.94-17.65-29.7-26.71-45.17-34.54c-4-2-8.19-3.69-12.29-5.54-.56-.25-1.54-.16-1.51-1s.92-.88,1.49-1.16A122.57,122.57,0,0,1-39.73-49c24.43-7.68,49.5-12.7,74.47-18.14,27.41-6,55-10.93,82.51-16.6,3.65-.75,3.71-.71,4.25,3,2.38,16.54,5.33,33,8.39,49.42C132-20.17,134.11-9.07,135.8,2.1c1.47,9.69,2.62,19.42,3.39,29.21.91,11.7.89,23.42,1.34,35.13.16,4.22-.35,4.6-4.5,4.59-6.23,0-6.75.58-7.08,7a47.29,47.29,0,0,1-3.3,15.06A15.09,15.09,0,0,1,120.5,100Z" transform="translate(58.97 84.09)"/></g></svg>
               <svg id="front-collar" fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.17 55"><title>back-right-wing</title><g id="_4hu45F.tif" data-name="4hu45F.tif"><path d="M35.5,35c-4.88-1.63-9.89-2.85-14.59-5.06A105.85,105.85,0,0,1,2.74,19,4,4,0,0,1,.9,14.8,91.16,91.16,0,0,0,1.46-.91,5.91,5.91,0,0,1,4.12-6.17c5.15-3.93,11.16-5.89,17.21-7.76a159.2,159.2,0,0,1,17.53-3.87c1.22-.23,3.33-.86,3.5.43s-2,1.14-3.27,1.37A119,119,0,0,0,7.58-6,5.05,5.05,0,0,0,4.47-.77c.15,2.32-.05,4.67.13,7,.27,3.42,1.86,4.35,5.07,3.23,2.28-.8,4.54-1.65,6.86-2.31,4.06-1.16,8.14-1,12.35-.49,9.2,1.05,18.35.49,26.87-3.59A29.87,29.87,0,0,0,69.87-11.58c1.32-2.77.57-4.32-2.31-5.4-4.37-1.64-8.9-.83-13.37-1-1.09,0-2.29.34-3.42-.58C52.16-20.13,54.14-19,55.5-20h7c1.2.29,2.39.66,3.6.87,5.13.91,8.63,3.54,9.74,8.87.83,4,1.93,7.9,5.16,10.76V1c-.9,1-1.77,2-2.69,2.95-8.87,9.25-19.1,16.79-29.65,24C45,30.39,41,32.26,37.5,35Z" transform="translate(-0.83 20)"/></g></svg>
               <svg id="front-chest-left" fill="white" class="single-suit-image" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.27 291.06"><title>back-right-wing</title><g id="l3WrpF.tif"><path d="M79,150.5c.45,2.12-.38,2.6-2.5,2.56-8.66-.15-17.33-.06-26-.06a20.14,20.14,0,0,0-2.18-.43,123,123,0,0,1-26.45-4.86,8.6,8.6,0,0,1-6-6.07,16.72,16.72,0,0,1-.67-6.9c.49-4.54,2.2-8.69,3.83-12.88,1.32-3.4,3.2-6.61,3.43-10.38.55-9,1.38-18.06.61-27.17-.79-9.37-1.54-18.74-2.93-28-1.7-11.35-3.71-22.66-5.58-34Q10.85,0,7.17-22.29A318.78,318.78,0,0,1,3-63.48a203,203,0,0,1,.54-25.21c1-11,2.8-21.78,6.65-32.18a4.83,4.83,0,0,1,2.79-3c3.35-1.48,6.67-3,10-4.61,6.68-3.19,13.57-5.93,20-9.56h1.5a19.54,19.54,0,0,0,4.07,3.67c7.83,5.87,16.69,9.68,25.9,12.73,2.32.77,3.21,1.91,3.11,4.29-.26,6.18-1.68,12.2-2.42,18.31-1.44,11.81-3.26,23.58-4.52,35.41C69-48.45,67.55-33.3,66.34-18.11,65-1.68,64,14.77,63.65,31.24c-.62,28-.18,56,4.88,83.63A194.35,194.35,0,0,0,79,150.5Z" transform="translate(-2.84 138)"/></g></svg>
@@ -754,9 +1614,9 @@
           </div>
           <div class="suit-display-back suit-display-img" >
             <section class="suit-images suit-display-back-images" id="fthisfinbackimage">
-              <svg fill="white" id="front-right-wing" class="zDex-1"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.41 169"><title>back-right-wing</title><g id="UOk1Yb.tif"><path d="M-46,77v1.5c-2.58.6-5.11.11-7.64-.36-4.35-.8-8.7-1.52-13.13-.57-3.93.84-5.72,2.81-6.13,6.78a7,7,0,0,1-4.94,6,18.88,18.88,0,0,1-4.92.77c-6.64.07-12.79-1.85-18.8-4.47-6.56-2.86-9.18-1.88-12.45,4.48a11.84,11.84,0,0,0-.56,1.12,8.37,8.37,0,0,1-3.53,4.07,64.91,64.91,0,0,1-17.14,8c-11.89,3.37-19.21,11.11-22.77,22.74A6.82,6.82,0,0,1-160.5,131H-165c-1.87-.47-2.64-1.83-3-3.59-.39-2-.8-3.91-1.27-5.86-1.41-5.82-2.52-11.79-7.19-16.16a3,3,0,0,1-.72-1.83,184,184,0,0,1-3.19-37,263.1,263.1,0,0,1,2.61-31.05,301.56,301.56,0,0,1,11.89-50.19c2.6-7.92,5.77-15.61,8.85-23.33h1.5a9.24,9.24,0,0,0,1.18.4A90.43,90.43,0,0,1-127.24-27,161.67,161.67,0,0,1-87,6.18,200.08,200.08,0,0,1-54.39,55.9C-51.21,62.79-48.79,70-46,77Z" transform="translate(180.41 38)"/></g>
+              <svg fill="white" id="back-right-wing" class="zDex-1"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.41 169"><title>back-right-wing</title><g id="UOk1Yb.tif"><path d="M-46,77v1.5c-2.58.6-5.11.11-7.64-.36-4.35-.8-8.7-1.52-13.13-.57-3.93.84-5.72,2.81-6.13,6.78a7,7,0,0,1-4.94,6,18.88,18.88,0,0,1-4.92.77c-6.64.07-12.79-1.85-18.8-4.47-6.56-2.86-9.18-1.88-12.45,4.48a11.84,11.84,0,0,0-.56,1.12,8.37,8.37,0,0,1-3.53,4.07,64.91,64.91,0,0,1-17.14,8c-11.89,3.37-19.21,11.11-22.77,22.74A6.82,6.82,0,0,1-160.5,131H-165c-1.87-.47-2.64-1.83-3-3.59-.39-2-.8-3.91-1.27-5.86-1.41-5.82-2.52-11.79-7.19-16.16a3,3,0,0,1-.72-1.83,184,184,0,0,1-3.19-37,263.1,263.1,0,0,1,2.61-31.05,301.56,301.56,0,0,1,11.89-50.19c2.6-7.92,5.77-15.61,8.85-23.33h1.5a9.24,9.24,0,0,0,1.18.4A90.43,90.43,0,0,1-127.24-27,161.67,161.67,0,0,1-87,6.18,200.08,200.08,0,0,1-54.39,55.9C-51.21,62.79-48.79,70-46,77Z" transform="translate(180.41 38)"/></g>
               </svg>
-              <svg fill="white" id="front-left-wing" class="zDex-1"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.63 184.22"><title>back-left-wing</title><g id="Wjjq8p.tif"><path d="M-184,81.5V80a109.72,109.72,0,0,0,14-14.55c15.35-19,30.38-38.17,45.63-57.22C-113-6-101.44-20.14-88.11-32.66c4.92-4.62,10.06-9,16.35-11.74,3.26-1.42,3.91-1.2,4.14,2.24.6,8.87,3.1,17.36,5.05,25.95C-59-.79-54.07,14.25-49.73,29.45-46.4,41.09-43.54,52.76-43.4,65-43.24,79-43.63,93.1-46,107c-.54,3.12-.42,6.81-3.08,9-3.82,3.16-5.73,7.25-7.08,11.78A40,40,0,0,1-61,139h-1c-3.5-3.62-7.94-5.68-12.49-7.57-8-3.34-16.69-4.51-24.9-7.24-9.87-3.27-19.8-6.46-28.8-11.8-5.47-3.25-6.64-7.86-3.94-13.71,1.22-2.64,2.67-5.19,3.74-7.89,1.8-4.54.08-7.87-4.6-9.23a30.22,30.22,0,0,0-8.14-1.06C-155.42,80.34-169.69,81.87-184,81.5Z" transform="translate(184 45.22)"/></g>
+              <svg fill="white" id="back-left-wing" class="zDex-1"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.63 184.22"><title>back-left-wing</title><g id="Wjjq8p.tif"><path d="M-184,81.5V80a109.72,109.72,0,0,0,14-14.55c15.35-19,30.38-38.17,45.63-57.22C-113-6-101.44-20.14-88.11-32.66c4.92-4.62,10.06-9,16.35-11.74,3.26-1.42,3.91-1.2,4.14,2.24.6,8.87,3.1,17.36,5.05,25.95C-59-.79-54.07,14.25-49.73,29.45-46.4,41.09-43.54,52.76-43.4,65-43.24,79-43.63,93.1-46,107c-.54,3.12-.42,6.81-3.08,9-3.82,3.16-5.73,7.25-7.08,11.78A40,40,0,0,1-61,139h-1c-3.5-3.62-7.94-5.68-12.49-7.57-8-3.34-16.69-4.51-24.9-7.24-9.87-3.27-19.8-6.46-28.8-11.8-5.47-3.25-6.64-7.86-3.94-13.71,1.22-2.64,2.67-5.19,3.74-7.89,1.8-4.54.08-7.87-4.6-9.23a30.22,30.22,0,0,0-8.14-1.06C-155.42,80.34-169.69,81.87-184,81.5Z" transform="translate(184 45.22)"/></g>
               </svg>
               <svg id="back-left-stripe" fill="white" class="zDex-1"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 283.26"><title>back-back-stripe</title><g id="Tm6DRK.tif"><path d="M-104.5-95.5h1a187.44,187.44,0,0,0-1.44,20.89c-.24,13.32.36,26.61,1.31,39.9.84,11.7,2.17,23.35,3.35,35,1,9.51,2.63,18.94,3.68,28.44,1.66,15,4.4,29.78,5.4,44.81.21,3.14-.1,6.34.7,9.44V96.5A21.06,21.06,0,0,0-90.9,99a219.17,219.17,0,0,1-4.47,37.11c-3,13.48-7.17,26.51-13.76,38.69a81.76,81.76,0,0,1-7.6,11.73c-1.25,1.58-2.34,1.72-3.88.25-4.74-4.51-5.5-7.37-3.28-13.58.34-.94.66-1.89,1.06-2.8,8.14-18.56,11.74-38.07,12.31-58.24a170.85,170.85,0,0,0-1.16-20.68A115.9,115.9,0,0,0-115,70.76c-2.77-9.85-6.11-19.54-9-29.35-3.64-12.2-7.06-24.46-9.68-36.94-1.11-5.3-1.58-10.69-2.75-16V-13c.35-.84.74-1.67,1-2.53,3.29-9.44,4.48-19.24,4.91-29.15.42-9.63.94-19.27,1.12-28.91.14-7.69,2.92-13.74,11-16.55C-113.77-91.78-109.16-93.72-104.5-95.5Z" transform="translate(136.5 95.5)"/></g>
               </svg>
@@ -786,11 +1646,11 @@
         <section class="contact-form">
           <div class="cf-input">
             <p>Full Name</p>
-            <input class="builder-input builder-input-full"/>
+            <input id="input-name"class="builder-input builder-input-full"/>
           </div>
           <div class="cf-input">
             <p>Email</p>
-            <input class="builder-input builder-input-full"/>
+            <input id="input-email" class="builder-input builder-input-full"/>
           </div>
           <div class="cf-input">
             <p>Phone</p>
@@ -826,4 +1686,5 @@
   </main>
 </body>
 <script src="./js.js"></script>
+<script src="./camera-suit-back.js"></script>
 </html>

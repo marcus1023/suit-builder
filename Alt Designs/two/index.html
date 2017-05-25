@@ -16,11 +16,11 @@
       <h2>Price: $248 (AUD)</h2>
     </section>
     <section id="pop-confirm-wrap" class="pop-confirm-wrap" >
-      <img id="blue-check-mark" src="./img/blue-check-mark.png" />
+      <img id="blue-check-mark" src="//d2beia7gtp5yjy.cloudfront.net/cdn_image/df/a3d5a/33250085/22275/landing/v999/06mil/blue-check-mark.png" />
       <div class="pop-confirm-info">
         <h4>Suit Design Confirmation</h4>
         <p>Please watch this video tutorial on how to measure for your suit dementions before confirming your order. By clicking confirm you acknolage you have watched the video and all your measurements are correct</p>
-      <div class="vid-btn">Watch Video</div>
+      <a onclick="goToVideo()"><div class="vid-btn">Watch Video</div></a>
       </div>
       <p id="pop-confirm-wrap-p">Be sure all the details on the color, size, and fabric of your suit are correct before clicking the confirm and pay button</p>
       <div class="pop-confirm-btns">
@@ -555,7 +555,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             </div>
             <div id="color-single-left-wing" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdown('left-wing')">
-                <h4>Front Left Wing</h4>
+                <h4>Left Wing</h4>
                 <div id="left-wing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
                 <p id="left-wing-title">Select</p>
                 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
@@ -626,7 +626,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             </div>
             <div id="color-single-right-wing" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdown('right-wing')">
-                <h4>Front Right Wing</h4>
+                <h4>Right Wing</h4>
                 <div id="right-wing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
                 <p id="right-wing-title">Select</p>
                 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
@@ -1267,7 +1267,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             </div>
             <div id="color-single-lower-right-arm" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdownBack('right-lower-arm')">
-                <h4>Front Right Lower Arm</h4>
+                <h4>Back Right Lower Arm</h4>
                 <div id="back-right-lower-arm-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
                 <p id="back-right-lower-arm-title">Select</p>
                 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png"/>
@@ -1322,7 +1322,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
                   <div class="color-single-display" style="background: #a2e978"></div>
                   <p>Lime</p>
                 </div>
-                <div onclick="colorPickerSelect('rla-white')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('rla-white')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: White"></div>
                   <p>White</p>
                 </div>
@@ -1478,7 +1478,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
                 </div>
               </div>
             </div>
-            <div id="color-single-left-wing" class="color-single">
+            <!-- <div id="color-single-left-wing" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdownBack('left-wing')">
                 <h4>Back Left Wing</h4>
                 <div id="back-left-wing-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
@@ -1619,7 +1619,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
                   <p>Teal</p>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div id="color-single-body-wrap" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdownBack('body-wrap')">
                 <h4>Back</h4>

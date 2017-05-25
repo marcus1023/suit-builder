@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500');
+
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+.video-wrap *{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:200;
+  color: white;
+  font-size: 12px;
+}
+.vid-overlay h1{
+  font-family: 'Audiowide', cursive;
+   text-shadow: 2px 2px #555;
+  font-size: 7rem;
+  letter-spacing: 1rem;
+}
+.vid-overlay h2{
+  font-family: 'Audiowide', cursive;
+   text-shadow: 2px 2px #555;
+  font-size: 1.4rem;
+  letter-spacing: .4rem;
+}
+.video-wrap{
+  position: relative;
+  background: grey;
+  width: 100%;
+  max-height: 60vh;
+  min-height: 60vh;
+  overflow: hidden;
+  top: 0;
+  left:0;
+}
+#sky-dive-vid{
+  top: -20%;
+  position: absolute;
+  min-width: 100%;
+  min-height: 62vh;
+}
+#frame{
+  text-shadow: 2px 2px #555;
+  position: absolute;
+}
+.faux-record{
+  display: none;
+}
+.vid-overlay{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:0;
+  left:0;
+  /*background: rgba(0,0,0, .6);*/
+  background: repeating-linear-gradient(
+  0deg,
+  rgba(0,0,0, .0),
+  rgba(0,0,0, .0) 2px,
+  rgba(0,0,0, .58) 1px,
+  rgba(0,0,0, .58) 3px
+);
+  height: 100%;
+  width: 100%;
+}

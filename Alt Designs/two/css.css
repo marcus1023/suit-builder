@@ -789,4 +789,13 @@ font-size: 1.3rem;
     #fthisfinbackimage{
       margin-left: 21px;
     }
+    .pop-confirm-wrap{
+      height: 66vh;
+      position: fixed;
+    }
+    .price-banner-wrap{
+      top: 52px;
+      height: 84px;
+
+    }
   }

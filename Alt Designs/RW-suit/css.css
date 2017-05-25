@@ -508,6 +508,7 @@ font-size: 1.3rem;
 }
 #down-chevron{
   min-width: 10px;
+  max-width: 10px;
   margin: 0 0 0 20%;
 }
 #front-suit-display{
@@ -721,14 +722,14 @@ font-size: 1.3rem;
       margin: 0 0 0 0;
     }
     .build-full{
-      width: 90%;
-      height: 300vh;
+      width: 100%;
+      height: 500vh;
     }
     .suit-display-img{
       margin: 110px 0 0 0;
     }
     .suit-display{
-      min-height: 140vh;
+      min-height: 200vh;
       width: 100%;
       margin: 0 0 0 0;
       flex-direction: column;

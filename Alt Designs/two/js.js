@@ -7,6 +7,10 @@ document.getElementById('price-banner-wrap').style.left = '0px '
 // ###############
 // ###############
 
+function goToVideo(){
+   window.open("https://youtu.be/Yh4sN4AFs6o", "_blank");
+}
+
 document.getElementById('pay-for-suit-btn').style.background = 'grey'
 document.getElementById('pay-for-suit-btn').style.border = '1px solid grey'
 document.getElementById('pop-confirm-wrap').style.display = 'none'
@@ -41,6 +45,7 @@ function hideConfirmPop(){
   document.getElementById('popup-confirm-section').style.display = 'none'
   document.getElementById('pop-confirm-wrap').style.display = 'none'
 }
+
 
 function adminColorControl(){
     let aquaVal = document.getElementById('admin-aqua').innerHTML
@@ -217,7 +222,7 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-back-left-elbow').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lua-yellow'){
+  if(color === 'ble-yellow'){
     document.getElementById('back-left-elbow-label').style.background = 'yellow'
     document.getElementById("back-left-elbow-title").innerHTML = "Yellow";
     document.getElementById('back-left-elbow').style.fill = 'yellow'
@@ -757,15 +762,15 @@ function colorPickerSelectBack(color){
     dropdownCtrlBack = true
   }
   if(color === 'rla-maroon'){
-    document.getElementById('right-upper-arm-label').style.background = '#cb0039'
-    document.getElementById("right-upper-arm-title").innerHTML = "Maroon";
+    document.getElementById('back-right-lower-arm-label').style.background = '#cb0039'
+    document.getElementById("back-right-lower-arm-title").innerHTML = "Maroon";
     document.getElementById('back-righ-top-arm').style.fill = '#cb0039'
     document.getElementById('back-color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrlBack = true
   }
   if(color === 'rla-grey'){
-    document.getElementById('right-upper-arm-label').style.background = '#969696'
-    document.getElementById("right-upper-arm-title").innerHTML = "Grey";
+    document.getElementById('back-right-lower-arm-label').style.background = '#969696'
+    document.getElementById("back-right-lower-arm-title").innerHTML = "Grey";
     document.getElementById('back-righ-top-arm').style.fill = '#969696'
     document.getElementById('back-color-picker-dropdown-right-left-arm').style.display = 'none'
     dropdownCtrlBack = true
@@ -1815,7 +1820,7 @@ function colorPickerSelect(color){
     document.getElementById('color-picker-dropdown-front-right-elbow').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lua-yellow'){
+  if(color === 'fre-yellow'){
     document.getElementById('front-right-elbow-label').style.background = 'yellow'
     document.getElementById("front-right-elbow-title").innerHTML = "Yellow";
     document.getElementById('front-right-elbow').style.fill = 'yellow'
@@ -1922,7 +1927,7 @@ function colorPickerSelect(color){
     document.getElementById('color-picker-dropdown-front-left-elbow').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'lua-yellow'){
+  if(color === 'fle-yellow'){
     document.getElementById('front-left-elbow-label').style.background = 'yellow'
     document.getElementById("front-left-elbow-title").innerHTML = "Yellow";
     document.getElementById('front-left-elbow').style.fill = 'yellow'
@@ -2443,8 +2448,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#129793'
     document.getElementById("left-wing-title").innerHTML = "Aqua";
     document.getElementById('front-left-top-wing').style.fill = '#129793'
-    document.getElementById('front-write-wing').style.fill = '#129793'
-    document.getElementById('back-left-wing').style.fill = '#129793'
     document.getElementById('back-right-wing').style.fill = '#129793'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2454,8 +2457,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#29f04f'
     document.getElementById("left-wing-title").innerHTML = "Neon Green";
     document.getElementById('front-left-top-wing').style.fill = '#29f04f'
-    document.getElementById('front-write-wing').style.fill = '#29f04f'
-    document.getElementById('back-left-wing').style.fill = '#29f04f'
     document.getElementById('back-right-wing').style.fill = '#29f04f'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2464,8 +2465,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#e929f0'
     document.getElementById("left-wing-title").innerHTML = "Hot Pink";
     document.getElementById('front-left-top-wing').style.fill = '#e929f0'
-    document.getElementById('front-write-wing').style.fill = '#e929f0'
-    document.getElementById('back-left-wing').style.fill = '#e929f0'
     document.getElementById('back-right-wing').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2474,8 +2473,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'yellow'
     document.getElementById("left-wing-title").innerHTML = "Yellow";
     document.getElementById('front-left-top-wing').style.fill = 'yellow'
-    document.getElementById('front-write-wing').style.fill = 'yellow'
-    document.getElementById('back-left-wing').style.fill = 'yellow'
     document.getElementById('back-right-wing').style.fill = 'yellow'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2484,8 +2481,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#cb0039'
     document.getElementById("left-wing-title").innerHTML = "Maroon";
     document.getElementById('front-left-top-wing').style.fill = '#cb0039'
-    document.getElementById('front-write-wing').style.fill = '#cb0039'
-    document.getElementById('back-left-wing').style.fill = '#cb0039'
     document.getElementById('back-right-wing').style.fill = '#cb0039'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2494,8 +2489,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#969696'
     document.getElementById("left-wing-title").innerHTML = "Grey";
     document.getElementById('front-left-top-wing').style.fill = '#969696'
-    document.getElementById('front-write-wing').style.fill = '#969696'
-    document.getElementById('back-left-wing').style.fill = '#969696'
     document.getElementById('back-right-wing').style.fill = '#969696'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2504,8 +2497,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#152c91'
     document.getElementById("left-wing-title").innerHTML = "Navy";
     document.getElementById('front-left-top-wing').style.fill = '#152c91'
-    document.getElementById('front-write-wing').style.fill = '#152c91'
-    document.getElementById('back-left-wing').style.fill = '#152c91'
     document.getElementById('back-right-wing').style.fill = '#152c91'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2514,8 +2505,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'purple'
     document.getElementById("left-wing-title").innerHTML = "Purple";
     document.getElementById('front-left-top-wing').style.fill = 'purple'
-    document.getElementById('front-write-wing').style.fill = 'purple'
-    document.getElementById('back-left-wing').style.fill = 'purple'
     document.getElementById('back-right-wing').style.fill = 'purple'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2524,8 +2513,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'Green'
     document.getElementById("left-wing-title").innerHTML = "Green";
     document.getElementById('front-left-top-wing').style.fill = 'Green'
-    document.getElementById('front-write-wing').style.fill = 'Green'
-    document.getElementById('back-left-wing').style.fill = 'Green'
     document.getElementById('back-right-wing').style.fill = 'Green'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2534,8 +2521,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#494949'
     document.getElementById("left-wing-title").innerHTML = "Dark Grey";
     document.getElementById('front-left-top-wing').style.fill = '#494949'
-    document.getElementById('front-write-wing').style.fill = '#494949'
-    document.getElementById('back-left-wing').style.fill = '#494949'
     document.getElementById('back-right-wing').style.fill = '#494949'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2544,8 +2529,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'blue'
     document.getElementById("left-wing-title").innerHTML = "Blue";
     document.getElementById('front-left-top-wing').style.fill = 'blue'
-    document.getElementById('front-write-wing').style.fill = 'blue'
-    document.getElementById('back-left-wing').style.fill = 'blue'
     document.getElementById('back-right-wing').style.fill = 'blue'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2554,8 +2537,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#09b600'
     document.getElementById("left-wing-title").innerHTML = "Lime";
     document.getElementById('front-left-top-wing').style.fill = '#09b600'
-    document.getElementById('front-write-wing').style.fill = '#09b600'
-    document.getElementById('back-left-wing').style.fill = '#09b600'
     document.getElementById('back-right-wing').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2564,8 +2545,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'White'
     document.getElementById("left-wing-title").innerHTML = "White";
     document.getElementById('front-left-top-wing').style.fill = 'White'
-    document.getElementById('front-write-wing').style.fill = 'white'
-    document.getElementById('back-left-wing').style.fill = 'white'
     document.getElementById('back-right-wing').style.fill = 'white'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2574,8 +2553,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = 'Black'
     document.getElementById("left-wing-title").innerHTML = "Black";
     document.getElementById('front-left-top-wing').style.fill = 'Black'
-    document.getElementById('front-write-wing').style.fill = 'black'
-    document.getElementById('back-left-wing').style.fill = 'black'
     document.getElementById('back-right-wing').style.fill = 'black'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2584,8 +2561,6 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#00b692'
     document.getElementById("left-wing-title").innerHTML = "Teal";
     document.getElementById('front-left-top-wing').style.fill = '#00b692'
-    document.getElementById('front-write-wing').style.fill = '#09b600'
-    document.getElementById('back-left-wing').style.fill = '#09b600'
     document.getElementById('back-right-wing').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
@@ -2595,6 +2570,7 @@ function colorPickerSelect(color){
     document.getElementById('left-wing-label').style.background = '#129793'
     document.getElementById("left-wing-title").innerHTML = "Aqua";
     document.getElementById('front-write-wing').style.fill = '#129793'
+    document.getElementById('back-left-wing').style.fill = '#129793'
     document.getElementById('color-picker-dropdown-left-wing').style.display = 'none'
     dropdownCtrl = true
     console.log(dropdownCtrl)
@@ -2603,6 +2579,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#29f04f'
     document.getElementById("right-wing-title").innerHTML = "Neon Green";
     document.getElementById('front-write-wing').style.fill = '#29f04f'
+    document.getElementById('back-left-wing').style.fill = '#29f04f'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2610,6 +2587,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#e929f0'
     document.getElementById("right-wing-title").innerHTML = "Hot Pink";
     document.getElementById('front-write-wing').style.fill = '#e929f0'
+    document.getElementById('back-left-wing').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2617,6 +2595,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = 'yellow'
     document.getElementById("right-wing-title").innerHTML = "Yellow";
     document.getElementById('front-write-wing').style.fill = 'yellow'
+    document.getElementById('back-left-wing').style.fill = 'yellow'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2624,6 +2603,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#cb0039'
     document.getElementById("right-wing-title").innerHTML = "Maroon";
     document.getElementById('front-write-wing').style.fill = '#cb0039'
+    document.getElementById('back-left-wing').style.fill = '#cb0039'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2631,6 +2611,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#969696'
     document.getElementById("right-wing-title").innerHTML = "Grey";
     document.getElementById('front-write-wing').style.fill = '#969696'
+    document.getElementById('back-left-wing').style.fill = '#969696'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2638,6 +2619,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#152c91'
     document.getElementById("right-wing-title").innerHTML = "Navy";
     document.getElementById('front-write-wing').style.fill = '#152c91'
+    document.getElementById('back-left-wing').style.fill = '#152c91'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2645,6 +2627,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = 'purple'
     document.getElementById("right-wing-title").innerHTML = "Purple";
     document.getElementById('front-write-wing').style.fill = 'purple'
+    document.getElementById('back-left-wing').style.fill = 'purple'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2652,6 +2635,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = 'Green'
     document.getElementById("right-wing-title").innerHTML = "Green";
     document.getElementById('front-write-wing').style.fill = 'Green'
+    document.getElementById('back-left-wing').style.fill = 'green'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2659,6 +2643,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#494949'
     document.getElementById("right-wing-title").innerHTML = "Dark Grey";
     document.getElementById('front-write-wing').style.fill = '#494949'
+    document.getElementById('back-left-wing').style.fill = '#494949'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2673,6 +2658,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#09b600'
     document.getElementById("right-wing-title").innerHTML = "Lime";
     document.getElementById('front-write-wing').style.fill = '#09b600'
+    document.getElementById('back-left-wing').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2680,6 +2666,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = 'White'
     document.getElementById("right-wing-title").innerHTML = "White";
     document.getElementById('front-write-wing').style.fill = 'White'
+    document.getElementById('back-left-wing').style.fill = 'White'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2687,6 +2674,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = 'Black'
     document.getElementById("right-wing-title").innerHTML = "Black";
     document.getElementById('front-write-wing').style.fill = 'Black'
+    document.getElementById('back-left-wing').style.fill = 'Black'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2694,6 +2682,7 @@ function colorPickerSelect(color){
     document.getElementById('right-wing-label').style.background = '#00b692'
     document.getElementById("right-wing-title").innerHTML = "Teal";
     document.getElementById('front-write-wing').style.fill = '#00b692'
+    document.getElementById('back-left-wing').style.fill = '#00b692'
     document.getElementById('color-picker-dropdown-right-wing').style.display = 'none'
     dropdownCtrl = true
   }

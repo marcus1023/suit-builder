@@ -4,15 +4,41 @@ let pannelStatus = true
 function colorPickerPannelSet(type) {
   if(type === 'measurements'){
       document.getElementById('color-picker-colors').style.display = 'none'
+      document.getElementById('color-picker-colors-back').style.display = 'none'
       document.getElementById('color-picker-measurements').style.display = 'flex'
+      document.getElementById('color-nav-1').style.background = 'black'
+      document.getElementById('color-nav-1').style.color = 'white'
+      document.getElementById('color-nav-2').style.background = 'white'
+      document.getElementById('color-nav-2').style.color = 'black'
+      document.getElementById('color-nav-3').style.background = 'white'
+      document.getElementById('color-nav-3').style.color = 'black'
   }
   if(type === 'colors'){
       document.getElementById('color-picker-measurements').style.display = 'none'
+      document.getElementById('color-picker-colors-back').style.display = 'none'
       document.getElementById('color-picker-colors').style.display = 'flex'
+      document.getElementById('color-nav-1').style.background = 'white'
+      document.getElementById('color-nav-1').style.color = 'black'
+      document.getElementById('color-nav-2').style.background = 'black'
+      document.getElementById('color-nav-2').style.color = 'white'
+      document.getElementById('color-nav-3').style.background = 'white'
+      document.getElementById('color-nav-3').style.color = 'black'
+  }
+  if(type === 'colors-back'){
+      document.getElementById('color-picker-measurements').style.display = 'none'
+      document.getElementById('color-picker-colors').style.display = 'none'
+      document.getElementById('color-picker-colors-back').style.display = 'flex'
+      document.getElementById('color-nav-1').style.background = 'white'
+      document.getElementById('color-nav-1').style.color = 'black'
+      document.getElementById('color-nav-2').style.background = 'white'
+      document.getElementById('color-nav-2').style.color = 'black'
+      document.getElementById('color-nav-3').style.background = 'black'
+      document.getElementById('color-nav-3').style.color = 'white'
   }
 }
 // show colors dropdown
 function colorPickerDropdown(position){
+  console.log('getting here')
   if(position === 'left-upper-arm' && dropdownCtrl === true){
     document.getElementById('color-picker-dorpdown-left-arm').style.display = 'flex'
     dropdownCtrl = false
@@ -73,6 +99,7 @@ function colorPickerSelect(color){
   console.log(dropdownCtrl)
   //left upper arm control
   if(color === 'lua-aqua'){
+    console.log('here')
     document.getElementById('left-upper-arm-label').style.background = '#129793'
     document.getElementById("left-upper-arm-title").innerHTML = "Aqua";
     document.getElementById('front-left-top-arm').style.fill = '#129793'
@@ -1143,17 +1170,71 @@ function colorPickerSelect(color){
 }
 // Save suit options - make sure you require them to watch the video and add measurements before
 
-
-
-
-
 //testing
 function test(){
-  let leftUpperArm = "Left Upper Arm: " + document.getElementById("left-upper-arm-title").innerHTML
+// Front
+  let leftUpperArm = "Left Upper Arm: " + document.getElementById("left-upper-arm-title").innerHTML + " "
+  let leftLowerArm = "Left Lower Arm: " + document.getElementById("left-lower-arm-title").innerHTML + " "
+  let leftWing = "Left Wing: " + document.getElementById("left-wing-title").innerHTML + " "
+  let leftBody = "Body Left: " + document.getElementById("body-left-title").innerHTML + " "
+
+
   let rightUpperArm = "Right Upper Arm: " + document.getElementById("right-upper-arm-title").innerHTML
+  let rightLowerArm = "Right Lower Arm: " + document.getElementById("right-lower-arm-title").innerHTML + " "
+  let rightWing = "Right Wing: " + document.getElementById("right-wing-title").innerHTML + " "
+  let rightBody = "Right Body: " + document.getElementById("body-right-title").innerHTML + " "
 
-  let allFrontValues = leftUpperArm + rightUpperArm
-  document.getElementById("form-front-info").getElementsByClassName("generic-name")[0].thesethings[3].value = allFrontValues
 
-  console.log(allFrontValues)
+  let collar = "Collar: " + document.getElementById("collar-title").innerHTML + " "
+  let bodyWrap = "Body Wrap: " + document.getElementById("body-wrap-title").innerHTML + " "
+
+
+
+  let allFrontValues = leftUpperArm +leftLowerArm+leftWing+leftBody+rightUpperArm+rightLowerArm+rightWing+rightBody+collar+bodyWrap
+  document.getElementById("form-group-company").getElementsByClassName("form-control")[0].value = "this is a success"
+  document.getElementById("form-group-email").getElementsByClassName("form-control")[0].value = "allFrontValues@success.com"
+  document.getElementById("form-group-comment").getElementsByClassName("form-control")[0].value = allFrontValues
+
+// Back
+  let backleftUpperArm = "Left Upper Arm: " + document.getElementById("left-upper-arm-title").innerHTML + " "
+  let backleftLowerArm = "Left Lower Arm: " + document.getElementById("left-lower-arm-title").innerHTML + " "
+  let backleftWing = "Left Wing: " + document.getElementById("left-wing-title").innerHTML + " "
+  let backleftBody = "Body Left: " + document.getElementById("body-left-title").innerHTML + " "
+
+
+  let backrightUpperArm = "Right Upper Arm: " + document.getElementById("right-upper-arm-title").innerHTML
+  let backrightLowerArm = "Right Lower Arm: " + document.getElementById("right-lower-arm-title").innerHTML + " "
+  let backrightWing = "Right Wing: " + document.getElementById("right-wing-title").innerHTML + " "
+  let backrightBody = "Right Body: " + document.getElementById("body-right-title").innerHTML + " "
+
+
+  let backcollar = "Collar: " + document.getElementById("collar-title").innerHTML + " "
+  let backbodyWrap = "Body Wrap: " + document.getElementById("body-wrap-title").innerHTML + " "
+
+//Measurements
+  let jacketLength = "Jacket Length: " + document.getElementById("measure-jacket-legnth").value
+  let sholderToSholder = "Sholder to Sholder: " + document.getElementById("measure-sholder-sholder").value
+  let fullArm = "Full Arm: " + document.getElementById("measure-full-arm").value
+  let sholderToElbow = "Sholder to Elbow: " +  document.getElementById("measure-sholder-elbow").value
+  let elbowToWrist = "Elbow to Wrist: " +  document.getElementById("measure-elbow-wrist").value
+  let chestLength = "Chest Length: " +  document.getElementById("measure-chest-legnth").value
+  let biceptCur = "Bicept Cur: " +  document.getElementById("measure-bicept-cur").value
+  let forearmCur = "Forearm Cur: " +  document.getElementById("measure-forearm-cur").value
+  let waistCur = "Waist Cur: " +  document.getElementById("measure-bicept-cur").value
+  let wristCur = "Wrist Cur: " +  document.getElementById("measure-wrist-cur").value
+  let trouserCur = "Trouser Waist Cur: " +  document.getElementById("measure-trouser-cur").value
+  let fabType = "Fabric Type: " +  document.getElementById("select-fab-title").innerHTML
+
+  let allMeasurements = jacketLength+sholderToSholder+fullArm+sholderToElbow+elbowToWrist+chestLength+biceptCur+forearmCur+waistCur+wristCur+trouserCur+fabType
+  document.getElementById("form-group-organization").getElementsByClassName("form-control")[0].value = allMeasurements
+
+  let allBackValues = backleftUpperArm +backleftLowerArm+backleftWing+backleftBody+backrightUpperArm+backrightLowerArm+backrightWing+backrightBody+backcollar+backbodyWrap
+  document.getElementById("form-group-company").getElementsByClassName("form-control")[0].value = allBackValues
+
+
+let name = document.getElementById("input-name").innerHTML
+let email = document.getElementById("input-email").innerHTML
+  document.getElementById("form-group-name_first").getElementsByClassName("form-control")[0].value = name
+  document.getElementById("form-group-email").getElementsByClassName("form-control")[0].value = email
+
 }
