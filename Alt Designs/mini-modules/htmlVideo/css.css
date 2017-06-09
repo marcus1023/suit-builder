@@ -1,63 +1,149 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500');
+.cta-btn:hover{
+    background: rgba(0,0,0, .6);
+}
+.cta-btn{
+    transition: all .4s;
+    border-radius: 3px;
+    padding: 7px 20px;
+    margin: 5px auto;
+    background: rgba(0,0,0, .1);
+    border: 1px solid white;
+    display: inline-block;
+}
+.ulpage *
+{
+    color: #FFFFFF;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
-.video-wrap *{
-    font-family: 'Montserrat', sans-serif;
-    font-weight:200;
-  color: white;
-  font-size: 12px;
+.ulpage-carousel-items
+{
+    display: none;
 }
-.vid-overlay h1{
-  font-family: 'Audiowide', cursive;
-   text-shadow: 2px 2px #555;
-  font-size: 7rem;
-  letter-spacing: 1rem;
+
+.ulpage-carousel
+{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 75vh;
 }
-.vid-overlay h2{
-  font-family: 'Audiowide', cursive;
-   text-shadow: 2px 2px #555;
-  font-size: 1.4rem;
-  letter-spacing: .4rem;
+
+.ulpage-carousel-cont
+{
+    display: block;
+    overflow: hidden;
+    width: 200%;
+    height: 75vh;
+    position: absolute;
 }
-.video-wrap{
-  position: relative;
-  background: grey;
+@media (min-width: 1200px){
+  .container {
+      width: 50%;
+  }
+}
+
+.ulpage-prev
+{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    height: 75vh;
+    width: 10%;
+    min-width: 60px;
+    background-image: url({{cdnimage '_bw/corner_left.png' 'maxD_100|colorize_FFFFFF'}});
+    background-size: 20%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: .1;
+}
+
+.ulpage-prev:hover
+{
+    opacity: 1;
+    background-color: rgba(0,0,0,.1);
+}
+
+.ulpage-next
+{
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    height: 75vh;
+    width: 10%;
+    min-width: 60px;
+    right: 0;
+    background-image: url({{cdnimage '_bw/corner_right.png' 'maxD_100|colorize_FFFFFF'}});
+    background-size: 20%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: .1;
+}
+
+.ulpage-next:hover
+{
+    opacity: 1;
+    background-color: rgba(0,0,0,.3);
+}
+
+.ulpage-carousel-item
+{
+    display: block;
+    overflow: hidden;
+    width: 50%;
+    float: left;
+    height: 75vh;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.ulpage-carousel-item-content
+{
   width: 100%;
-  max-height: 60vh;
-  min-height: 60vh;
-  overflow: hidden;
-  top: 0;
-  left:0;
-}
-#sky-dive-vid{
-  top: -20%;
   position: absolute;
-  min-width: 100%;
-  min-height: 62vh;
-}
-#frame{
-  text-shadow: 2px 2px #555;
-  position: absolute;
-}
-.faux-record{
-  display: none;
-}
-.vid-overlay{
-  flex-direction: column;
+  bottom: 36%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: absolute;
-  top:0;
-  left:0;
-  /*background: rgba(0,0,0, .6);*/
-  background: repeating-linear-gradient(
-  0deg,
-  rgba(0,0,0, .0),
-  rgba(0,0,0, .0) 2px,
-  rgba(0,0,0, .58) 1px,
-  rgba(0,0,0, .58) 3px
-);
-  height: 100%;
-  width: 100%;
+  background: rgba(0,0,0, .5);
+  padding: 30px;
+  background: rgba(0,0,0, .5);
+}
+
+.ulpage-carousel-nav
+{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.ulpage-carousel-nav a
+{
+    display: inline-block;
+    overflow: hidden;
+    background-color: rgba(255,255,255,.4);
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    margin: 1.5em .2em;
+}
+
+.ulpage-carousel-nav a:hover
+{
+    background-color: rgba(255,255,255,.7);
+}
+
+.ulpage-carousel-nav a.active
+{
+    background-color: rgba(255,255,255,1);
+}
+
+body.phone .ulpage-carousel-item-content-content
+{
+    font-size: .8em;
 }

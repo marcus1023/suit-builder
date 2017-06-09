@@ -1,106 +1,129 @@
-if(color === 'brua-aqua'){
+if(color === 'blml-aqua'){
   console.log('here')
-  document.getElementById('brua-label').style.background = '#129793'
-  document.getElementById("brua-title").innerHTML = "Aqua";
-  document.getElementById('back-left-lower-arm').style.fill = '#129793'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+  document.getElementById('blml-label').style.background = '#129793'
+  document.getElementById("blml-title").innerHTML = "Aqua";
+  document.getElementById('blml').style.fill = '#129793'
+  document.getElementById('bins').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-neon-green'){
-  document.getElementById('brua-label').style.background = '#29f04f'
-  document.getElementById("brua-title").innerHTML = "Neon Green";
-  document.getElementById('back-left-lower-arm').style.fill = '#29f04f'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-neon-green'){
+  document.getElementById('blml-label').style.background = '#29f04f'
+  document.getElementById("blml-title").innerHTML = "Neon Green";
+  document.getElementById('blml').style.fill = '#29f04f'
+  document.getElementById('bins').style.fill = '#29f04f'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-hot-pink'){
-  document.getElementById('brua-label').style.background = '#e929f0'
-  document.getElementById("brua-title").innerHTML = "Hot Pink";
-  document.getElementById('back-left-lower-arm').style.fill = '#e929f0'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-hot-pink'){
+  document.getElementById('blml-label').style.background = '#e929f0'
+  document.getElementById("blml-title").innerHTML = "Hot Pink";
+  document.getElementById('blml').style.fill = '#e929f0'
+  document.getElementById('bins').style.fill = '#e929f0'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-yellow'){
-  document.getElementById('brua-label').style.background = 'yellow'
-  document.getElementById("brua-title").innerHTML = "Yellow";
-  document.getElementById('back-left-lower-arm').style.fill = 'yellow'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-yellow'){
+  document.getElementById('blml-label').style.background = 'yellow'
+  document.getElementById("blml-title").innerHTMLx = "Yellow";
+  document.getElementById('blml').style.fill = 'yellow'
+  document.getElementById('bins').style.fill = 'yellow'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-maroon'){
-  document.getElementById('brua-label').style.background = '#cb0039'
-  document.getElementById("brua-title").innerHTML = "Maroon";
-  document.getElementById('back-left-lower-arm').style.fill = '#cb0039'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-maroon'){
+  document.getElementById('blml-label').style.background = '#cb0039'
+  document.getElementById("blml-title").innerHTML = "Maroon";
+  document.getElementById('blml').style.fill = '#cb0039'
+  document.getElementById('bins').style.fill = '#cb0039'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-grey'){
-  document.getElementById('brua-label').style.background = '#969696'
-  document.getElementById("brua-title").innerHTML = "Grey";
-  document.getElementById('back-left-lower-arm').style.fill = '#969696'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-red'){
+  document.getElementById('blml-label').style.background = 'red'
+  document.getElementById("blml-title").innerHTML = "Red";
+  document.getElementById('blml').style.fill = 'red'
+  document.getElementById('bins').style.fill = 'red'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-navy'){
-  document.getElementById('brua-label').style.background = '#152c91'
-  document.getElementById("brua-title").innerHTML = "Navy";
-  document.getElementById('back-left-lower-arm').style.fill = '#152c91'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-grey'){
+  document.getElementById('blml-label').style.background = '#969696'
+  document.getElementById("blml-title").innerHTML = "Grey";
+  document.getElementById('blml').style.fill = '#969696'
+  document.getElementById('bins').style.fill = '#969696'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-purple'){
-  document.getElementById('brua-label').style.background = 'purple'
-  document.getElementById("brua-title").innerHTML = "Purple";
-  document.getElementById('back-left-lower-arm').style.fill = 'purple'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-navy'){
+  document.getElementById('blml-label').style.background = '#152c91'
+  document.getElementById("blml-title").innerHTML = "Navy";
+  document.getElementById('blml').style.fill = '#152c91'
+  document.getElementById('bins').style.fill = '#152c91'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-darkGreen'){
-  document.getElementById('brua-label').style.background = 'Green'
-  document.getElementById("brua-title").innerHTML = "Green";
-  document.getElementById('back-left-lower-arm').style.fill = 'Green'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-purple'){
+  document.getElementById('blml-label').style.background = 'purple'
+  document.getElementById("blml-title").innerHTML = "Purple";
+  document.getElementById('blml').style.fill = 'purple'
+  document.getElementById('bins').style.fill = 'purple'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-darkGrey'){
-  document.getElementById('brua-label').style.background = '#494949'
-  document.getElementById("brua-title").innerHTML = "Dark Grey";
-  document.getElementById('back-left-lower-arm').style.fill = '#494949'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-darkGreen'){
+  document.getElementById('blml-label').style.background = 'Green'
+  document.getElementById("blml-title").innerHTML = "Green";
+  document.getElementById('blml').style.fill = 'Green'
+  document.getElementById('bins').style.fill = 'Green'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-blue'){
-  document.getElementById('brua-label').style.background = 'blue'
-  document.getElementById("brua-title").innerHTML = "Blue";
-  document.getElementById('back-left-lower-arm').style.fill = 'blue'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-darkGrey'){
+  document.getElementById('blml-label').style.background = '#494949'
+  document.getElementById("blml-title").innerHTML = "Dark Grey";
+  document.getElementById('blml').style.fill = '#494949'
+  document.getElementById('bins').style.fill = '#494949'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-lime'){
-  document.getElementById('brua-label').style.background = '#09b600'
-  document.getElementById("brua-title").innerHTML = "Lime";
-  document.getElementById('back-left-lower-arm').style.fill = '#09b600'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-blue'){
+  document.getElementById('blml-label').style.background = 'blue'
+  document.getElementById("blml-title").innerHTML = "Blue";
+  document.getElementById('blml').style.fill = 'blue'
+  document.getElementById('bins').style.fill = 'blue'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-white'){
-  document.getElementById('brua-label').style.background = 'White'
-  document.getElementById("brua-title").innerHTML = "White";
-  document.getElementById('back-left-lower-arm').style.fill = 'White'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-lime'){
+  document.getElementById('blml-label').style.background = '#09b600'
+  document.getElementById("blml-title").innerHTML = "Lime";
+  document.getElementById('blml').style.fill = '#09b600'
+  document.getElementById('bins').style.fill = '#09b600'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-black'){
-  document.getElementById('brua-label').style.background = 'Black'
-  document.getElementById("brua-title").innerHTML = "Black";
-  document.getElementById('back-left-lower-arm').style.fill = 'Black'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-white'){
+  document.getElementById('blml-label').style.background = 'White'
+  document.getElementById("blml-title").innerHTML = "White";
+  document.getElementById('blml').style.fill = 'White'
+  document.getElementById('bins').style.fill = 'White'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-teal'){
-  document.getElementById('brua-label').style.background = '#00b692'
-  document.getElementById("brua-title").innerHTML = "Teal";
-  document.getElementById('back-left-lower-arm').style.fill = '#00b692'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'blml-black'){
+  document.getElementById('blml-label').style.background = 'Black'
+  document.getElementById("blml-title").innerHTML = "Black";
+  document.getElementById('blml').style.fill = 'Black'
+  document.getElementById('bins').style.fill = 'Black'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'blml-teal'){
+  document.getElementById('blml-label').style.background = '#00b692'
+  document.getElementById("blml-title").innerHTML = "Teal";
+  document.getElementById('blml').style.fill = '#00b692'
+  document.getElementById('bins').style.fill = '#00b692'
+  document.getElementById('color-picker-dropdown-blml').style.display = 'none'
   dropdownCtrl = true
 }

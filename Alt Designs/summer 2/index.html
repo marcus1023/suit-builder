@@ -12,43 +12,92 @@
 <body>
   <main>
     <section id="price-banner-wrap" class="price-banner-wrap">
-      <h2>Price: $248 (AUD)</h2>
+  <h2>Price: $368 (AUD)</h2>
+</section>
+<section id="pop-confirm-wrap" class="pop-confirm-wrap">
+  <img id="blue-check-mark" src="//d2beia7gtp5yjy.cloudfront.net/cdn_image/df/a3d5a/33250085/22275/landing/v999/06mil/blue-check-mark.png" />
+  <div class="pop-confirm-info">
+    <h4>Suit Design Confirmation</h4>
+    <p>Please watch this video tutorial on how to measure for your suit dementions before confirming your order. By clicking confirm you acknolage you have watched the video and all your measurements are correct</p>
+  <a onclick="goToVideo()"><div class="vid-btn">Watch Video</div></a>
+  </div>
+  <p id="pop-confirm-wrap-p">Be sure all the details on the color, size, and fabric of your suit are correct before clicking the confirm and pay button</p>
+  <div class="pop-confirm-btns">
+    <div class="pop-confirm-btn vid-btn" onclick="videoConfirm()">
+      Confirm Video Watched
+    </div>
+    <div class="pop-confirm-btn vid-btn" onclick="openStripeForm(368, 'Summer One')" id="pay-for-suit-btn" onmouseout="mouseOut()" onmouseover="mouseOver()" >Pay for Suit </div>
+    <section id="stripe-form-shade">
     </section>
-    <section id="pop-confirm-wrap" class="pop-confirm-wrap" >
-      <img id="blue-check-mark" src="//d2beia7gtp5yjy.cloudfront.net/cdn_image/df/a3d5a/33250085/22275/landing/v999/06mil/blue-check-mark.png" />
-      <div class="pop-confirm-info">
-        <h4>Suit Design Confirmation</h4>
-        <p>Please watch this video tutorial on how to measure for your suit dementions before confirming your order. By clicking confirm you acknolage you have watched the video and all your measurements are correct</p>
-      <a onclick="goToVideo()"><div class="vid-btn">Watch Video</div></a>
+    <section id="stripe-form">
+      <div id="secure-payment-img">
+        <svg id="secure-payment-img-in" fill="#50aaed"data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2149.18 1152.87"><title>Untitled-8</title><g id="WU5bnU.tif"><path d="M948.9-416.68c84.28,20.77,129.52,78.36,143.65,160.22,15.61,90.38-25.75,189.74-146.69,218.39-24.66,5.84-49.78,9.15-74.51,3.2-26.51-6.37-48,2.39-65.26,20.14-29.26,30-56.51,62-84.82,93-6.94,7.59-4.37,11.74,3.57,15.85,40.77,21.1,82.93,37.38,129.6,38.64,81.82,2.22,162-5.41,237.71-39.69,7.33-3.32,14.86-4.47,21,2.11,6.31,6.75,3.39,14.2.26,21.24-5.35,12-13.3,21.37-25.28,27.86-70.26,38.1-145.44,51.69-224.64,46.74A659,659,0,0,1,758,176.28c-31-7-60.68-17.39-87.68-34-11.5-7.09-19.93-6.18-31.9-.58-127.81,59.85-257.95,66.94-389.73,13.74-19.62-7.92-40.83-15.67-50-38.14-3.31-8.08-8.34-16.63-.75-24.37s16-3.21,24.31.13c91.33,36.73,185.55,49.24,282.76,31.12,27.55-5.14,53.25-17,78.25-29.86,8.36-4.3,11.69-8.46,3.89-17C561.18,48.87,536.17,19.61,510-8.6c-19-20.45-41.92-29.2-70.88-24.85-77.39,11.64-160.77-26.06-196.46-87.11-41-70.1-34.63-160.61,13.46-226.16,29.14-39.72,68.36-60.31,115-70h45.52c3.91,1.08,7.77,2.35,11.73,3.2,119.14,25.59,187,125.46,168.45,246.74-3.12,20.36-12.45,38.82-14.91,59.24-6.17,51.2,15.69,91.88,47.91,128.56,24.33,27.71,25,27.82,49.26.57,43-48.19,66.43-101.36,40.18-166.49-2.37-5.87-3.1-12.42-4.37-18.7-17-84,19.42-198.5,124.36-238.93,14.09-5.43,28.71-9.49,43.08-14.19ZM528-220.19c.3-68.76-61.25-128.79-132.16-128.92C330.27-349.24,281.23-300,281.15-234c-.08,73.14,51.14,127.64,119.94,127.62C474.44-106.37,527.75-154.18,528-220.19Zm500.88-13.56c.34-68.8-45.17-115.77-112.52-116.12-71.22-.38-133.39,57.73-134.08,125.3C781.63-158.27,834.46-109.5,907.55-109,979.31-108.41,1028.55-159,1028.91-233.75Z" transform="translate(372.69 416.68)"/><path d="M627.79,538.85q0,83.13,0,166.25c0,21.83-2,23.7-24.27,23.84-19.25.12-38.5-.17-57.75,0-12.35.12-18.21-5.36-18-18,.29-19.83-.42-39.68.17-59.49.37-12.25-3.34-18.23-16.71-18.18q-129.5.47-259,0c-12,0-16.67,4.73-16.32,16.71.57,19.82-.37,39.68.29,59.49.44,13.22-4.41,19.59-18,19.4-21.58-.3-43.17-.1-64.75-.07-10.09,0-17.52-3.47-17.35-14.84,1-72.26-5.64-144.85,3-216.72,8.43-70.17,51.9-116.8,113.68-147,40.42-19.76,83.72-28.45,128.73-28.42,62.42,0,124.84-.09,187.25,0,42.82.08,59.1,16.57,59.12,59.39Q627.82,460.09,627.79,538.85Zm-246.53,7.66c42.54,0,85.09-.41,127.62.23,14.5.22,19.42-5.06,19.09-19.44q-1.16-50.67,0-101.38c.35-14.39-4.39-19.39-19-19.13-42.53.77-85.08.16-127.61.37a201.39,201.39,0,0,0-73.33,14.32c-48,18.93-71,53.2-72.31,104.75-.39,15,4,20.87,19.62,20.56C297.34,546,339.31,546.51,381.27,546.51Z" transform="translate(372.69 416.68)"/><path d="M1472.19,729c-53.69,0-107.38.09-161.07,0-20.63-.05-22.8-2.42-23-23.45-.14-14,.37-28-.1-42s5.6-20.06,19.8-19.9c36.18.41,72.36.11,108.54.1q100.67,0,201.33,0c6.42,0,12.85.13,19.25-.29,23.09-1.49,38.16-15,39.05-34.7.94-20.62-11.61-35.23-34.45-39.18-7.41-1.28-15.1-1.3-22.66-1.31-64.19-.11-128.41.88-192.57-.44-46-.95-87.64-15.56-117.69-52.5C1263.13,459.3,1282.29,377,1348,342.61c25.2-13.18,52.2-20.47,80.68-20.55q140.06-.39,280.12-.08c21.66,0,24.11,2.68,24.44,24.15.19,12.25.15,24.51,0,36.76-.23,22-2.14,24.08-24,24.1q-130.43.12-260.86,0c-7,0-14-.11-21,.22-27.83,1.28-42.65,14.79-42.55,38.56.1,22.13,15.65,36.14,42.54,36.41,50.18.51,100.38,0,150.56.33,27.95.21,56.09-2.62,83.76,3.49,49.79,11,91,33.32,109,85,15.91,45.51-2.15,100-42.12,127.11-30.34,20.61-64.14,30.14-100.62,30.78-1.17,0-2.33,0-3.5,0Z" transform="translate(372.69 416.68)"/><path d="M973.62,317.25c29.57,1.5,66-3.62,101.71,4.07,61.45,13.22,112.47,41.46,141.55,100.46a140.83,140.83,0,0,1,14.22,53.76c2.48,38.45,4.72,77.1-2,115.16-8.72,49.51-37.47,86-80.21,111.35-33.16,19.64-69.29,30.75-108,31.6-62.33,1.37-125.08,7.07-186.72-5C792.38,716.51,742.63,685.35,714.49,626a133,133,0,0,1-12.8-48.78c-2.54-39.59-5.33-79.53,2.24-118.62,11.17-57.71,47.8-95.92,100.07-120.08a224.3,224.3,0,0,1,96.62-21.25C922.79,317.37,945,317.25,973.62,317.25ZM966.43,403q0,.14,0,.28c-26.21,0-52.53-1.46-78.62.3-54.35,3.68-85.64,38.18-85.78,92.2,0,19.81,1.21,39.72-.24,59.42-4,55,37,86.13,80.86,92.07,34.3,4.65,68.66,1.82,103,2.48,22.69.43,45.41,1,68-3,42.69-7.4,80.52-37.57,77.55-89.85-1.12-19.75-.12-39.62-.19-59.43-.19-56.88-32-91-89.42-94.29C1016.61,401.81,991.49,403,966.43,403Z" transform="translate(372.69 416.68)"/><path d="M-97.7,728.94c-49,0-98,1-147-.34-42.17-1.15-80.52-13.52-107.79-48.61-13.7-17.63-19.67-38-19.56-60.41.28-57.18,2.19-114.45-.45-171.51-3.55-76.77,50.17-123.15,115.09-124.91,105.52-2.87,211.18-1,316.78-1.11,12.37,0,18.07,6.09,18,18.35-.14,15.17-.49,30.36.21,45.5.73,16-6.49,21.46-22,21.33-60.67-.5-121.36-.2-182-.19-37.34,0-74.68-.16-112,.08-26.69.17-33.5,7-33.54,32.91q-.13,85.77,0,171.53c0,25.91,5.81,31.95,32,32q145.28.27,290.56.11c25.57,0,26.86,1.35,27,26.54.06,12.25-.62,24.54.14,36.75,1.06,17-6.68,22.43-23,22.23C3.82,728.57-46.94,729-97.7,728.94Z" transform="translate(372.69 416.68)"/></g></svg>
+        <span>Secure Payment</span>
       </div>
-      <p id="pop-confirm-wrap-p">Be sure all the details on the color, size, and fabric of your suit are correct before clicking the confirm and pay button</p>
-      <div class="pop-confirm-btns">
-        <div class="pop-confirm-btn vid-btn" onclick="videoConfirm()">
-          Confirm Video Watched
-        </div>
-        <div class="pop-confirm-btn vid-btn" onclick="payForSuit()" id="pay-for-suit-btn" onmouseout="mouseOut()" onmouseover="mouseOver()" >
-          Confirm suit details and Pay
-        </div>
+      <div id="payment-form-exit" onclick="hideStripeForm()">x</div>
+      <div id="payment-form-stripe">Powered By <span>Stripe!</span></div>
+      <div id="payment-headline">
+        <span>Payment of: $ </span>
+        <span id="payment-confirm"></span>
+        <span> for a custom Designed: </span>
+        <span id="type-confirm"></span>
       </div>
+      <form method="post" id="payment-form">
+
+        <div class="form-row">
+          <label for="card-element">
+            Credit or debit card
+          </label>
+          <div id="card-element">
+            <!-- a Stripe Element will be inserted here. -->
+          </div>
+
+          <!-- Used to display form errors -->
+          <div id="card-errors" role="alert"></div>
+        </div>
+
+        <button>Submit Payment</button>
+      </form>
     </section>
-    <section class="popup-confirm-section" id="popup-confirm-section" onclick="hideConfirmPop()"></section>
-    <section class="admin-color-control">
-      <p  id="admin-aqua">{{#first main}}{{aqua}}{{/first}}</p>
-      <p  id="admin-ngreen">{{#first main}}{{ngreen}}{{/first}}</p>
-      <p  id="admin-hpink">{{#first main}}{{hpink}}{{/first}}</p>
-      <p  id="admin-yellow">{{#first main}}{{yellow}}{{/first}}</p>
-      <p  id="admin-maroon">{{#first main}}{{maroon}}{{/first}}</p>
-      <p  id="admin-grey">{{#first main}}{{grey}}{{/first}}</p>
-      <p  id="admin-navy">{{#first main}}{{navy}}{{/first}}</p>
-      <p  id="admin-purple">{{#first main}}{{purple}}{{/first}}</p>
-      <p  id="admin-darkGreen">{{#first main}}{{darkGreen}}{{/first}}</p>
-      <p  id="admin-darkGrey">{{#first main}}{{darkGrey}}{{/first}}</p>
-      <p  id="admin-blue">{{#first main}}{{blue}}{{/first}}</p>
-      <p  id="admin-lime">{{#first main}}{{lime}}{{/first}}</p>
-      <p  id="admin-white">{{#first main}}{{white}}{{/first}}</p>
-      <p  id="admin-black">{{#first main}}{{black}}{{/first}}</p>
-      <p  id="admin-teal">{{#first main}}{{teal}}{{/first}}</p>
-   </section>
+  </div>
+</section>
+<section id="loading-payment">
+  <div id="payment-load-animation">
+    <div id="secure-payment-img">
+      <span id="thanks-for-choosing">Thanks for choosing CAOS</span>
+    </div>
+    <p>Processing your payment</p>
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+</section>
+<section class="popup-confirm-section" id="popup-confirm-section" onclick="hideConfirmPop()"></section>
+<section class="admin-color-control">
+  <p  id="admin-aqua">{{#first main}}{{aqua}}{{/first}}</p>
+  <p  id="admin-ngreen">{{#first main}}{{ngreen}}{{/first}}</p>
+  <p  id="admin-hpink">{{#first main}}{{hpink}}{{/first}}</p>
+  <p  id="admin-yellow">{{#first main}}{{yellow}}{{/first}}</p>
+  <p  id="admin-maroon">{{#first main}}{{maroon}}{{/first}}</p>
+  <p  id="admin-grey">{{#first main}}{{grey}}{{/first}}</p>
+  <p  id="admin-navy">{{#first main}}{{navy}}{{/first}}</p>
+  <p  id="admin-purple">{{#first main}}{{purple}}{{/first}}</p>
+  <p  id="admin-darkGreen">{{#first main}}{{darkGreen}}{{/first}}</p>
+  <p  id="admin-darkGrey">{{#first main}}{{darkGrey}}{{/first}}</p>
+  <p  id="admin-blue">{{#first main}}{{blue}}{{/first}}</p>
+  <p  id="admin-lime">{{#first main}}{{lime}}{{/first}}</p>
+  <p  id="admin-white">{{#first main}}{{white}}{{/first}}</p>
+  <p  id="admin-black">{{#first main}}{{black}}{{/first}}</p>
+  <p  id="admin-teal">{{#first main}}{{teal}}{{/first}}</p>
+</section>
 <section class="build-full">
       <h1>Caos Suit Designer</h1>
       <p id="build-wrapp">Designer for the Summer Two Suit</p>
@@ -1090,7 +1139,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             </div>
             <div id="color-single-lining" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdownFront('line')">
-                <h4>lineing</h4>
+                <h4>Stitching</h4>
                 <div id="line-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
                 <p id="line-title">Select</p>
                 <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
@@ -1231,6 +1280,79 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
               </div>
             </div>
             <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('bins')">
+                <h4>Lining</h4>
+                <div id="bins-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="bins-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-bins" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-bins">Select Color</p>
+                <div onclick="colorPickerSelectBack('bins-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-grey')" class="acc-grey color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-navy')" class="acc-navy color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-purple')" class="acc-purple color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-darkGreen')" class="acc-darkGreen color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-darkGrey')" class="acc-darkGrey color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-blue')" class="acc-blue color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-lime')" class="acc-lime color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-white')" class="acc-white color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-black')" class="acc-black color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bins-teal')" class="acc-teal color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="color-single-lining" class="color-single">
               <div class="color-single-wrap" onclick="colorPickerDropdownFront('fc')">
                 <h4>Collar</h4>
                 <div id="fc-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
@@ -1306,74 +1428,1295 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
 
           </div>
           <div id="color-picker-colors-back" class="color-picker-colors">
+
             <div id="color-single-lining" class="color-single">
-              <div class="color-single-wrap" onclick="colorPickerDropdownBack('b')">
-                <h4>Back</h4>
-                <div id="b-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
-                <p id="b-title">Select</p>
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blla')">
+                <h4>Back Left Arm</h4>
+                <div id="blla-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blla-title">Select</p>
                 <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
               </div>
-              <div id="color-picker-dropdown-b" class="picker-dropdown right-armdropdown">
+              <div id="color-picker-dropdown-blla" class="picker-dropdown left-armdropdown">
                 <p class="picker-dropdown-p">Select Color</p>
-                <div onclick="colorPickerSelectBack('b-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: aqua"></div>
                   <p>Auqa</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: #53ef4b"></div>
                   <p>Neon Green</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: pink"></div>
                   <p>Hot Pink</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: yellow"></div>
                   <p>Yellow</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: maroon"></div>
                   <p>Maroon</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-grey')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blla-grey')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: darkGrey"></div>
                   <p>Grey</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-navy')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-navy')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: Navy"></div>
                   <p>Navy</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-purple')" class="color-single color-single-dropdown">
-                  <div class="color-single-display" style="background: Purplxe"></div>
+                <div onclick="colorPickerSelectBack('blla-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
                   <p>Purple</p>
                 </div>
-                <div onclick="colorPickerSelect('b-darkGreen')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-darkGreen')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: DarkGreen"></div>
                   <p>Dark Green</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-darkGrey')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-darkGrey')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: #393939"></div>
                   <p>Dark Grey</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-blue')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-blue')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: Blue"></div>
                   <p>Blue</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-lime')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-lime')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: #a2e978"></div>
                   <p>Lime</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-white')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-white')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: White"></div>
                   <p>White</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-black')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-black')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: Black"></div>
                   <p>Black</p>
                 </div>
-                <div onclick="colorPickerSelectBack('b-teal')" class="color-single color-single-dropdown">
+                <div onclick="colorPickerSelectBack('blla-teal')" class="color-single color-single-dropdown">
                   <div class="color-single-display" style="background: Teal"></div>
                   <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brla')">
+                <h4>Back Right Arm</h4>
+                <div id="brla-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brla-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brla" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brla-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brla-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <!-- <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blua')">
+                <h4>Back Left Upper Arm</h4>
+                <div id="blua-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blua-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blua" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blua-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blua-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brua')">
+                <h4>Back Right Upper Arm</h4>
+                <div id="brua-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brua-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brua" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brua-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brua-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div> -->
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blsh')">
+                <h4>Back Left Sholder</h4>
+                <div id="blsh-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blsh-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blsh" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blsh-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blsh-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brsh')">
+                <h4>Back Right Sholder</h4>
+                <div id="brsh-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brsh-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brsh" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brsh-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brsh-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('bleb')">
+                <h4>Back Left Elbow</h4>
+                <div id="bleb-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="bleb-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-bleb" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('bleb-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('bleb-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('breb')">
+                <h4>Back Right Elbow</h4>
+                <div id="breb-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="breb-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-breb" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('breb-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('breb-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blul')">
+                <h4>Back Left Crotch</h4>
+                <div id="blul-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blul-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blul" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blul-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blul-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brul')">
+                <h4>Back Right Crotch</h4>
+                <div id="brul-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brul-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brul" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brul-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brul-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blml')">
+                <h4>Back Left Upper Leg</h4>
+                <div id="blml-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blml-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blml" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blml-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blml-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brml')">
+                <h4>Back Right Upper Leg</h4>
+                <div id="brml-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brml-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brml" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brml-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brml-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blly')">
+                <h4>Back Left Middle Leg</h4>
+                <div id="blly-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blly-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blly" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blly-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blly-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brly')">
+                <h4>Back Right Middle Leg</h4>
+                <div id="brly-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brly-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brly" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brly-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brly-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('blll')">
+                <h4>Back Left Lower Leg</h4>
+                <div id="blll-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="blll-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-blll" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('blll-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('blll-gCamo')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: url('http://res.cloudinary.com/devmountain-discover/image/upload/v1496952219/green-camo1_auzzel.png')"></div>
+                  <p>Green Camo</p>
+                </div>
+              </div>
+            </div>
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('brll')">
+                <h4>Back Right Lower Leg</h4>
+                <div id="brll-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="brll-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-brll" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('brll-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('brll-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+<!-- bester -->
+            <div id="color-single-lining" class="color-single">
+              <div class="color-single-wrap" onclick="colorPickerDropdownBack('back')">
+                <h4>Back</h4>
+                <div id="back-label" class="color-single-display" style="background: rgba(0,0,0, .0)"></div>
+                <p id="back-title">Select</p>
+                <svg id="down-chevron" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.65 52.17"><title>back-right-wing</title><g id="uEeni0.tif"><path d="M-91-55c.6.69,1.17,1.41,1.81,2.05,12.3,12.31,24.63,24.58,36.87,37,1.62,1.64,2.52,1.63,4.14,0,12.24-12.37,24.57-24.64,36.87-37,.64-.64,1.21-1.37,1.81-2.05H-8c.9,1,1.77,2,2.69,2.94,2.21,2.27,2.23,2.38,0,4.58q-9.79,9.81-19.6,19.6l-23,23c-2.42,2.41-2.43,2.41-4.91-.06Q-73.66-25.91-94.59-46.83c-.76-.76-1.6-1.45-2.41-2.17,0-2-.78-4.78.22-5.78S-93-55-91-55Z" transform="translate(97.29 55.29)"/></g></svg>
+              </div>
+              <div id="color-picker-dropdown-back" class="picker-dropdown left-armdropdown">
+                <p class="picker-dropdown-p">Select Color</p>
+                <div onclick="colorPickerSelectBack('back-aqua')" class="acc-aqua color-single color-single-dropdown"   class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: aqua"></div>
+                  <p>Auqa</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-neon-green')" class="acc-ngreen color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #53ef4b"></div>
+                  <p>Neon Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-hot-pink')" class="acc-hpink color-single color-single-dropdown"  class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: pink"></div>
+                  <p>Hot Pink</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-yellow')" class="acc-yellow color-single color-single-dropdown"    class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: yellow"></div>
+                  <p>Yellow</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-maroon')" class="acc-maroon color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: maroon"></div>
+                  <p>Maroon</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-red')" class="acc-red color-single color-single-dropdown" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: red"></div>
+                  <p>Red</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-grey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: darkGrey"></div>
+                  <p>Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-navy')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Navy"></div>
+                  <p>Navy</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-purple')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: purple"></div>
+                  <p>Purple</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-darkGreen')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: DarkGreen"></div>
+                  <p>Dark Green</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-darkGrey')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #393939"></div>
+                  <p>Dark Grey</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-blue')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Blue"></div>
+                  <p>Blue</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-lime')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: #a2e978"></div>
+                  <p>Lime</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-white')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: White"></div>
+                  <p>White</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-black')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Black"></div>
+                  <p>Black</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-teal')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: Teal"></div>
+                  <p>Teal</p>
+                </div>
+                <div onclick="colorPickerSelectBack('back-backCam1')" class="color-single color-single-dropdown">
+                  <div class="color-single-display" style="background: url('http://res.cloudinary.com/devmountain-discover/image/upload/v1496952219/green-camo1_auzzel.png')"></div>
+                  <p>Green Camo</p>
                 </div>
               </div>
             </div>
@@ -1381,7 +2724,7 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
         </section>
         <section class="suit-display">
           <section class="suit-display-wrapper" id="front-suit-display">
-            <svg id="front-lineing" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1818 3461.57"><title>CAOS suit example</title><g id="_06dln2.tif" data-name="06dln2.tif"><path d="M-408,30c2.16-2.25,3.09-5,3.76-8,5.17-23.05,14.86-44.15,28-63.66A48.29,48.29,0,0,0-368.88-59c12.26-57.85,30.69-113.8,51.5-169.08,17.37-46.15,34.07-92.56,50.56-139,34.67-97.67,67-196.15,99.53-294.54,5.13-15.5,9.9-31.12,15-46.61,1.71-5.14,2.12-10.43,2.8-15.7,3.86-30,14.87-57.28,31.11-82.57,22.46-35,49.82-65.73,80.65-93.57,19.54-17.65,39.56-34.68,59.82-51.47,13.4-11.11,28-20.4,42.74-29.51,51.56-31.94,104.32-61.83,157.4-91.18,19.53-10.8,39-21.64,58.68-32.26,4.55-2.46,7-5.66,7.35-10.89,1-13.27,2.35-26.52,3.55-39.78,1.62-17.93,3.87-35.77,8.24-53.26a119.63,119.63,0,0,1,5-15.17c2.52-6.35,7.06-9.68,14.26-10.69,84.45-11.85,168.71-24.83,252.45-41.06,47.77-9.25,95.49-18.65,141.58-34.76,8.42-2.94,10.68-1.81,14.31,7.26,11.93,29.77,27,57.94,42.75,85.82a38.67,38.67,0,0,0,19.37,17.53c36.35,15.82,72.42,32.3,108.52,48.68,18.85,8.55,38.75,14.29,58,21.83,50.16,19.67,98.15,43.33,140.94,76.5,25.43,19.71,48,42.21,65.48,69.49a37,37,0,0,0,8.35,9.83c54.55,42.13,91.15,97.3,116.44,160.64,14.4,36.06,23.73,73.51,30.46,111.67,8.11,45.92,16,91.89,22.86,138,6.22,41.83,12.43,83.66,17.53,125.65,4.94,40.65,10.31,81.25,15.08,121.93,3.92,33.39,7.23,66.85,10.83,100.28,3.06,28.46,6.24,56.91,9.19,85.39,2.4,23.18,4.69,46.37,6.7,69.58,1.21,14,4.13,27.67,6.94,41.35,1.68,8.2-.46,16.75,2.89,24.68V26a20.75,20.75,0,0,0-1.73,8.75C1408,54.17,1402,72,1393.65,89.3a19.58,19.58,0,0,1-13.21,11c-41.64,12-83.39,23.5-125.58,33.38-33.41,7.82-66.9,15.42-101.05,19.3-14.48,1.64-28.91,4.13-43.75,2-11.18-1.63-20-6.67-28.19-13.81-15.78-13.75-25.5-31.48-33.19-50.48-6.8-16.79-10.43-34.44-12.49-52.36-.79-6.88.4-14-.09-20.91-2.24-31.57-6.52-62.92-10.65-94.28-6.22-47.24-13.8-94.25-23.65-140.89C996.56-242.57,990-267,982.39-291.18a13.8,13.8,0,0,0-.64-1.89c-1.24-2.57-1.21-6.5-4.94-6.72-3-.17-4.09,3.08-5.66,5.14-20.59,27-35.52,57.07-47.43,88.72-16.4,43.58-26.28,88.67-31.93,134.84a816,816,0,0,0-5.28,129.64,1157.36,1157.36,0,0,0,10.42,115.34c4.69,34,8.83,68,13.34,102,4.16,31.36,8.48,62.7,12.75,94q8.63,63.35,17.31,126.7c5.52,39.92,11.31,79.8,16.74,119.72,6,44.21,12.86,88.32,17.25,132.74,2.66,26.88,6.91,53.3,14.5,79.38a595.8,595.8,0,0,1,20.85,107.79c.43,4.3.42,8.65.42,13,0,112.65.17,225.29-.32,337.93q-.19,42.94-2.08,85.89c-1.48,34.56-3.31,69.13-7,103.6-2.88,26.79-3.72,53.78-4.83,80.74-2,47.59-3.07,95.19-4.37,142.79-.63,23-.55,46-1.48,68.92-2,48.28-1.54,96.6-2.26,144.9-.18,12-1.32,23.92-1.6,35.91-.64,27.69,1.83,55.22,3.45,82.8.9,15.29.44,30.65.73,46,.11,5.76-3.24,9-7.46,12.14-15.72,11.56-33,20-51.39,26.38-33.21,11.52-67.5,18.2-102.24,22.85-31.37,4.2-62.9,6.52-94.49,8.13-3,.15-6,.28-8.74,1.78H594c-4-2.16-8.43-1.67-12.73-1.83-7-.25-13.95-.56-20.93-1.25-8-.8-12.71-5.06-15.89-11.85-4.88-10.4-6.71-21.6-8.41-32.8-2.06-13.54-2-27.2-2.44-40.86-.61-19-2-37.89-3.22-56.81-.89-13.62-.69-27.27-2-40.91-1.7-17.88-1.62-35.92-2.61-53.87-1.71-30.91-3.66-61.8-5.5-92.71-.75-12.63-1-25.27-1.91-37.91-2.16-29.21-2.53-58.56-4.77-87.76-2.5-32.52-3-65.17-7.06-97.6-2.6-20.79-3.17-41.82-4.95-62.72-4.07-47.81-9.89-95.36-19.61-142.42-10.32-49.92-19.91-100-29.75-150a45.87,45.87,0,0,0-4.11-12.26c-12.63-24.62-24.75-49.48-34.63-75.37-.69-1.8-1.15-3.87-3.37-4.9-3.17.49-3.6,3.49-4.66,5.74-24.59,52.53-47.68,105.65-67.24,160.33-12.79,35.75-26.93,71.06-41.6,106.09-15.92,38-27.05,77.32-35.86,117.41-7.22,32.87-14.05,65.83-19.28,99.08a223.92,223.92,0,0,0-2.89,33.8c-.09,25.31-.44,50.6.9,75.93,1.44,27.26-.25,54.69,1,82,1.6,33.6.16,67.32,3.74,100.81,1.48,13.89,4.32,27.63,6.6,41.43,3.81,23.13,3.79,46.43,3.22,69.77-.26,10.45-5.32,18.09-12.71,25-35.54,33.24-76.92,55.92-123.79,68.55-34.57,9.32-69.8,13.64-105.66,14.31-74,1.39-145.89-11.23-216.74-31.52-10.86-3.11-18-9-22.61-19.18-5.68-12.6-8.73-25.79-10.74-39.37-2.35-15.91-2.22-31.9-1.9-47.88.34-16.71-1.74-33.24-3.29-49.8-1-10.61-1.1-21.26-2.22-31.88-1.61-15.21-1.87-30.57-2.59-45.86q-2.84-60.36-5.57-120.72c-.17-3.66-.22-7.33-.22-11,0-70-.49-140,.15-210,.34-37.61,2.44-75.21,4-112.81,1-23.61,2.46-47.21,3.79-70.8,1.79-31.57,4.3-63.12,5.28-94.71.71-23,2.43-45.9,2.58-68.89.13-20,1.8-39.92,2.52-59.89,1-27.64,5.22-55,9.9-82.27,5.35-31.19,11.14-62.31,16.56-93.49,1.38-7.95,4.16-15.39,6.78-23,19.8-57.32,39.19-114.79,59.37-172,5.41-15.34,13.1-29.89,19.73-44.8C-95.14,653.2-69.11,589-47.58,523c11.79-36.12,22.39-72.62,28.34-110.27,2.7-17.11,3.95-34.37,5.4-51.63,5-59.87,4.26-119.85,3.37-179.8-.58-38.92-2.21-77.86-5.14-116.73C-17.09,45-18.11,25.43-20.27,6.26c-1.55-1-2.35-.32-2.76.53C-37.14,35.86-53,64-65.84,93.77c-3.45,8-5.27,16.49-7.79,24.77C-84.82,155.39-106,183.9-142,200c-6.7,3-13,3.75-20.17,1.06-58.73-21.88-117.12-44.53-173.17-72.77a420.76,420.76,0,0,1-39.81-23,120.48,120.48,0,0,1-17-13.93,38.52,38.52,0,0,1-11.51-19.49c-.84-3.58-1.66-7.17-4.38-9.92ZM268.08,578.86c-.46,29.42,1.22,66.3,3.72,103.21q3.44,50.81,8.12,101.49c2.4,25.53,5.23,51,8.66,76.4,1.51,11.2,3,22.46,8.05,32.87,9.14,18.91,19.4,37.23,29.22,55.78C343,981,362.49,1012.09,378.61,1045q11.86,24.25,24.3,48.21c5.24,10.11,8.21,10.67,16.64,3.86q49.76-40.23,101.65-77.67A1867.54,1867.54,0,0,1,734.82,886.32a1474.89,1474.89,0,0,1,169-77.12c18.36-7,37-13.36,55.47-20,6.91-2.48,10-1.77,8.86-12.51-.83-7.59-1.37-15.24-2.17-22.85-3.72-35.1-8.76-70-13.52-105-5.35-39.26-11-78.48-16.42-117.74-5.76-41.89-11.32-83.82-17-125.71-5-36.29-10.16-72.55-15-108.85-5.12-38.28-9.65-76.64-15-114.89-5.07-36.29-9.38-72.71-10.74-109.26-1.6-42.9-1.61-85.87,3-128.76,4-37.87,10.24-75.24,20.65-111.86,12.93-45.48,30.09-89.27,58.92-127.14,9.27-12.17,9.17-22,4.72-35.36C927.5-444.51,889.67-558.35,849.28-671.33c-23-64.33-46.53-128.45-71.24-192.13C757.67-916,736.47-968.15,712.87-1019.3c-11.73-25.42-24.24-50.48-39.39-74.09-7.61-11.87-8.53-12-20.31-5.07-1.15.67-2.28,1.39-3.43,2-41.15,23.37-82.32,46.75-125.85,65.47-29.94,12.88-61.23,20.71-94,20.79-7.81,0-12.08,3.48-16,9.55a938.22,938.22,0,0,0-82.12,158.67c-20.6,51.1-36.69,103.63-49.5,157.18a1243.74,1243.74,0,0,0-24.3,131.62c-3.21,25.1-6,50.22-8.27,75.43-2.46,27.86-4.76,55.77-5.06,83.67-.62,56.62-1.86,113.24,1.16,169.88,1.06,19.92,2.23,39.88,3,59.85.39,10.6,1.23,21.25,1.87,31.88,2.1,34.48,5.54,68.76,4.28,103.56-1.85,51.22-1.82,102.57.9,153.86,1.39,26.25.36,52.59,2.14,78.88,1.28,18.91,1,37.92,1.71,56.89C261.16,302,262,343.3,264,384.53c.91,18.95.67,37.92,1.67,56.9,1.43,27.24.92,54.58,2.26,81.87C268.72,539.27,268.08,555.3,268.08,578.86ZM407.74-1008.32c-.16-4.39-3.57-4-5.87-4.53-18.73-4-36.66-10-52.72-20.66-4.34-2.89-8.37-3-13.11-.89-14.87,6.72-29.73,13.37-44.1,21.23A487.48,487.48,0,0,0,152.15-898.44C115.43-854.87,86-806.64,62.32-754.83,27.13-677.93,4.66-597.26-9.74-514.19-16.29-476.45-21-438.48-24.3-400.28c-2.43,28.53-4.88,57.08-5.17,85.67C-30-266-31.26-217.36-28.22-168.73c1,16.26,2.08,32.55,2.76,48.85.43,10.29,1.52,20.59,2.89,30.8,4.11,30.69,8.73,61.3,11.18,92.2C-10,20.71-8.79,38.31-7.25,55.87c2.85,32.52,4,65.13,5,97.69,1.3,43.29.28,86.64.67,130,.21,24-1.66,47.92-2.63,71.87-.66,16.26-2.58,32.52-4.78,48.67-6.59,48.44-20.71,95-36.5,141.07-21.09,61.5-45.41,121.75-72.27,181-3.44,7.58-6.91,15.16-10.32,22.76-1,2.15-2.21,4.91,1.3,5.57,6.42,1.2,9,6.32,12.41,10.77,5.31,6.83,10.67,13.67,16.56,20,23.67,25.4,49.72,48.24,76.78,69.92C30,896,83.53,933.37,137.5,970.14c41.31,28.15,83.52,54.93,125.69,81.77,14.33,9.13,28.82,18,43.34,26.84,6.27,3.81,7.23,3.38,11.58-2.08,9.75-12.25,19.24-24.71,29.45-36.56,11.84-13.75,12-11.79,2.33-29.13-20.35-36.33-41-72.51-59.48-109.86a94.61,94.61,0,0,1-8.7-26.48c-5.62-33.52-8.72-67.34-11.92-101.14-1.79-18.88-2.71-37.85-4.63-56.72-2.6-25.51-4.15-51.11-4.94-76.68-.77-24.89-2.55-49.83-.73-74.79,1-13.3-.87-26.6-1.38-39.89-1-26.61.08-53.25-1.92-79.89-1.6-21.22-.3-42.58-2-63.89-1.52-19.22-1.19-38.58-1.9-57.88-1.51-40.91-3-81.84-4-122.77-.78-32.62-2.46-65.23-2.45-97.87,0-19,.6-38-.56-57a499.54,499.54,0,0,1,0-53.83,805.54,805.54,0,0,0-1.94-108.84c-2.5-27.85-3.58-55.79-5.69-83.65-2.39-31.57-2.06-63.21-3.31-94.8-1.09-27.56-.55-55.23.91-82.89,1.47-27.91,2.34-55.85,4.17-83.76,1.95-29.59,5-59.05,8.87-88.42,8.29-63.51,20.52-126.27,38.17-187.88,16.27-56.8,36.64-112.1,62.2-165.43a862.65,862.65,0,0,1,55.7-99.32C405.6-1004.62,406.73-1006.64,407.74-1008.32Zm560.6,428.18c-1.54,34.71,1,70.64,2.3,106.57.46,12.61.84,25.3,2.07,37.87,2.69,27.49,4.27,55.06,7.06,82.54,2.23,21.93,5.83,43.19,12.64,64.36,21.9,68.14,32.06,138.77,41.77,209.42,4.12,30,7.76,60.07,10.59,90.24.91,9.68,2.27,11.54,12.64,9.58,57.93-10.94,115.93-21.51,173.9-32.19l151.33-27.9c9.72-1.79,9.89-1.84,9.27-11.12-.68-10.29-1.62-20.57-2.66-30.84q-4.61-45.19-9.4-90.36c-2.88-27.47-5.64-55-8.71-82.41q-5.38-48.13-11.21-96.2c-4.84-40-9.49-80-14.92-119.91-7.53-55.43-15.56-110.8-25.19-165.92-7.44-42.64-13.52-85.54-25.35-127.33a464.55,464.55,0,0,0-32.63-83.67,358.34,358.34,0,0,0-50.51-75.35c-19.7-22.36-41.45-42.37-67.55-57.21-3.2-1.82-6.45-3.49-10.21-3.83-25.78-2.36-49.65,2.41-70.88,18.15C1044.3-952,1031.64-933.82,1021-914c-19.4,36.3-29.14,75.74-36.74,115.77-5,26.5-8.14,53.27-10.74,80.15-2.57,26.53-3.71,53.11-5,79.68C967.59-619.44,968.35-600.41,968.35-580.14Zm19.54,2111.51s0-1.64,0-3.31c.29-17.32.28-17.35-16.22-12.15-44.82,14.14-90.1,26.65-135.58,38.42-77.12,20-154.71,37.75-234,46.93-24.09,2.79-48.31,4.73-72.63,3.19-10-.63-11.17.75-11.43,11.16s1.53,20.58,2,30.89c.82,17.29,1,34.64,2.62,51.85,1.11,12,1.21,23.94,1.93,35.9,1.84,30.56,4,61.1,5.42,91.67.79,17,1.89,33.91,2.8,50.85.7,13,1,25.94,1.75,38.9,1.84,31.89,3.77,63.77,5.5,95.67.6,11.07,1.26,12.21,12.46,14.12a273.36,273.36,0,0,0,51.72,4.1c24.28-.53,48.58-2,72.75-4.33,32.82-3.12,65.44-8,98-13.41,64.46-10.68,128.27-24.46,191.78-39.71,9.81-2.36,10.55-3.57,10.86-13.64.82-26.29.47-52.58,1.63-78.9,1.8-40.91,0-81.91,2.21-122.87,1.55-29.25.77-58.58,1.71-87.89C984.6,1623.55,985.72,1578.29,987.89,1531.36Zm-1233.5,125.08c.85,21.4-1.14,56.7,1.36,92,1.6,22.55.79,45.23,2,67.87,1.41,26.58,2.65,53.17,4,79.75,1.61,30.92,4.16,61.75,6.49,92.6.61,8.09.86,8.71,9.12,10.6,9.41,2.15,18.91,3.95,28.41,5.66,43.34,7.79,87.07,11.69,131.06,12.88,14.33.39,28.6-.83,42.9-1.52a456.21,456.21,0,0,0,96.55-14.88,304.37,304.37,0,0,0,64.83-25.87c5.5-2.94,8.79-6.36,8.17-13.25-2-22.2-3.77-44.42-5.19-66.66-2.22-34.86-4.69-69.73-5.89-104.64-1-28.61-3.47-57.18-2.64-85.85a72.5,72.5,0,0,0-.24-11c-3.23-26.05-.33-51.86,3.49-77.54,2.26-15.14,5.85-30.07,8.68-45.13,1.15-6.13.25-7.27-5.95-7.08s-12.6,1.48-18.89,1.45c-36-.15-71.89,1.19-107.87-1.27-24.24-1.66-48.46-3.16-72.59-6.11-61.48-7.53-121.51-20.39-177.84-47.29-6.31-3-8.16-2.11-8.1,4.54.13,14.34-1.6,28.59-1.78,42.89C-245.86,1586.59-245.61,1614.58-245.61,1656.44Zm1247.24-534.9h0q0-67.48,0-135c0-2.67.08-5.34-.06-8-.42-7.81-1.73-8.95-9.1-7.14a156.09,156.09,0,0,0-15.29,4.66c-32.94,11.77-66,23.31-98.74,35.52q-91.82,34.23-180.28,76.45c-40.9,19.51-81.25,40.12-120.35,63.1-38.53,22.65-75.8,47.13-110.59,75.29-4.63,3.75-7.35,7.52-5.28,13.62a47.47,47.47,0,0,1,1.15,5.88c11,54.2,22,108.39,31.81,162.81,2.07,11.47,3.93,23,6.18,34.42,1.54,7.83,2.75,8.53,10.73,8.7,6,.13,11.92-1.2,17.88-1.76,49.45-4.62,98.43-12.53,147.24-21.52,65.24-12,129.74-27.33,193.7-44.89Q930.85,1367.2,990,1347c9-3.06,9.76-3.73,9.62-12.67-.51-33.65,2-67.24,2-100.87Q1001.6,1177.52,1001.63,1121.54ZM174,1420.48l0-.33c1.66,0,3.33-.07,5,0,10.89.53,10.83.52,14.49-10.13q33.47-97.35,67-194.68c5.15-15,5.11-15-9.91-20.67-88.06-33.16-173.14-72.83-256.07-117.21A1961.58,1961.58,0,0,1-179.05,972.64a107.8,107.8,0,0,0-13-7.49c-7.67-3.76-8.72-3.28-10.4,5.45-3.14,16.35-5.91,32.77-8.88,49.16-7.56,41.62-14.34,83.35-16.16,125.69-1.09,25.28-1.67,50.57-2.48,75.86-.09,2.66,0,5.34-.26,8-2.65,31.84-2.21,63.86-5.47,95.66-.86,8.38,2.46,13.67,9.73,17.77,16.95,9.55,34.92,16.64,53.37,22.37,67.38,21,136.79,31.84,206.56,40.8,26.41,3.39,52.85,6.52,79.4,8.74C133.62,1416.34,153.81,1418.52,174,1420.48ZM969.19-352.83c1.65-9-1-16.49-1.35-24.09-1-21.61-3-43.17-4.72-64.71-2.83-34.53-3.67-69.13-4.85-103.69-1.61-46.92,0-93.86,3.09-140.76,2.2-32.92,5.29-65.7,10.59-98.25,6.49-39.89,15.76-79.06,31.84-116.36,9-21,20.16-40.74,35.79-57.41,26.08-27.82,58.45-39.71,96.53-35.69,2,.21,4.58,1.94,6.37-1.41-.87-1.26-1.7-2.67-2.72-3.93-20.67-25.74-46-46.29-73.35-64.28-34.09-22.4-70.65-40-108.51-55.14-21-8.41-42.91-14.52-63.56-24-33.89-15.61-68-30.73-102.06-46-9.47-4.24-10.16-4-17.45,3.11-6.91,6.74-13.59,13.72-21.16,19.78C731-1147.5,707-1131.37,682.37-1116c-8.7,5.44-8.92,6-3.13,14.6,18.09,27,32,56.16,45.49,85.52,26.24,57.26,49.54,115.76,72.15,174.55,40.9,106.38,78.51,213.93,115.54,321.7,17.76,51.68,34.64,103.66,52,155.49C965.52-360.71,966.1-357,969.19-352.83ZM-147.22-689.19c-3.3,3.47-3.71,7.24-4.83,10.63-14.52,44-28.66,88.11-43.5,132q-29.94,88.55-60.78,176.8-23.49,67-48.32,133.48C-326-178.78-346.3-121-359.25-60.83c-2.34,10.86-2.54,10.89,6.75,15.59q95,48,190.1,96c10.48,5.28,15.94,3.8,23-5.92,1.37-1.88,2.66-3.84,3.86-5.83C-124.35,20.39-115,.87-106.11-18.91c18.66-41.69,34.68-84.45,51-127.1a46.56,46.56,0,0,0,2.4-26.28C-64-231.86-75.34-291.43-86.09-351.11q-29.14-161.81-57.65-323.73C-144.55-679.39-144.54-684.13-147.22-689.19Zm109.4,546.55,1.31-.06c0-5.31.41-10.65-.07-15.92-2.67-29.54-2-59.2-3.33-88.79-.77-16.94.11-33.92,1.29-50.9,1.25-17.91.9-35.9,1.85-53.88q3.36-63.4,12.24-126.18C-14.09-552.5,2.37-625.14,28-695.6,50.26-757,78.72-815.16,116.9-868.34c24.56-34.21,52-65.89,84.09-93.27,37.51-32,78.46-58.53,123.81-78.13,2.59-1.12,5.94-1.55,7.05-5.79-15.35-13.59-28-29.79-38.52-47.7-2.29-3.91-5.12-4.95-9.11-2.71-1.74,1-3.54,1.86-5.29,2.82-29.73,16.47-59.54,32.77-89.15,49.45-43.84,24.7-87.44,49.79-130,76.6C32-949.59,7.58-927.88-16.93-906.32c-31.36,27.59-60.45,57.29-84.71,91.43-16.93,23.82-30.37,49.33-36.61,78.22a90.26,90.26,0,0,0-.71,36.57c6,31.41,11.29,63,16.9,94.44q20.78,116.58,41.61,233.16,12.27,68.36,24.94,136.66C-49.76-204.75-43.73-173.71-37.82-142.65ZM1001.54,949.52c-.85-8.95-1.41-17.93-2.6-26.83-5.27-39.4-14.79-77.88-25.43-116.1-2.9-10.41-3.52-10.69-13.84-7.38q-2.38.76-4.74,1.58a1478.69,1478.69,0,0,0-163.41,67.58c-29.13,14-57.68,29.18-85.95,44.87-43.14,24-85.08,49.92-126.06,77.37-53.18,35.63-104.35,74-154.1,114.3-14.05,11.38-14.46,11.22-8.33,28.66,9.29,26.45,20.82,52,33.36,77,5.8,11.59,5.89,11.68,15.9,3.64,27.34-21.95,56.48-41.3,86.35-59.55,52.1-31.85,106.44-59.49,161.81-85.14,56.58-26.21,114.23-49.81,172.59-71.73q52-19.52,104.68-36.8C1000.65,958.06,1001.43,957,1001.54,949.52ZM-128.66,765.87a36.69,36.69,0,0,0-3.71,2c-3.22,2.14-4.79,5.4-6,8.94Q-166.5,858-194.63,939.27c-2.59,7.5-2.32,7.78,3.83,12.59,1.83,1.44,3.8,2.71,5.7,4.06,37,26.25,75.41,50.22,114.31,73.51,41.77,25,84.71,47.87,128.15,69.74Q100.62,1121,145,1140.51c37.53,16.49,75.23,32.54,113.71,46.7,9.73,3.58,10.38,3.3,14-6.25,10.17-27.15,20.67-54.16,32.33-80.71,3.57-8.14,3.16-8.94-4.29-13.63-23.12-14.55-46.35-28.93-69.41-43.59-85.5-54.37-169.9-110.38-249.53-173.2C-56.39,839.69-94,808.77-123.32,769.31-124.5,767.72-125.51,765.89-128.66,765.87Zm273.1,918.84c-1.56,32.5,1.55,62.73,2.36,93,.36,13.59,1,27.27,1.87,40.88q2.64,40.84,5.43,81.66c1.3,19.25,2.57,38.51,4,57.75.53,6.94,1.78,7.91,8,5.35,21.27-8.71,42.41-17.76,63.61-26.65,3.82-1.6,5.91-4.24,5.33-8.53-3.05-22.51-1.43-45.21-2.7-67.82-2-34.88-.92-69.9-2.24-104.86-1.14-30.28-.14-60.65-.35-91a196.22,196.22,0,0,1,3-32.78c5.38-33.23,12.26-66.17,19.43-99,5.75-26.38,11.31-52.91,20.79-78.19,24.45-65.2,51.52-129.38,75.19-194.9,14.95-41.38,34.71-80.79,53.37-120.61,3-6.46,3.88-12.28,1.66-19.12A226.45,226.45,0,0,0,388,1084.21c-6.81-13-13.15-26.21-19.78-39.29-4.54-8.95-4.95-8.94-11-1.52-4.65,5.67-9.15,11.47-14.07,16.89a173.1,173.1,0,0,0-31.18,48.53c-8.8,20.52-17.23,41.19-25.07,62.1-25.51,68-47.58,137.26-72.25,205.59-19.82,54.87-35.12,111.19-50.14,167.54C151.95,1590.83,140.54,1637.79,144.44,1684.71Zm853.79-305.49c0-3.72-.1-9.71,0-15.71.15-7.29-.69-8.07-8.08-5.84-10.52,3.18-21,6.57-31.45,9.93a2316,2316,0,0,1-266.18,67.88c-43.83,8.48-87.87,15.63-132.2,20.92-16.19,1.93-32.41,3.63-48.6,5.64-6.62.82-7.34,1.9-7.23,8.22,0,1.66.36,3.31.52,5,1.74,18.22,3.58,36.43,5.19,54.66,1.58,17.9,3.64,35.76,4.45,53.73.37,8.31,2.66,10.3,10.88,11.59a65.13,65.13,0,0,0,9,.57c10.66.18,21.27-.87,31.91-1.39,40.06-1.93,79.46-8.54,118.74-15.83,67.21-12.47,133.47-29.05,199.31-47.34,32.1-8.92,64.14-18.07,95.91-28.15,5.83-1.85,8.75-4.79,9.46-11.06C994,1455.28,996,1418.39,998.23,1379.22Zm-921,176.59v.22c11,0,22,.24,33-.07,10.64-.3,21.3.37,31.95-.95,6.82-.85,10.41-3.67,12.3-10.65,9.48-35.06,19.51-70,29.3-104.93,2.18-7.78,1.5-8.67-6.42-9.3-40.8-3.23-81.55-7-122.23-11.65-46-5.28-91.81-11.93-137.25-20.79-39.58-7.72-78.88-16.77-116.6-31.51a222.77,222.77,0,0,1-30.78-14.32c-4.73-2.74-5.45-2.28-6.67,2.91a41.93,41.93,0,0,0-1.25,7.88c-.52,13.3-1.48,26.61-1.93,39.89-.83,24.29-3.28,48.52-2.67,72.86a59.46,59.46,0,0,1-.88,8.93c-1.24,9.71-.55,11.3,8.06,16,12.93,7,26.61,12.32,40.43,17.22,71.05,25.21,144.94,34.32,219.69,38.15C42.56,1556.57,59.93,1555.81,77.25,1555.81Zm346.85-2625c0,13.65-.12,27.3,2,40.86,1.1,7.09,1.79,8.12,8.6,8.22a124.8,124.8,0,0,0,15.95-.72c32.5-3.71,62.89-14.31,92-28.77Q600-1078,655-1110.62c38.12-22.66,75.21-46.79,108.44-76.43,8.71-7.77,9.14-8.63,3.49-18.22-16-27.29-31.29-55-43.7-84.19-3.48-8.18-3.68-8.1-11.65-4.35-1.51.71-3,1.47-4.47,2.23-49.93,25.28-99.34,51.55-147.45,80.16-26.61,15.83-53,32-76.52,52.48-16.55,14.42-33.29,28.72-51.86,40.62-3.43,2.2-4.34,5.57-5.07,9.29C423.66-1095.84,424.19-1082.5,424.1-1069.19Zm-91.85-157.5c1.25,4.82,4.53,6.19,7.06,8.16,10.3,8,21.65,14.32,33.06,20.5a88.61,88.61,0,0,1,26.47,22.47,166.62,166.62,0,0,1,21.34,34.81c4.57,9.71,9.76,11.38,18.82,5.27,5.23-3.53,10.05-7.66,15-11.58,19-15.06,36.6-31.91,57.06-45.23,51.12-33.29,104.69-62.25,158.58-90.66,3.09-1.63,6.11-3.39,9.17-5.09C564.57-1260.95,448.77-1244.07,332.25-1226.69ZM298-1121.44c.63,7.45-1.26,14.17,2.2,20.5,18.39,33.61,44.3,58.89,80.56,72.57a127.64,127.64,0,0,0,30.09,7c3.87.46,5.75-.8,5.41-4.83-.14-1.66-.25-3.32-.29-5-.51-24.57-4-49.29.41-73.66,2.42-13.52-.66-24.85-6.88-36.24-3.67-6.72-7.12-13.56-11.59-19.81-9.22-12.87-20-23.88-34.3-31.35-13.87-7.27-27.3-15.31-39.12-25.75a40.8,40.8,0,0,0-4.06-2.9c-3.21-2.2-5.88-1.36-7.28,2a82.59,82.59,0,0,0-4.44,13.23C302.33-1177.61,299.8-1149.13,298-1121.44ZM-47.78-137.06c-5.16,9.57-8,19.78-11.83,29.58C-76.94-62.76-94.4-18.1-116.29,24.66c-5.16,10.08-10.61,20-17.92,28.77-5.78,6.92-5.95,7.25,1.8,11.51,15.17,8.34,30.56,16.28,45.85,24.4,8,4.23,8.34,4.11,12.93-4,16.35-29,30.11-59.41,45.6-88.88A34,34,0,0,0-24.6-27.47c-6.84-33.94-13.33-68-20-101.93C-45.11-131.88-45.08-134.67-47.78-137.06Z" transform="translate(408 1311.57)"/></g></svg>
+            <svg id="front-lineing" fill="black  " data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3570.26 6798.55"><title>flul</title><g id="V2HdMV.tif"><path d="M-84.78,1544.39c-7.72,25.28-14.75,50.77-27,74.46-6.34,12.22-14.76,20.28-28.39,24.14-149.43,42.32-299,84.08-453.25,105.46-19.18,2.66-38.65,3.48-58,4.51-46.77,2.48-80.77-20.62-108.45-55.46-40-50.41-61.47-109.27-66.75-172.12-5.55-66-9.57-132.07-18.42-197.74-20.49-152.13-41.06-304.23-87.25-451.39-1.36-4.32-1.27-9.49-7.07-12.8C-954.18,880-965.79,898.89-976.94,918c-62.34,106.83-95.74,223.34-113.46,344.8-20.93,143.46-19.8,287.29-4.65,431.17,12.5,118.69,29.72,236.8,45.71,355q29.07,215,58.2,429.91c16.83,122.88,34.75,245.62,50.9,368.59,5.5,41.91,11.37,83.86,12.86,126.31.92,26,11.94,50.22,18.71,75.13,29,106.59,47.26,213.93,45.53,325.42-2.17,140,3.65,280.11.73,420.16-2,94.74-.15,189.52-3.25,284.2-3.2,98.1-8.86,196.09-18.93,293.82-4.34,42.08-6.46,84.47-7.51,126.78-2.93,118.81-8.32,237.54-9.16,356.42-.8,113-1.26,226-7,338.81-5.2,102.66,4.18,204.52,8,306.69.91,24.37-8,39.48-27.32,52.51-58.79,39.62-125.07,59.31-193.09,74.55-55.14,12.35-111,20.16-167.26,25.5-2.87.27-5.66,1.48-8.48,2.25h-480.4c-21.85-23.8-28.62-53.67-32.68-84.18-10.63-80-8.38-160.81-13.91-241.17-5-72.16-7.54-144.48-11.5-216.72q-8.3-151.49-17.09-302.95c-2.59-45.8-4.46-91.65-8-137.38-6.21-80.89-13.26-161.71-20.26-242.54-5.68-65.6-11.23-131.21-23.76-196-18.31-94.68-36-189.49-54.62-284.11-10-50.63-19.21-101.25-45.72-147.32-18-31.36-30.78-65.77-45.89-98.83-4.15,1.62-4.25,5.59-5.7,8.66-44.27,93.64-85.58,188.42-120.44,286.12q-39.71,111.3-86.36,220.1c-45.82,106.89-69.57,219.56-92.19,332.62-11.52,57.58-22.43,115.09-22.25,174.62.49,156.56,3.87,313.05,8.27,469.53.44,15.79,2.92,31.65,5.79,47.22,10.48,56.78,18.49,113.76,17.55,171.7-.5,30.78-6.51,57.53-31.59,80.39-69.72,63.58-149.36,107.68-239.86,133.41-44.26,12.58-89.65,18.83-134.75,26.82h-208.41c-51.19-7.2-102.58-13-153.3-23.39-51.32-10.54-101.92-23.66-152.28-38.13-18.86-5.42-30.45-16.35-39-32.64-17-32.4-22.79-67.57-27.61-103.33-6.16-45.72-1.17-91.62-5.1-137.47q-13.13-152.9-18.92-306.36c-5.62-150.56-9.75-301.18-6.79-451.84q3.38-172,10.95-344c5.27-117.49,12.16-234.91,17.79-352.39,4.22-88.09,3.82-176.5,13.45-264.25,8.28-75.42,24.6-149.7,35.58-224.72,14.64-100.09,56.53-191.44,87.07-286.43,17.46-54.31,34.76-108.79,55.48-161.88,20.08-51.46,45.16-100.93,66.78-151.82,60.76-143,117-287.67,156.42-438.39,19.44-74.41,27.88-150.28,32.21-226.66,6.06-107,5.56-214.18,3.63-321.28-1.78-98.79-7.33-197.48-14.14-296.07-.35-5.11-1.89-10.13-3-15.93-7.21,4.34-8.36,11.16-11.11,16.67-32.73,65.72-66.44,130.55-88.2,201.64-20.69,67.59-68.3,115.73-134.77,143.23-11.7,4.84-23,6.91-35.8,2.17-120.9-44.7-241.14-91-355.88-150.19-33.47-17.27-66.1-36-95.14-60.5-21.56-18.18-34.39-39.59-32-68.87,1.08-13.45,1.45-27.2,0-40.58-6.17-55.74,13.18-104.56,41.83-150a231.1,231.1,0,0,0,31-75.88c29.26-135,79.16-263.47,126.8-392.6q84.3-228.48,161.4-459.48c42.06-126.09,83-252.57,125.59-378.48,9.57-28.28,10.82-57.69,17.74-86.21,19.09-78.65,61.1-145,112.58-205.58C-2919.41-364-2778.09-472.82-2619.76-561c102.27-57,203.77-115.4,306.58-171.43,11.87-6.47,16-14.06,17.14-27.43,5-59.71,8-119.79,23.57-178.1a220.52,220.52,0,0,1,10.38-30c6.3-14.67,17.56-22.12,33.91-24.28,165.58-22,330.48-48.21,494.5-79.75,93-17.88,185.89-36.2,275.75-67.18,22.62-7.8,31.47-2.22,40.58,20.55,24.53,61.36,56,119.2,89,176.33,6.91,12,18.74,15.61,29.82,20.57C-1185.3-871-1072.47-819.59-956-776.17c109.69,40.89,211.56,97.4,299.69,176.2,26,23.24,50.5,48,70.42,76.45a388,388,0,0,0,65.93,72.36c95.5,82,159.19,186.05,204.38,302.53,34.93,90,52.72,184.17,68.45,278.79,15.62,93.95,30.8,188,44.59,282.22q27.58,188.47,48.4,377.84c10.7,98.77,22.68,197.4,33.33,296.18,8.26,76.57,15.09,153.29,23.07,229.9,2.55,24.47,3.33,49.39,12.93,72.66ZM-2322.61,2581c2.3,61.9,4,119.49,6.73,177q2.52,53.69,7.46,107.26c6.37,69,13.09,138,20.59,206.84,5.53,50.73,11.49,100.78,36.73,147.57,65.08,120.64,135.6,238.41,193.93,362.65,7.25,15.44,15.13,9.94,24.43,2.45q76.3-61.47,155-119.84c276.88-204.26,573.35-371.91,900.53-482.14,12.2-4.11,16.87-10.24,15.91-23-3.53-47.48-10.09-94.6-16.35-141.74C-988.54,2736-1000,2654-1011.23,2571.92q-20-145.75-39.94-291.51-17.12-124.79-34.24-249.57c-10.32-76.23-20.32-152.5-30.48-228.75-10.24-76.89-20.11-153.93-21.84-231.48-1.46-65.22-2.26-130.5,2.26-195.84,5.65-81.79,17.05-162.48,37.74-241.71,27.72-106.14,67.25-207.07,136-294.3,7.65-9.71,4.84-18.21,1.71-27.89Q-1039.85,564-1125.15,319c-79.75-230.17-161.4-459.65-253.58-685.2-46.75-114.38-93.21-229-158.13-334.83-13.11-21.38-13.48-21.28-35.37-8.49-71.68,41.89-144.51,81.74-219.54,117.25-64.18,30.37-130.91,53.52-203.07,53.34-23.17-.06-36.22,9-48.52,28.33C-2155.82-334.22-2233-143-2284.89,59c-53.64,208.78-77.3,421.67-83.76,636.54q-4.77,158.75,3.46,317.67,1.85,35.2,3.55,70.43c4.91,101.39,17.69,202.17,14.39,304.24-4.64,143.48-.08,287,5.41,430.54,2.68,69.9,4.38,139.86,7,209.78,4.58,122.22,9.26,244.48,10.73,366.77C-2323.34,2458.37-2315.68,2521.85-2322.61,2581Zm140.89-3169.41c-5.33,1.82-10.45,3.2-15.28,5.26q-158.56,67.31-282.57,186.89C-2631.81-249-2727.51-67.8-2793.2,130.93c-46.85,141.73-75.85,287.34-93.09,435.56-10.94,94.08-18,188.36-19.77,283-1.72,90.58-1.84,181.21,3.3,271.73,2.2,38.71,3.78,77.52,8,116,8.9,81.73,21.77,162.95,28.28,245.05,8.17,103.16,13.24,206.45,15.89,309.79,2.67,104.08,2.64,208.31-3.3,312.34-3,52.75-6.49,105.57-15.94,157.71-19.49,107.48-53.42,210.83-90.84,313.09-40.25,110-85.22,218.1-134,324.59-2,4.38-7.26,9.57-1,14.09,22.88,16.64,34.87,42.49,53.79,62.6,59.55,63.27,126.48,117.95,195.08,170.69,139.6,107.33,285.64,205.42,433.87,300.3,52.52,33.62,105.59,66.39,158.23,99.83,9.44,6,15.28,6.59,23.11-3.82,18.72-24.89,38.46-49.15,59.45-72.16,12-13.16,12.42-23.25,3.51-38.56q-61.69-106-117.87-215.17a243.29,243.29,0,0,1-24.54-78.71c-12.78-92-21.37-184.34-28.67-276.89-8.28-105-14.36-209.92-13.73-315.27.28-47-.56-94-2.1-141.1-3.75-114-6.8-228-11-342-2.59-69.9-4.44-139.84-7-209.75q-5.24-141.91-7.11-283.94c-.82-64.66-2.67-129.35,2.25-194.06,4.87-64.12-2.56-128.16-7.47-192-9-117.27-13.32-234.69-16.1-352.19-1-42.31.83-84.64,2.14-127,2.06-66.41,5.5-132.65,10.72-198.89a2788.57,2788.57,0,0,1,49.37-347.05c50.71-244.81,135.71-476,271.48-687.06,6.14-9.55,6.24-13.46-6.14-15.93-34.4-6.85-66-21.21-96.16-38.76C-2174.19-585-2177.94-586.56-2181.72-588.43ZM-945.24,300.36c0,45.32-1.79,90.73.37,136C-940.08,536.68-935,637.08-924.28,737c4.37,40.72,7.26,81.3,21,121.08,43,124.61,62,254.65,81,384.47,10.23,69.8,19.47,139.74,25.33,210.09,1.07,12.82,3.4,22.12,21.39,18.65,104.52-20.14,209.24-39.18,313.91-58.56q158.78-29.39,317.58-58.61c9.33-1.71,16.78-2.94,15.35-16-10.55-95.79-21-191.6-30.67-287.48C-173,915.62-188.88,780.77-205.49,646q-34-275.81-81.82-549.56c-20.14-116-48.79-229-105.62-333.25C-442.61-327.91-506.71-406-592.57-466c-28.81-20.14-58.37-23.15-90.34-18-70.22,11.37-115.9,55.92-150.47,114.38C-871-306-891.76-236.16-907-164.58-939.67-11.3-947,144.21-945.24,300.36ZM-1790.9,4596.61H-1798c-31.68-.08-32.47,0-30.72,31.5,4.07,73.32,9.31,146.57,13.45,219.88,4.27,75.68,7.59,151.42,11.68,227.11,5.46,100.9,11.46,201.78,16.78,302.69,1.39,26.44.76,27.29,27.68,29.74,43.22,3.93,86.23,7,130,5,105.38-4.93,209.45-19.12,313.2-36.7,118.9-20.15,236.73-45.54,353.94-73.82,10.5-2.53,17.84-5.33,18.08-19,1.75-101.1,4.62-202.18,6.48-303.28,1.75-95.27,1.82-190.57,4.28-285.82,2.23-86.36,6.86-172.65,10.07-259,.77-20.57.13-20.51-18.71-14.86-187.65,56.34-376.64,107.39-569.32,143.76C-1603.55,4581.28-1696.65,4593.9-1790.9,4596.61ZM-3326,4865.32c.15,29.38,1,58.74,1.93,88.1,4.11,125.73,11.6,251.21,21.45,376.6,1.29,16.48,6,23.54,22.35,26.91a1648.91,1648.91,0,0,0,281.58,33,1090.68,1090.68,0,0,0,193.51-10.68c77.25-11.35,151.82-31.8,221.27-68.68,9.81-5.21,15.91-10.89,14.58-23.07-5.72-52.58-6.92-105.49-11-158.18-7.72-100.81-12.1-201.79-16.05-302.75-3.87-98.8-5.15-197.79,21.39-294.49,3.81-13.87-2.08-16.74-14-15.8-19.32,1.52-38.54,4.07-58,3.48-56.4-1.71-112.79,0-169.28-2.7a2014,2014,0,0,1-212.18-20.86c-98-15.13-193.62-39.35-284-81.4-9.22-4.29-14.12-6.46-14.23,7.78-.47,60-2.64,119.93-3,179.9C-3330.19,4690.09-3331,4777.75-3326,4865.32ZM-894.89,3459.6h-2.93c0-30.6-.44-61.21.2-91.8.29-13.78-3.23-17.72-17.29-13q-158.27,52.78-313.06,115c-141.34,57-280.24,119.51-414.22,192.46-96.16,52.35-189.13,109.52-275.95,176.7-20.21,15.64-23.77,29.76-18.67,53.28q40.23,185.39,72.12,372.44c2.71,15.82,10.82,17.27,23.25,15.9,87.09-9.58,174-20.77,260.29-35.84q226.16-39.5,447.26-101.6c72-20.09,143.14-42.8,214.37-65.31,13.27-4.19,19.18-11.08,18.85-25.31-.36-15.82,1.9-31.68,2.16-47.54,1.67-101.17.17-202.36,3.12-303.56C-893,3620.83-894.89,3540.19-894.89,3459.6Zm-1630.28,757.72c38.71,1.21,38.59,1.17,47.89-27.89,7.89-24.65,15.72-49.34,24.25-73.77q52.94-151.63,106.46-303.05c3.56-10.05,1.19-15.39-8.49-18.9-18.8-6.82-37.61-13.67-56.16-21.12-153.51-61.65-303.8-130.24-449.5-208.77-100-53.87-198.33-110.35-293-173.16-24-15.92-48.36-31.3-72.64-46.79-10.74-6.85-16.72-6.93-19.66,8.79-26.06,139.42-49.73,279-50.19,421.55-.09,29.23-1.29,58.75-3.07,88.11-3.63,59.83-6.16,119.73-9.64,179.57-.77,13.17,5,19.95,16.12,26,61.68,33.51,128.54,52,196.06,68.43,106.44,25.86,214.63,42.07,323.19,55.7C-2688.4,4202.73-2603,4211-2525.18,4217.32ZM-968.11,678.66l2.42,0c0-9.36.86-18.81-.13-28.06-11.31-105.31-14-211.12-16.06-316.84-2.28-117.6,2.69-235.05,16.17-352.08,12.5-108.5,31.85-215.29,75.74-316.11,25.71-59.07,60.45-111.9,114.4-149.33,40.12-27.84,85.39-38.3,133.91-35.9,3.83.19,9.06,2.06,11.27-2.38s-2.31-7.48-5.07-10.21c-17.12-17-33.53-34.85-51.82-50.5-79-67.67-169.64-115.89-265-155.93-66.15-27.77-135.12-48.29-199.91-79.66-49.75-24.09-100.64-45.84-151.1-68.43-6.74-3-13.27-6.71-20.7.91-54.21,55.59-118.18,98.47-183.84,138.89-11.34,7-12.51,11.61-5.23,22.8,39.28,60.33,70.16,125.18,99.48,190.72,58.17,130,109.78,262.67,160,395.91,73,193.82,141.23,389.33,208,585.35C-1019.41,524.66-993.92,601.72-968.11,678.66ZM-3145.5,109.05c-3.07,8.54-4.55,12.3-5.79,16.14q-70.11,216.62-143.92,432c-46.27,134.6-93.56,268.83-143.38,402.17-41.79,111.88-82.15,224.21-109.12,340.88-8.41,36.38-9.17,36.12,23.65,52.68q174.11,87.86,348.15,175.84c24.89,12.58,29.59,11.88,44.41-11.29a575.9,575.9,0,0,0,29.23-50.26c51.57-102,91-209.16,131.29-315.9,5.5-14.56,9.27-28.43,6.2-44.41q-24.33-126.44-47.42-253.11Q-3057.73,603-3102.55,352C-3116.76,272.77-3130.6,193.45-3145.5,109.05Zm207.07,957.56,1.57-.64c-1-13.44-3.1-26.91-2.85-40.33,1.32-72.31-.79-144.59,2.32-217,3.92-91.1,10.5-181.79,21.82-272.21,20-159.81,54.25-316.28,109.63-467.78,56.18-153.7,131.84-296.23,240-420.36,94.87-108.92,207.16-194.45,338.93-253.89,11.53-5.2,13.9-8.23,3.75-17.27-19.86-17.69-36.17-38.51-50.62-60.81-15.72-24.25-15.6-24-40-10.29-82.51,46.44-165.34,92.31-247.61,139.16-73.07,41.61-147.49,81.57-214.6,132.35-76.84,58.15-149.41,121.51-213.5,194.18-41.89,47.5-79.84,97.38-105.84,155.28-17.41,38.77-32.56,79.19-25.49,122.64,15.66,96.29,32.77,192.35,49.92,288.39q39.66,222.18,80.2,444.2C-2973.64,877.09-2955.93,971.83-2938.43,1066.61Zm2041,2226.53c-.89-11.69-1.19-18.16-1.89-24.58-8.84-80.32-28.11-158.47-49.22-236.24-6.19-22.79-6.17-22.94-28.31-15.36-198.39,67.9-386.32,158.14-566.57,264.89-166.84,98.81-323.76,211.66-475.11,332.63-16.08,12.85-18.06,23.74-12,41.4,18.68,54.09,42.95,105.68,67.47,157.23,6.15,12.92,12,9,19.87,2.72,97.8-78.23,204.79-142.17,315.35-200.17,226.7-118.92,463.52-213.86,706.35-294.12C-903.24,3315.52-893.32,3307.92-897.43,3293.15Zm-1361.9,295.29c-.88-10.32-10.39-12.12-16.86-16.13-201.11-124.49-399.89-252.45-587.42-396.95-85.22-65.66-170.07-132.08-236.2-218.47-6.75-8.82-11-6.89-15.47,1.06a71.71,71.71,0,0,0-4.59,11.44q-52.24,150-104.4,300c-9.06,26.09-8.82,26,14.55,42.32,74.85,52.15,151.95,100.73,230.68,146.83q303.06,177.43,631.37,301.85c14.41,5.49,19,2.15,23.75-11.39,17.13-48.85,36.09-97,57.34-144.26C-2264.16,3599.34-2261.79,3594-2259.33,3588.44Zm-305.15,1138.34c1.73,129.73,7.44,240.08,14.6,350.39,4.18,64.5,7.63,129.05,11.35,193.59.63,11,3.26,16.51,16.21,10.8,36.6-16.13,73.57-31.44,110.6-46.58,8.6-3.52,10.74-8.2,10-17.4-2.71-33.4-3-67-3.52-100.45-2-121.19-6.34-242.35-5.15-363.6.48-48.85,1.23-97.33,10.72-145.66,27.53-140.24,54.79-280.14,111.1-413,74.37-175.38,131.33-358,218-528.32,4.3-8.45,3.85-16.82,1.26-25.66-15.33-52.43-46.07-97.65-68.38-146.8-3.82-8.42-8-6.84-12.71-.83-29.57,37.9-62.74,72.76-82.53,118.1-38.65,88.55-71.39,179.22-102.84,270.44-65,188.45-134.54,375.38-184,568.9C-2544.54,4547.76-2570.8,4644.3-2564.48,4726.78Zm1662.6-600.17c.19-18.93.15-18.66-23.29-11.1-88.42,28.52-177.32,55.46-267.2,79-213.43,55.92-429.46,97.83-649.15,119.71-12.26,1.22-16.26,4.34-13.84,17.36,3.21,17.24,3.83,35,5.37,52.51,4.83,55,9.69,109.91,14.23,164.9.69,8.31,4.91,10.5,12.34,11.63,18.17,2.76,36.18.73,54.34.41,79-1.42,156.7-14,234.18-27.69,132.06-23.4,262.14-55.69,391.48-90.82,68.64-18.64,136.66-39.55,204.91-59.61,8.94-2.63,17.68-5,19.14-17.41C-910.21,4287.92-907.29,4209.88-901.88,4126.6ZM-2703.2,4486c42.34-.36,84.66.21,126.93-3.37,10.17-.86,14.51-4.85,17-13.91,18.59-66.86,37.21-133.7,56.33-200.41,3.65-12.74.16-16.43-12.76-17.26-48-3.1-96.13-6.12-144-11.24-122.07-13.07-244-27.64-364.38-52.33-95.14-19.51-189.89-40.6-277.15-85.64-9.62-5-10.76-1.09-11.12,7.36-3.43,80.41-6.84,160.83-10.88,241.21-.72,14.33,4,22.43,17.1,28.8,47.29,23,96.61,40.22,147.28,53.78C-3009.53,4472.94-2857.07,4485.59-2703.2,4486Zm-147,1141c61.94-2,127.51-6.27,191.93-21.35,100.53-23.54,190.59-66.74,264.39-140.51,4.91-4.91,11.33-9.21,11.67-17,.89-20.53,5.67-40.85,3.58-61.54-3.43-33.88-6.76-67.77-10.55-101.61-2.57-22.94-3.09-22.93-24.18-14.2-66.83,27.66-132.12,58.66-197.82,88.87-87,40-180.35,54.69-275.48,61.19-100.25,6.86-199.54-.15-298.68-14.12-33.17-4.67-66.19-9.89-98.94-17-5.79-1.26-17.26-7.44-17.08,6.42.65,49.42,2.39,98.75,23,145.11,5.47,12.29,14.09,18.89,27,22.82C-3121.89,5603.57-2989.47,5624.31-2850.23,5627Zm1261.41,3.91c160.48,1.51,295.33-4.64,428.77-29,70.77-12.91,140-30.83,202.8-68.07,18.33-10.86,27.07-23.08,22.21-45.55-3.42-15.82-1.37-32.8-2.08-49.25-1.28-29.34-2.79-58.66-4.23-88-.68-13.8-5.84-18.81-21-15.09-143.24,35.12-287.61,64.87-433.53,86.39-82.46,12.16-165.15,22.89-248.83,23.13-41.7.12-83.35,1-124.59-6.15-10.76-1.87-13.81,2.47-13.66,12.14.28,17.06-.8,34.19.48,51.16,2.62,34.5,4.16,69.18,13.88,102.79,4.28,14.8,12,21,28.63,22.13C-1681.23,5631.57-1622.44,5630.08-1588.82,5630.87ZM-2015.17-660.46c3.25,20.67,1.9,46.63,3.09,72.47.67,14.55,7.24,20.38,22.63,18.77,53.61-5.61,105.73-17.07,154.91-39.31,110.62-50,216.45-109.06,319.32-173.4,53.94-33.74,105.81-70.37,153.64-112.55,10.74-9.47,13.79-16.78,5.14-30.82a1288.26,1288.26,0,0,1-79-149.77c-10.39-23.21-10.44-23.62-33.53-11.37-70.16,37.24-140.83,73.59-210.07,112.49-81,45.5-162.48,90.48-232.84,152.56a894.7,894.7,0,0,1-80.35,63.33c-13.24,9.22-19,19.77-19.9,34.43C-2013.3-704.27-2014-684.87-2015.17-660.46ZM-112.82,1461.93c-1.73-14-.16-34.67-4.2-55.07-4.55-23-4.37-23.55-26.71-19.4q-168.83,31.36-337.68,62.65-145.52,26.86-291.12,53.34c-12.46,2.28-24.7,3.57-21.37,22.16,10.5,58.6,27.1,114.57,67.41,160.46,15.86,18.06,34.67,31.15,60,33.22,23.71,1.94,47.23-.87,70.24-4.1,148.13-20.85,292.11-60.09,435.75-100.73,11.85-3.35,19.09-9.58,24-20.74C-118.69,1553.71-112,1511.71-112.82,1461.93Zm-3042.05,350.72c5.77-2.08,11.42-3.69,16.71-6.1,62.47-28.48,96.8-79.7,116.25-143.26,4-13,1.17-19.73-11.44-26-80.71-39.93-161-80.67-241.43-121.21q-139.52-70.33-279-140.81c-8.71-4.4-16.42-9.42-23.67,2.8-31.1,52.42-54.49,106.83-49.9,169.86,2.05,28.14,12.2,50.71,35.73,67.44a632,632,0,0,0,80.14,48.11c108.24,55,220.72,100.09,334.61,141.78C-3169.69,1807.9-3162.41,1810.13-3154.87,1812.65ZM-2042.54-760.2c.17,1.26.41-1.92-.7-4.52-21.69-50.87-46.2-99.64-97.81-127.55-23.32-12.61-46.16-26-67.3-42.08-25.89-19.72-26.48-19.85-33.76,13-12.89,58.12-16.17,117.46-21,176.58a32.88,32.88,0,0,0,3.63,18.8c43.32,79.78,106.45,133.4,197.46,151.13,13.74,2.68,16.62-1.91,16.05-14.1-1.4-29.94-3.35-59.94-2.88-89.87C-2048.42-704.58-2045-730.31-2042.54-760.2Zm-904.84,1956.1-3.64-.46c-1.44,3.11-3,6.16-4.3,9.35-20.1,50.86-39.22,102.14-60.47,152.52-27.63,65.51-53.69,132-96.41,189.85-7.1,9.62-1,12,5.51,15.42,26.05,13.65,52.55,26.52,78,41.16,14.26,8.19,21.5,5.39,28.63-8.92,28.83-57.91,58.53-115.4,87.84-173.07,3.19-6.27,6.15-12.46,4.65-20.12Q-2927.63,1298.79-2947.37,1195.89Z" transform="translate(3655.03 1142.5)"/></g></svg>
             <svg id="frs" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.06 2017.04"><title>CAOS suit example</title><g id="e4I8K0.tif"><path d="M435.67-304h8c.42,4,.59,8,1.28,11.94q37,210.3,74.07,420.57Q565.47,389.28,612.59,650q29.18,161.54,59.31,322.9c9.86,52.9,20.68,105.62,31.06,158.42V1142c-1.83,3.53-4.06,6.92-5.43,10.63-33.36,90.17-67.15,180.17-104,269-30.4,73.17-60.93,146.28-99.39,215.71-12.48,22.54-24.49,45.52-43.64,63.58-14.28,13.47-26.11,15.66-43.43,6.89-48.06-24.33-96-49-144.06-73.21q-193.8-97.75-387.77-195.16c-9.79-4.91-15.45-9.62-12.54-22.37,20.11-88.13,41.91-175.79,69.93-261.8,33.38-102.45,72.13-203,109.22-304.1Q157.44,535.8,264.53,217.46C308.89,85.83,352.13-46.18,395.6-178.1,409.39-219.94,422.34-262,435.67-304Z" transform="translate(138.1 304.03)"/></g></svg>
             <svg id="frside" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1541.78 3129.98"><title>CAOS suit example</title><g id="_3W70fq.tif" data-name="3W70fq.tif"><path d="M1132.16-1410c27.95,54.43,63.88,103.07,106.76,146.59,7.89,8,17.06,14.74,25.18,22.54,14.34,13.75,13.5,18-4.54,25.71A1612,1612,0,0,0,999.28-1074c-107.42,71.55-203.77,156.32-290.62,251.37-109.93,120.32-201,254.13-277.58,398.07C330.81-236.13,258.46-37.25,203.71,168.54,170,295.32,144.24,423.75,124.09,553.28,111.22,636,101.25,719.08,93.43,802.45c-6.86,73.19-12,146.45-16.27,219.83-3.87,66.5-4.79,133-6.77,199.56-1.18,39.73-2.85,79.45-2,119.17q2.51,124,6.58,248c1.34,39.66,4.63,79.26,7.1,118.89.29,4.62,3.1,10.89-3.65,12-6.36,1-6.84-5.43-7.76-10.12-11.63-59-23.58-118-34.76-177.06q-27.25-144-53.62-288.21-49.94-274.95-99.2-550-39.34-218.77-78.37-437.59C-217.83,130-239.76,3-262.07-123.88c-1.29-7.34-3.74-14.48-5.65-21.72q0-24.19,0-48.38c.85-2.53,2.18-5,2.47-7.59,7-62.83,28.19-121.25,56.25-177.28C-160.7-475.3-95-559.54-21.66-637.76,40.82-704.38,106.44-768,176.62-826.61,232.23-873.06,286-921.82,346.82-961.76c81.31-53.42,165-103,249-152Q788.77-1226,984.54-1333.26c46.18-25.23,92-51.15,138-76.75Z" transform="translate(267.72 1410.01)"/></g></svg>
             <svg id="fls" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1467.59 3463.92"><title>CAOS suit example</title><g id="BmBPzS.tif"><path d="M1202.64,1734.28v34.26c-25.24,4.77-50.46,9.64-75.72,14.3Q754.86,1851.5,382.79,1920.1q-179.3,33.07-358.56,66.35c-14.46,2.71-20.82-.53-22.4-16.06C-4,1912.51-10.69,1854.72-17.53,1797c-19.59-165.48-42-330.56-72.22-494.48-27.42-148.82-57.69-297-110-439.62-4.1-11.19-8.94-22.08-10.42-34.27-16.32-134.8-27.45-270.07-36.95-405.48q-12.21-174.1-16-348.6C-265.52-43-266-160.59-261.9-278.19c3.44-98.67,8.57-197.13,17.75-295.4C-231-714.14-210.57-853.51-173.91-990c30.18-112.41,69.39-221.27,137-317.49,68.4-97.31,157.92-160.62,280.26-167.94,36.38-2.18,72.9-3.4,106.39,16.56,87.6,52.22,163.57,118.23,230,195.11,83.73,96.92,150.7,204.57,203.29,321.47,59.13,131.44,99.4,268.45,125.45,409.9q52.24,283.71,94.44,569.09,30.34,204,56.28,408.64,20.91,163.82,40,327.87,16.64,141.07,31.87,282.3c10,91.28,19.37,182.62,28.86,274,10,96.44,19.59,192.93,29.86,289.34C1193.87,1657.3,1195.73,1696.08,1202.64,1734.28Z" transform="translate(264.96 1476.61)"/></g></svg>
@@ -1399,7 +2742,22 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             <svg id="fc" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4575.09 2700.68"><title>CAOS suit example</title><g id="UB2TPi.tif"><path d="M3580.38-629.42c55.4,158.43,130.44,308.1,206.89,456.89C3874-3.82,3966.16,162,4065.8,323.48c20.44,33.13,12.25,58.23-14,84.59-144.37,145.29-306.29,269-473,386.74-361.3,255-741.13,479.81-1130.6,688.57-279.49,149.81-555.4,307.3-852.45,421.34-222.58,85.45-450.55,149.57-691,158.15-36.55,1.3-73,4.7-109.48,8-35.46,3.2-54.66-12.53-57-47.69-15.28-227.22-33.45-454.29-14.42-682.38,5.3-63.55,9.94-126.92,21.12-189.77,3.91-22,13.32-37.86,32.46-49.93,211.11-133.11,396.05-300,585.9-460,171.76-144.74,362.28-260.19,552.77-376,403.29-245.22,817.79-470.47,1237.3-686.6,133.13-68.59,265.55-138.53,398.3-207.86Z" transform="translate(497.81 629.42)"/><path d="M-497.81,1170.34c16.81-60.51,10.83-123.27,16-184.78,18.18-217.46,37.23-434.68,78.92-649.12,15.18-78.11,30.77-156.59,71.16-227.21,17.2-30.08,37.39-37.38,65.35-14Q-52.84,273.78,193.79,402.87c173.46,91.26,284.57,242.06,377.43,408,42.77,76.44,81.19,155.37,112.44,237.66,10.73,28.27,12.73,54.39,7.2,83.64-45.64,241.56-35.66,484.9-21.75,728.31,2.82,49.27,3.93,98.53,10,147.75,5.49,44.21-11.59,56.07-57.26,50.26C163.12,2000.19-175.7,1759.32-419.26,1374c-28-44.37-52.45-91-78.55-136.64Q-497.81,1203.85-497.81,1170.34Z" transform="translate(497.81 629.42)"/><path d="M753.23,998.67c-27,4.49-37.49-17.3-48.86-42.36C624.87,781.05,528.68,617.4,389.62,480.64c-81.34-80-180.06-130.93-277.31-184.88C18.51,243.73-69.13,183.3-153.3,117.35c-15.66-12.27-41.25-21.94-32.93-46.52,6.78-20.05,31.89-17.64,50.2-20.34C57.74,21.93,251.83-4.64,445.38-34.73c329-51.14,658.14-101.47,986.32-157.47,538.87-92,1076.68-189.85,1607.17-323.67,52.55-13.26,104.82-27.63,157.38-40.87,17.86-4.5,42.16-16.72,51.93,4.24,11.34,24.34-17,30-32.41,37.83q-413.42,210.49-817.7,438c-315.85,176.78-631.31,354.94-926,565.45-146.14,104.39-278.82,227.61-417.93,341.88-48,39.42-99.36,75-144.95,117C865.37,987.93,812.91,992.83,753.23,998.67Z" transform="translate(497.81 629.42)"/></g></svg>
           </section>
           <section class="suit-display-wrapper" id="back-suit-display">
-
+            <svg id="boso" fill="black" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2935.27 4858.81"><title>flul</title><g id="bIqKdX.tif"><path d="M-1174.24,2000.09c-33.37,85.83-100.74,132.68-184.64,159.94-42.83,13.92-86.57,18.68-130.49,4.91-34.82-10.91-60.93-30.92-72.46-68-7.44-23.89-14.89-49.29-29-69.27-40-56.56-58.64-122.92-89.12-183.76-48.37-96.52-89-196.77-139.53-292.32-12.36-23.4-25.38-46.44-40.25-68.39-3.51-5.18-6.93-10.31-14.38-8.73-7.26,1.54-7.48,7.83-8.16,13.27-6.68,53.6-25.73,104.32-36.32,157-15.74,78.29-26.62,157.25-36,236.51-15.57,132.12-19.25,264.7-15.29,397.48,2.31,77.48,17.77,152.88,38.23,227.71,33.17,121.33,58.62,244.54,83.66,367.79,16.32,80.33,31.14,160.94,45,241.73,17.51,101.7,32.75,203.63,38.85,306.82q4.11,69.49,6.4,139c2.86,85.39,5.53,170.86,5,256.28-.7,111.93,1.63,224-2.63,335.75-3.68,96.54-4.43,193.16-9.36,289.67-4.67,91.36-7.24,182.82-11,274.23-1.13,27.71-3.15,55.39-4.4,83.1-.36,8-2.9,13.41-11.36,14.78-7.45,1.2-9,6.11-9.67,13-1.87,19.85-4.87,39.58-7,59.41-3.68,34.41-25.29,55-53,71.95-40,24.51-84.9,34.71-129.91,42a739.29,739.29,0,0,1-213.94,3.14c-35.44-4.61-69.7-13.89-102.71-26.49-26.51-10.12-48.12-28.61-62.74-53.95-2.31-4-2.42-8.25-2.45-12.58-.08-12.15.11-24.31-.2-36.45-.47-18.32-3.09-22.39-21-25.67-10.91-2-14-7.41-14.75-17.48-6.15-87.81-14.43-175.45-24.21-262.91q-20.3-181.58-49.71-362c-27.43-166.95-59.6-332.88-99.18-497.29-17.33-72-37-143.52-55.69-215.22-1.41-5.38-4.14-10.45-6.51-15.54-2.6-5.59-5.5-11.65-13-10.64-6.38.86-6.86,7.31-8.24,12-8.91,30.36-18.2,60.64-26.09,91.27-40,155.27-81.48,310.15-115.85,466.85-23,105-47.4,209.62-67.35,315.23-17.76,94-34.31,188.24-48.9,282.83-9.17,59.46-17.08,119.08-25.56,178.62-1,7.18-2.58,14.16-10.28,16.65-10.23,3.31-11.71,11.31-13,20.26-2.8,19.7-6.46,39.28-9.15,59-3.63,26.56-20.35,43.09-41.75,56.3-40.39,24.93-85.69,34.69-131.77,39.77-88.69,9.77-177.45,9.28-265.86-4.42-44.21-6.85-87.42-18.12-127.48-37.92-22-10.89-40.91-27.53-53.09-50.16-2.64-4.91-3.06-9.89-2.87-15.08q1.2-33.79,2.64-67.58c.23-5.72.39-11-5.29-15-5.2-3.67-4.63-10-4.43-15.59,2.33-64.1,5.46-128.17,8.86-192.23,2.64-49.79,6.45-99.49,9.24-149.26,3.25-58,9.74-115.75,14.05-173.66,4-53.66,12.41-106.92,15.23-160.54,5.47-103.83,23.11-206.17,34.77-309.23,9.07-80.13,18.23-160.27,29.11-240.16,14.34-105.21,27.23-210.64,42.28-315.72,17.2-120.13,37.59-239.88,64.68-358.29,23.51-102.75,50.51-204.58,82.61-305,21.86-68.42,33.66-138.91,42.25-210.07,9.33-77.25,12.18-154.74,10.19-232.43a1248.48,1248.48,0,0,0-34.51-261.28c-30.59-126.92-77.65-247.28-143.16-360.31-3.08-5.31-5.33-9.91-13.45-11.7-8.43-1.86-8.85-13.91-13.15-21.28-1.63-2.8-1.33-7.78-5.86-7.52-3.19.18-4.12,4.11-5.51,6.72-29.18,54.94-69.14,101.45-111.82,146.21-40.39,42.36-79,86.39-118.37,129.76-13.71,15.11-26.77,30.92-47,37.91-4.65,1.6-7.77,5.28-10.61,9.26-11.33,15.85-22.88,31.55-34.16,47.43a36,36,0,0,1-21.85,14.9c-98.22,24.33-199.1-11-258.89-91.61-12.16-16.39-21.31-34.73-29.41-53.46-4.46-10.3-5.13-20.81.06-31.43,3.79-7.76,6.26-16.17,10.08-23.92,4.53-9.17,8.06-17.85,2.55-28.09-2.59-4.81-.16-10.23,2.14-15,53.59-110.42,100.91-223.72,155.36-333.78,38.26-77.34,72.74-156.55,109.32-234.72,49.7-106.22,104.51-209.65,170.91-306.56,16.42-24,32.79-48.13,51.17-70.57,39.15-47.78,84.63-87.58,139.62-117.76,134.74-73.95,273-140.5,413-203.71,11.86-5.36,23.6-11,35.36-16.55,2.7-1.28,6.65-2.17,6.85-5.39.54-8.68,7.61-11.1,13.21-14.73,26.45-17.13,49.78-37.66,69.19-62.54a189.17,189.17,0,0,0,33.83-68.34c4.19-15.71,14.19-24.55,30.65-24.9,75.53-1.61,150.62-9.09,225.72-16.31,39.23-3.77,78.07-12,117.76-10.27a387.57,387.57,0,0,1,135,30.76c37.45,15.88,55.53,45.58,56.95,85.72a331.43,331.43,0,0,1-.49,36.42c-.86,11.44,3.9,17.35,14.38,21.31q125.37,47.39,250.5,95.4c73,27.85,146,55.32,220.27,79.63,58,19,112.28,44.77,159.82,83.73C-1617.23,642.55-1573,711-1543.3,789.52c14.31,37.81,24.06,76.89,32.21,116.5,12.43,60.45,33.22,118.57,52.19,177.11q80.83,249.49,175.09,494.25c33.22,86.6,60.08,175.63,89.74,263.59,1,2.84,2.14,6.12,1.58,8.86-6.45,31.91,10.71,58.83,18.24,87.77Zm-1555.93,475.77c22.14-1.14,48.53-.37,75-1.85,47.53-2.66,94.94-6.15,142.27-11.08,57.66-6,114.81-15.46,171.88-25.5,49-8.63,97.34-20.54,145.8-31.83,68.79-16,136.34-36.3,203.63-57.58,7.5-2.37,10.2-6.35,8.79-14.41-5.73-32.94-4.34-66.4-6.26-99.62-2.5-43.27.48-86.6,1.3-129.91.57-30.34,2.89-60.57,3.6-90.89.49-21.14,2.84-42.28,5.11-63.34,4.74-43.81,10.17-87.55,15-131.36,6.32-57.65,15.7-114.83,27.49-171.58,9.68-46.58,21.6-92.69,31.07-139.31,3.61-17.75,10.44-36.11,2.88-54.59q-59-144.25-118.25-288.41c-28.54-69.71-56.08-139.85-85.58-209.15-48.92-114.93-103-227.3-169.78-333.22-62-98.32-128.23-193.53-202.47-283.07-4.69-5.66-9.59-8.2-16.87-6.47q-20.2,4.78-40.52,9.06c-55.84,11.83-109.12,33.5-166.33,40.64-66.14,8.25-132.06,10.83-198,.88-17.23-2.6-30.83-.71-46.36,7.63-121.5,65.27-223.08,153.59-306.79,262.7-69.26,90.28-119.24,190.64-154.13,298.79-36,111.67-53.5,226.19-54.56,343.41q-.63,70.23,5.59,140.13c1.73,19.78,5.08,38.63,16.38,56.45,43.5,68.59,79.11,141.32,108.57,217a1364,1364,0,0,1,55.06,175.84,1429.81,1429.81,0,0,1,31.57,186.56c4.48,42.8,5.23,85.65,5.22,128.34,0,54-.22,108.21-8.46,161.87-1,6.68,1,10.86,7.61,14.43,47.21,25.5,97.5,43.24,149,56.91C-2974.71,2464.37-2855.26,2476.42-2730.17,2475.86Zm912.35,660.43c-.37-4.22-.38-6.41-.76-8.53-12.48-68-24.48-136.19-37.66-204.1-11.94-61.57-24.45-123.06-38-184.29-16.76-75.62-33.43-151.27-53.3-226.17-12.53-47.23-26.88-94.09-32-143-1.09-10.45-7.47-6-12.2-4.52q-134.37,42.79-272.17,72.69a2506.73,2506.73,0,0,1-259.83,42c-59.85,6.44-119.87,9.48-179.9,12-48,2-96.07-1.35-144.09-4.33A1339.77,1339.77,0,0,1-3032.81,2464c-69.39-14.15-136.91-34.39-201-65.09-17.52-8.4-17.62-8.74-19.8,10.44,0,.43,0,.87-.08,1.3-3.42,37.1-9.86,73.74-18.07,110-20.56,90.85-52.61,178.48-75.36,268.79-27.19,107.92-50.49,216.51-68.84,326.26-2.8,16.76,1.59,24.55,15.35,33.09,75.88,47.12,153,91.9,232.75,132.21q98.08,49.58,199.16,92.61c66.53,28.42,134.3,53.75,202.47,78,7.94,2.82,12.61,2.1,15.3-7.12,3.87-13.28,9-26.21,13.8-39.2,5.87-15.85,11.56-31.87,23.29-44.62,8.75-9.52,16.4-10.38,24.08-.73,22.66,28.47,43.7,58.06,53.07,94.09,3.69,14.19,10.7,20.37,22.15,18.42,74.25-12.65,147.74-29,220.47-48.4,79.13-21.11,156.59-47.38,232.72-77.79,69.25-27.67,138.16-55.66,201.34-96,46.85-29.94,91.57-62.59,133-99.73C-1822.21,3146.2-1816.81,3142-1817.83,3136.3Zm326.11-1100.51c60.16,0,131.1-21.3,180.43-51.59,30.21-18.55,57.77-39.89,77.71-69.63,19.46-29,28.14-58.77,13.74-94.12-16.15-39.64-28.24-80.94-41.9-121.59-11.46-34.08-20.86-69-34.28-102.24-42.93-106.46-82.05-214.3-119.4-322.78-28.33-82.27-55-165.11-81.83-247.9-10.66-32.92-21.43-66-29-99.68-11.93-52.85-24.06-105.31-45.41-155.5-42.12-99-110.63-172.54-206.84-220.61-9.26-4.63-15.11-4.32-22.53,3.37-32.29,33.51-60.54,69.71-83.55,110.44-45,79.58-65.61,165.2-67.23,255.88-1,56.75,1,113.43,4.68,170.1,2.95,45.82,8.71,91.22,16.11,136.46,12,73.25,32.32,144.39,55.26,214.83,1.65,5.05,1.7,12.34,8.6,13.41,10.73,1.67,16.22,9.38,21.87,17,19.19,25.81,34.17,54.2,49,82.57,47.32,90.66,87.13,184.88,130.75,277.3,22.36,47.38,43.2,95.47,65.49,142.88,5.58,11.86,9.34,24.89,20.9,33.77C-1551.6,2029.33-1519.61,2034.44-1491.72,2035.78ZM-1773.66,3810.7c1.51-23.36,1-46.78.67-70.09-1-74.09-2.51-148.15-5.94-222.16-1.76-38-2.84-76.14-5.94-114.07-1.09-13.31-.51-26.83-3.24-40-1.37-6.62-3.53-9.6-10.07-4.15-5.3,4.42-11.29,8-16.86,12.12-106.72,78.73-223.16,139.4-347.36,185.15-129.81,47.82-264,77.12-401.58,90.9-11.13,1.12-11.25,4.72-9,13.73,10.67,42.84,21.69,85.62,30.79,128.8q31.31,148.58,60.45,297.61c2.47,12.68,6.83,15,18.19,14.83,35.51-.58,70.89-3.08,106.32-5,40.23-2.15,80.24-6.37,120.06-11.68q78.41-10.46,155.89-27.19c101.86-22.1,200.72-53.48,297.17-92.76,7.3-3,10.66-7.33,10.61-15.64C-1773.82,3904.29-1773.66,3857.49-1773.66,3810.7Zm-612.51,491.75c-16.05,0-32.12.28-48.16-.11-8.76-.22-12,1.41-10.49,11.73,16.09,106.46,27.69,213.5,39.13,320.53,6.62,61.9,11,124,16.15,186.1.58,7,1.85,10.78,10.1,11.64,59.46,6.19,119.15,8.68,178.82,9.71,63.19,1.1,126.27-3.07,189.22-9.43a1772.09,1772.09,0,0,0,195.94-31.12c14.23-3.07,18.13-10.33,18.16-23.15.09-42,3.17-83.92,4.83-125.87,1.82-45.85,3.26-91.72,5.31-137.58,2-45.41,3.25-90.85,5.17-136.27,2.65-62.74,3.6-125.55,5.44-188.33.23-8-1.71-9.84-9.68-6.5-99.43,41.62-202.4,71.14-308.33,90.92C-2191,4292.71-2288.2,4301.17-2386.17,4302.45ZM-3257.11,4853c36.88.82,73.58-2.44,110.18-5.73,30.09-2.7,59.91-8.43,89.82-12.94,7.86-1.19,12.26-4.28,13.43-13.93,8.08-66.52,16.16-133.07,26.05-199.34,15.65-104.78,33-209.31,53.31-313.3,3.5-17.9,2.93-19.34-14.74-20.68-55.72-4.22-110.7-13.35-165.5-23.89a1568.64,1568.64,0,0,1-242.5-67q-73.88-27-145-60.38c-8.81-4.13-11.34-1.92-12.1,6.74-1.4,15.92-3.19,31.81-4.77,47.72-4.05,40.84-9.06,81.62-11.83,122.55-2.63,38.83-6.87,77.51-8.9,116.41-2.63,50.5-7.35,100.88-10.16,151.4-1.11,19.89-1,39.84-2.66,59.64-4.3,50-4.55,100.24-7.32,150.33-.49,8.9,2.73,13.06,11.39,15.6C-3473.46,4837-3366.2,4851.3-3257.11,4853Zm-262.57-951.22c-1.19,5.91,2.47,10.89,9.89,14q12,4.95,23.73,10.56a1851.16,1851.16,0,0,0,183.76,75.44,2208.43,2208.43,0,0,0,366.67,94.82c10.75,1.8,14.55-.57,16.76-11.15,13.62-65.22,26.77-130.57,42.22-195.37,18.78-78.72,39.56-157,59.85-235.31,2.36-9.09,2.49-13.86-8.48-16.65-111.42-28.37-219.83-65.33-324.88-112.38-101.5-45.46-198.5-98.64-289.58-162.46-8.47-5.94-10.48-2.31-11.61,5.07-1.24,8.12-1.84,16.33-2.94,24.46-6.68,49.26-13,98.58-20.29,147.74-6.43,43.21-10.92,86.63-16.17,130q-8.41,69.52-17,139C-3511.49,3839.54-3515.5,3869.53-3519.68,3901.8Zm-92.64-3161c-8.43,11.74-15.07,20.62-21.32,29.77-60.55,88.53-112.7,181.89-158.81,278.62-45.3,95-87.58,191.44-133.44,286.23-22.42,46.34-47.13,91.57-66.66,139.38-21,51.32-43.17,102.25-69.3,151.15-12.53,23.45-9.37,42.37,6,61.61,1.35,1.69,2.55,3.5,3.9,5.19a301.59,301.59,0,0,0,103.14,83.53c47.48,23.59,96.57,38.3,150.15,30.32,21.06-3.14,42.94-7.46,58.93-22,21.12-19.16,39.72-41.09,59.22-62,10.32-11.07,20-22.74,30.41-33.73,17.29-18.26,31.17-40.07,49.53-56.61,48.78-43.94,84.81-96.77,116.56-153.28,4.18-7.45,4.74-14.26,1.37-22.09-6.16-14.31-11.94-28.8-17.58-43.33-31.68-81.7-57.63-165.14-75.63-251-17.25-82.24-29.36-165.13-33.94-249.14-2.64-48.45-5.21-96.86-4.54-145.39C-3614.22,760.07-3613.19,752.11-3612.32,740.76ZM-1935,1318c-24.37-108-33.82-218.1-36.32-328.9-.79-35-1-70.09,1.77-105.22,3.64-46.4,10.39-92.1,25.51-136.05,25.65-74.58,63-142.44,119.81-198.32,7.21-7.1,8.2-10.23-2.74-14.26-48.74-18-97.22-36.64-145.77-55.11-121.78-46.34-243.7-92.33-365.25-139.28-36.37-14.05-73.49-13.68-111.09-10.94-4.41.32-13.51.89-5.8,9.94,30.88,36.26,59.37,74.38,87.1,113.08,62.84,87.71,122.69,177.4,172.88,273q67.65,128.91,123.06,263.69C-2026.66,1099.27-1980.67,1208.57-1935,1318Zm-1542.07,93.26c-4.17-27.46-2.79-55.12-4.06-82.6-2.23-48.46,2.92-96.79,6.76-145.12,4.75-59.76,16.31-118.27,31-176.1a1039.2,1039.2,0,0,1,92.54-237.92,962.47,962.47,0,0,1,151.17-208.7c56.74-59.47,119.34-112,189.76-154.79,15.38-9.35,30.75-18.71,46.72-28.43-9.58-5.58-18-10-28.72-5.12-55.18,25.14-111,49-165.66,75.16-108.28,51.9-214,108.81-319.08,166.88-38.91,21.5-74.31,46.31-97.42,85.27-7.82,13.18-18.23,25.14-18.38,42.19-.85,97.92,1,195.56,15.16,292.82,14.8,101.39,37,200.83,70.33,297.7C-3497.84,1359-3489.56,1385.84-3477.08,1411.27Zm1661.16,1754.29c-15.81,13.35-29.19,25.61-43.54,36.6-59.25,45.4-121.2,86.4-189.46,117.45-76.58,34.84-155.1,64.64-234.93,90.88-104.19,34.25-210.48,60.41-318.93,77.3-9.35,1.46-12.31,5.64-10.1,14.89,7.93,33.25,14.84,66.75,23.34,99.85,7.35,28.6.72,28.2,34.15,24.69a1611.32,1611.32,0,0,0,210.84-36.2c93.27-22.53,183.81-53,271.33-92.55,97.55-44.07,189.05-98.09,274-163.23,4.07-3.12,6.71-5.8,5.42-11.75C-1804.92,3272.29-1810.82,3220.32-1815.92,3165.56Zm-951.61,313.78c.42-8.58.42-8.59-10.16-12.3-137.43-48.22-271.31-104.7-401.25-170.63q-110.19-55.91-214.81-121.39c-25.2-15.74-25.68-16.13-30.56,12.56q-11.09,65.18-20.32,130.68c-2.1,14.75,4.84,20,14.36,26.57,93.38,64.28,192.06,118.88,295.63,165,101.13,45.07,205.67,79.93,312.41,108.75,11,3,15.43.48,17.36-10.72,4.55-26.43,14.21-51.49,22.12-77C-2777.27,3513.14-2772.23,3495.28-2767.54,3479.34Zm993.66,592.58h0c0-24.72-.26-49.44.13-74.15.15-9.57-1.74-12.46-11.76-8.31-98.67,40.78-200.61,70.85-305,92.93-80.5,17-161.88,28.06-243.77,34.62-43.5,3.48-87.17,6.62-130.93,5.72-7.34-.15-11.76,1-10.06,9.88q13.21,69.41,26.06,138.9c1.51,8.14,5.57,11.4,14.19,11.38,50.22-.12,100.35-1,150.52-4.62a1711,1711,0,0,0,200.39-26.58c102.35-19.71,201.45-50.09,297.76-89.83,9.44-3.89,13-9.46,12.66-19.69C-1774.35,4118.77-1773.88,4095.33-1773.88,4071.92Zm-1769.07,23c-4.52,9.44,2.65,12.59,10.12,16.32,96.82,48.33,198,85.05,302.7,111.79,85.16,21.73,171.44,37.1,259.1,44.9,12,1.06,14.55-2.08,16.55-12.41,7.73-39.9,16.15-79.67,24.64-119.42,3.81-17.83,4.12-18.11-13.56-20.77-42.79-6.45-85.15-15.18-127.27-24.86-151.52-34.82-297.84-85-438.41-151.44-12-5.65-13.72-1.09-14.94,8.38C-3530.3,3996.28-3536.56,4045.14-3542.95,4094.94Zm517.47,730c-2.55,11.69,3.1,11.3,11.39,8.32,13-4.69,26.53-8,39-14.33,5.48-2.76,8.32-6.33,9.05-12.87,10.85-96.29,26.15-192,42.46-287.43q24.91-145.82,55-290.73c21.51-103.35,45-206.32,69.44-309,21.55-90.54,45.36-180.55,68.7-270.65,14.11-54.47,29.08-108.73,44-163,3.66-13.33,7.18-27.49,19.75-35.57,6.44-4.13,5.4-7.58,2.49-12.56-9.83-16.82-19.44-33.76-29.46-50.47-5.5-9.18-9.45-7.15-13.92,1.68-14.82,29.24-23.33,61-36.78,90.91-17.4,38.74-27.17,81.08-38.45,122.36-14.94,54.65-28.25,109.76-42.09,164.71-13.75,54.56-28.34,108.94-40.67,163.82-19.14,85.26-36.59,170.89-54.92,256.33-13.52,63-25.64,126.33-36.88,189.8q-13.45,76-25.79,152.19-13.21,82.6-25.07,165.41C-3014.48,4737.43-3019.77,4781.2-3025.48,4824.9Zm207.36-4455.31c35.55.2,70.83-3.32,106.16-6.62,39.21-3.66,75.59-17.58,113-28.17,79.44-22.49,159.45-41.26,242.86-23.13,6.88,1.5,9.48-2.09,9.41-8.63-.13-12.14,1.11-24.43-.34-36.4-3.3-27.36-15.19-49-42.14-60.79-40.15-17.55-82.16-27.19-125.57-30.1-44.77-3-88.75,6.87-133,11.16-49.92,4.84-99.77,10.13-149.9,12.27-19.89.85-39.78,1.56-59.65,2.77-7.85.48-14.54,2-17.22,12.16-13.64,51.45-45.07,90.77-86.21,123.13-2.67,2.1-6.89,3.69-6.31,7.51.61,4,5.3,3.66,8.41,4.88C-2913.39,367.43-2865.82,369-2818.13,369.59ZM-2992.5,4846.54c-21.47,9.59-42,9-62,12-55.2,8.36-110.52,15.57-166.4,16.35-39,.54-77.93.43-116.93-2-39.34-2.43-78.39-6.84-117.35-12.24-38.7-5.37-75.76-17.77-113.21-28.3-7.82-2.2-10.53-1.36-11.86,7-2.94,18.58-.41,37.25-2.08,55.77-.72,8,1.62,14.26,6.27,20.43,17.92,23.77,44.21,34.35,70.65,44,62,22.7,127,30.35,192.29,33.42,59.27,2.79,118.6.61,177.29-10,39.41-7.1,78.07-16.33,111.46-40.13,11-7.81,19-17.76,21.35-31.38C-2999.57,4891.16-2996.4,4870.71-2992.5,4846.54Zm639.63,43.91c-5.11,21.37,7.08,38.33,26,51.72a148.19,148.19,0,0,0,29.49,16.37c61.61,25.2,126.72,30.88,192.07,31.46a553.45,553.45,0,0,0,91.66-6.8c46.31-7.37,92.16-16,134.15-38.18,20.14-10.62,40.71-22.76,47.42-45.71,5.75-19.66,6.14-40.9,8.8-61.45,1.18-9.07-1.56-12.26-11.66-10.11-32.53,7-65.39,12-98.3,17-90.46,13.78-181.52,18-272.74,19.46-39.71.61-79.49-3.32-119.25-4.65C-2352.9,4858.66-2352.91,4859.07-2352.87,4890.45Zm1148.52-2981.17c-35.84,63.82-91.5,100.35-156.21,126.21-65.37,26.12-131.48,34.32-201.11,11.75,9.58,23.42,18.5,45.37,27.56,67.26,1.68,4.06,4.89,7,8.31,9.8,37,30.6,79.71,35.43,124.94,27.35,67.84-12.12,127.31-41.47,171.91-94.47S-1178,1968.11-1204.35,1909.28ZM-4080,1691.46c-2.22,15.82-15.13,26.4-8.76,41.39,11.07,26,24.38,51,44.33,71.31,61.19,62.41,135.36,81.6,220,64.37,5.55-1.13,10.3-3.56,13.69-8.88,4.87-7.64,10.67-14.68,16.11-22,1.54-2.06,3.89-4,2.58-6.83s-4.52-2.06-6.95-1.93c-12.51.65-25.06,2.7-37.49,2.07a291.23,291.23,0,0,1-126.13-35.84c-29.36-16-56.56-34.36-79.46-59.25C-4054.63,1722.31-4066.15,1707.88-4080,1691.46Z" transform="translate(4109.51 -155.63)"/></g></svg>
+            <svg id="blla" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1738.44 3212.08"><title>flul</title><g id="oFTjIK.tif"><path d="M-2042.67-204.07h28.87c-1.83,16.65-5.09,33.29-5.29,50-2.32,203-.39,405.76,20.2,608,23.11,227,59.83,451.56,113.55,673.6,57.77,238.82,139.86,469.19,231.4,696.55,9.87,24.51,10.07,45.51-2.53,68.52-47.33,86.45-97,171.37-157.33,249.6-52.06,67.53-113.51,126.48-171.15,189-66.66,72.26-130.84,146.9-198,218.8-49.14,52.59-97.27,106.14-146.81,158.35-20.39,21.49-34.13,49.32-63.8,62.25-42.05,18.32-88,27.88-102.11,86.43-7.77,32.3-41.74,57.69-61.13,88-18.2,28.41-42,44.51-75.13,49.58-76,11.65-151.49,18.32-229.08,9.37-110.31-12.72-210.64-49.09-299.67-113.51-103.69-75-177.48-174.68-224.51-293.88v-57.74c17.88-60.07,76.09-108.74,50.82-181.38-2.2-6.33,3.57-16.12,7.07-23.64q120.11-257.85,233.34-518.79c73.4-169.46,159.59-333.51,240.68-499.66,91.15-186.76,173.53-377.45,262-565.4,125-265.56,263.39-523.34,423.79-769.16C-2126.91-81.54-2084.34-142.51-2042.67-204.07Z" transform="translate(3385.19 204.07)"/></g></svg>
+            <svg id="brla" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4188.47 8713"><title>flul</title><g id="iZWKbs.tif"><path d="M-405,3110.45H-768.16c-13.37-3.66-26.69-7.51-40.12-11-194.53-49.85-353.89-139.84-412.37-350.85-34.29-123.72-122.11-230-119.53-366.32.31-16.51-15.23-27.75-29.16-37.17-55.8-37.75-90.91-91.17-119-151.45q-238.18-511.92-474.27-1024.81c-192.28-415.53-374.93-835.61-583.76-1243.24-89.94-175.56-179.26-352.37-301.25-509.46-14.49-18.66-28.37-45.6-52.39-40.3-64.7,14.27-74.84-30.82-87.57-73.16-65.56-218-135.48-434.63-192.19-655.41C-3315-1879.45-3381.2-2415.27-3396.16-2957.8c-8.82-320.12-24.43-640.58,15.82-960.11,79.74-633.11,346.68-1175.21,788.11-1634.16,54-56.19,103.81-64.42,172.78-29.92,290.1,145.11,547.95,330,758,580.4,227.86,271.57,382.44,580.71,490.45,915.81,62.88,195.08,91.34,398.69,146.22,595.13C-941.6-3193.1-843-2899.86-750.4-2604.95c183.79,585.64,389.71,1163.62,597.74,1741C-22.81-503.58,128.25-151.25,250,212.11Q442.77,787.34,637.89,1361.77c17.6,51.92,23.88,102.38,12.11,157.25-7.06,32.89-28.5,74.73-7.44,101.33C712.31,1708.46,713.19,1820.13,755,1917c39.32,91.1,29.45,182.52,8.24,273.29C691.11,2498.93,482,2701.35,228.17,2866.16,34.67,2991.79-179.06,3067.63-405,3110.45Z" transform="translate(3406.65 5602.56)"/></g></svg>
+            <svg id="blsh" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3783.16 6219.45"><title>flul</title><g id="NS6tqV.tif"><path d="M-1576.57-3634.53c38.64,18.13,76.87,37.21,116.08,54,21,9,43.15,12.47,44,43.32.78,29.38-19.74,37.76-39.1,49.57-135.55,82.65-273.34,161.9-405.84,249.2-274,180.55-526.86,386.76-764.24,614.74-314,301.59-592.52,630.09-830.79,994.21-393.78,601.77-659.2,1256.08-822,1955.39C-4364.38,695-4413.81,1067.65-4442.73,1445c-19.15,249.92-13.36,499.44-7.77,748.57,2.46,109.37-.66,221.49,19.71,331,4.09,22,20.05,52.06-21.78,58.67-29.72,4.7-53.39,1.85-65.54-32.86-25-71.34-53.35-141.48-79.67-212.36-204.94-552-361-1117.64-458.79-1698.14C-5110.88,317.48-5155.84-6.43-5174-333.85c-6.58-118.37-11.54-236.36-11.81-354.74-.05-22.89-.76-45.55-13.82-65.67v-621.53c28.7-45.39,4.56-99.08,25.67-147.28,86-196.4,216-359.77,383.24-489.87,193.75-150.74,418.12-252.7,632.35-370.13,243.26-133.35,490.06-260.21,734.31-391.79,406.68-219.09,823.74-416.82,1244.21-607.6q278.72-126.47,557.83-252.07Z" transform="translate(5199.66 3634.53)"/></g></svg>
+            <svg id="brsh" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2923.22 4666.93"><title>flul</title><g id="W4rdwD.tif"><path d="M-5654.94-799.17c377.72,101.57,732.35,266.79,1098.59,400C-4153.9-252.78-3755.11-96.32-3354.72,55.77c58.71,22.3,118,43.26,175.91,67.47,50.07,20.93,56.1,43.87,19.72,80.4q-258.12,259.22-420.19,586.79c-112.19,226.81-186.57,465-220.67,716.81-38.86,286.86-26,575-18.76,861.77,7.81,311.15,45.37,621.1,104.34,927.9,33.07,172.07,72.5,342.45,114.45,512.4,4.94,20,16.26,47.35-9.05,55-27.35,8.22-28.25-23.68-35.7-41.48-237.43-567.18-477.44-1133.3-710.76-1702.17q-188.73-460.16-409.74-905C-5032,681-5356.48,181.84-5710.5-298.82q-143.87-195.33-296.37-383.58c-14.31-17.6-32.39-32.13-48.72-48.09-12.12-56.52,7.19-73.79,67.13-70.45C-5877.6-794.76-5766.15-799.17-5654.94-799.17Z" transform="translate(6059.03 801.33)"/></g></svg>
+            <svg id="back" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3211.22 6102.63"><title>flul</title><g id="_19VVnG.tif" data-name="19VVnG.tif"><path d="M-1788.3,4791.75v20.15c-29.19,25.24-57.79,51.2-87.68,75.58-104.36,85.15-216.09,159.6-336.52,219.72-99.1,49.47-202.57,89.44-306.15,128.75-266.81,101.25-541.3,173.82-822.59,221.12-34.26,5.76-52-5.37-60.11-39.08-16.27-67.91-57.11-122.26-96-177.7-10.16-14.47-22.33-14-32.61.31a228.59,228.59,0,0,0-18.16,30.14c-20.1,39.84-32.67,82.63-48,124.35-11.4,31.08-14.84,33.87-45.55,22.81-75-27-150.12-53.71-224.43-82.5q-353.67-137-688-316.34c-116-62.56-228.82-130.51-340.12-201-16.8-10.65-23.84-22.21-19.72-43.46,16.43-84.79,30.38-170.05,46.3-254.94q58.74-313.22,151.26-618.21c61.12-200.17,117.31-400.9,132.27-610.88,3.75-52.62,12.46-105.06,13.36-157.67C-4568,2976-4566,2819-4586.32,2662.9c-28.62-219.9-85.3-432.67-166.25-638.92-57.17-145.67-129.44-283.88-211.21-417.19-11.58-18.88-17.25-39.14-20.38-61.34-8-56.56-10.17-113.59-12.64-170.33-7.2-165.41-.63-330.61,26.17-494.14a2184.16,2184.16,0,0,1,139.31-487.71q135.18-324.76,378.52-577.6c141.34-147,302.37-267.86,484.14-360.89,13.69-7,26.14-8.84,40.87-6.11,60.27,11.13,120.85,19.2,182.43,17.84,50.29-1.11,100.54.33,150.8-5,71.85-7.67,143.28-17.68,212.64-37.93,83.78-24.47,167.56-48.59,253.27-65.59,24.94-4.95,43.95-2,62,19.73,72.27,87.34,140,178,206.21,269.93,214,297,386.93,616.25,524.35,955.4q180.13,444.55,365.72,886.87c17.83,42.62,21.23,82.72,14.24,126.87-15.25,96.25-41,190.14-61.26,285.26-46.87,220.23-72.08,443.48-91.18,667.36-11.81,138.49-14.52,277.69-15.81,416.69-.65,69.41,6.77,138.87,9.57,208.35,2.84,70.26,10.16,140.22,27.25,208.17,53.81,213.94,108.66,427.6,154.42,643.48,32,150.95,63,302.07,91,453.81Q-1815.23,4645.81-1788.3,4791.75Z" transform="translate(4999.52 644.12)"/></g></svg>
+            <svg id="blul" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3316.03 2284.51"><title>flul</title><g id="gjI4Kz.tif"><path d="M-3407.74,4402.77c-147.71-33-312.13-80.56-475.72-130.49q-705.16-215.25-1368.35-538c-396.35-192-771.7-417.31-1136.45-662.45-56.61-38-64.28-87-56-144.27,25.43-175.14,52.42-350,79.25-525,12.17-79.33,25.58-158.46,38.07-237.74,7.43-47.16,30.94-52.81,68.49-28.63,223.6,144,451,281.63,683.78,410.24C-5273.22,2713-4968.16,2872.08-4654,3014c240.47,108.63,480.61,218,725.69,315.52,241.26,96,485.59,184.28,729.08,274.58,77.25,28.65,78.16,26.69,54.88,106.32-63.56,217.36-138,431.49-193.51,651.25C-3344.33,4387.34-3348.59,4417.81-3407.74,4402.77Z" transform="translate(6447.04 -2122.25)"/></g></svg>
+            <svg id="brul" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3739.58 2162.41"><title>flul</title><g id="upjqvw.tif"><path d="M-3423.59,1537.27c182.09-35.7,364.78-68.62,546.15-107.67q642.35-138.32,1259.39-365C-1319.68,955.67-1023,842.5-739.65,698.51-469.77,561.35-219.2,393.33,14,199.9c55-45.58,113-87.66,160.65-141.52h34.93c15.18,54.63,4.52,112,13,165.89,29.44,187,44.47,376.33,88.76,561,13.34,55.65-1.74,101.54-52.37,135.95-81.65,55.5-159.92,116-241.37,171.79-335.12,229.64-689.77,423.71-1062.65,585.2-432,187.1-879.67,324-1340,419.48-259.57,53.82-521,97.35-785.75,119.05-104.32,8.55-104.59,13-129.87-90.13-41.46-169.16-82-338.55-123-507.84Q-3423.59,1578-3423.59,1537.27Z" transform="translate(3423.59 -58.37)"/></g></svg>
+            <svg id="blml" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5890.18 6205.98"><title>flul</title><g id="H8CYT1.tif"><path d="M-2824.39-3879.92h84.94c654.75,466.48,1348.67,864.5,2072.54,1214.64,974.17,471.21,1987.46,829.53,3034.26,1097.58,123.62,31.65,143.2,60.13,111.85,188.32C2413-1108.5,2341.87-838.8,2274.49-568.19,2153.31-81.51,2028,404.24,1914.58,892.74c-100.56,433.08-188.41,869.14-279.3,1304.42-19.65,94.1-58,143.92-164.84,124.89C976.69,2234.12,484.7,2137.64-1.81,2015.74a17650.88,17650.88,0,0,1-2040-645c-461.72-177.34-917.83-368.67-1356-599.93q0-95.56,0-191.12c30.37-227.09,61.5-454.07,90.93-681.28,46.22-356.78,96.35-713.15,135.57-1070.71,48.08-438.28,101.42-875.75,162.57-1312.39C-2943.62-2949.3-2868.06-3412.52-2824.39-3879.92Z" transform="translate(3397.76 3879.92)"/></g></svg>
+            <svg id="brml" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3117.79 2925.64"><title>flul</title><g id="msjVE7.tif"><path d="M-297,405.84v1217.9c-242.22,109.4-493.39,194.44-748.27,267.93-337.34,97.26-680.65,166.16-1029,212.53-297.39,39.6-596.13,54-895.27,67.22-54.55,2.42-74.58-17.79-83.65-69.66-68.29-390.85-153.18-778.42-236.38-1166.26C-3325.48,768.11-3370,602.58-3409.91,436c-11.89-49.56-4.34-58.69,45.73-61.73,82.2-5,163.41-18.11,245-28.33,352.32-44.1,696.78-123.22,1035.12-229.72C-1603.69-34.93-1150-243.14-728.54-520q159-104.48,311.41-218.43c37.31-27.73,59.38-18,62.49,25.73,13.64,191.94,31.92,383.75,38,575.95,5.18,162.93,17.91,325.83,12.73,489.11C-304.44,370.08-299.46,388-297,405.84Z" transform="translate(3414.84 754.03)"/></g></svg>
+            <svg id="blly" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2966.54 1648.78"><title>flul</title><g id="bdz5zP.tif"><path d="M-3266.77-353.81H-3218c95.89,57.81,200.29,97.62,302,143.13,491.69,220,1000,392.32,1520.67,528.66C-1097.24,396-795.77,459.26-491.74,510.11c82.84,13.85,88.45,26.75,70.59,110.43-42.28,198.13-85.34,396.14-123.75,595-11.46,59.34-37.57,84.89-97.25,78.43-126.8-13.72-254.65-20.5-380.38-40.67-302-48.47-603.08-102-899.5-179.81-476.15-125-936-293-1378.21-509.29-82-40.12-87-55.48-73.24-148.26C-3353,277.77-3337.43,138.85-3316.6.72-3298.81-117.31-3293.79-237.11-3266.77-353.81Z" transform="translate(3379.38 353.81)"/></g></svg>
+            <svg id="brly" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5607.77 2450.89"><title>flul</title><g id="dt0ff7.tif"><path d="M-3399.45,1260.19V1138.05c182.84,0,364-28.87,547.51-26,168.8,2.67,338.61-5.09,506.69-21.49,403.29-39.36,806.89-77.62,1207.54-140.08C-642.51,873.31-151.86,773.4,332.94,646.2,929.81,489.61,1512.47,290,2085.16,60.71c110.58-44.28,132.73-25.06,119.89,91.24-4.82,43.65-4.51,88-4.54,132-.24,369.63-1.18,739.26,1.07,1108.88.45,73.51-22.46,114.56-94.83,145.31C1735.35,1696,1355.82,1829.66,970.7,1949.82c-902,281.43-1826.8,439.36-2766.73,511.8-398.94,30.75-799.56,33.2-1199.79,21.88-172-4.86-171.62-7-203.89-176.59Q-3299.28,1783.49-3399.45,1260.19Z" transform="translate(3399.45 -38.81)"/></g></svg>
+            <svg id="brll" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3559 4283.5"><title>flul</title><g id="aQlI0C.tif"><path d="M94.38-2120.27c25.4,16.61,87.39-40,80.9,40.45-3.27,24.3-8.74,48.54-9.45,72.91-5.38,186.11-2.82,372.18-10.61,558.52-11.52,275.48-17.09,551.3-28.37,827-9,219.5-19,439-26.62,658.51-12.08,347.3-25.07,694.5-41.48,1041.61-2.61,55.24-15.28,89.31-74.87,98.66-22.64,3.56-59.1,4.11-53.47,45.69,15.35,113.2-19.37,222.75-23.83,334.49-5.16,129.28-71.14,224-171.3,298.43s-213.27,124.51-331,162.82c-275.13,89.5-560.28,123-847.3,136.36-262.63,12.22-524.91-2.57-783.59-53.87-198.89-39.45-395.12-87.7-557.4-220.71-44.27-36.28-90.87-77.92-97-133.57-12.3-111-18.79-224-11-335.09,3.88-55.57-13.07-62.63-54.56-63.23-123.49-1.81-132.38-6.71-143.86-146.53-14.66-178.64-25.27-357.69-43.67-535.94-36.8-356.49-80-712.32-116.27-1068.87-33.77-332.33-82.15-662.65-128-993.34-11.81-85.27-7.64-93.12,79.81-93.2,298.4-.28,596.57,1.84,894.53-25.26,294.9-26.82,588.24-62.59,879.29-116.64q653.07-121.28,1276.92-349.72C-132.27-2023-13.93-2059.69,94.38-2120.27Z" transform="translate(3383.25 2124.31)"/></g></svg>
+            <svg id="blll" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2527.58 3456.11"><title>flul</title><g id="of91Gk.tif"><path d="M-3387,2516.11V2393.69c9.63-24.48,7.84-50.19,7.32-75.55-3.82-188.58,15.72-376.23,23.83-564.29,10.29-238.63,31-476.82,47.53-715.17,10.67-153.88,19.81-307.9,33.35-461.53,20.53-233,39.78-466.05,68.39-698.26,8.84-71.75,15-77.5,80.53-44.94C-2908.35-57.82-2683.33,33-2454,112.94c502.47,175.14,1020.16,279.79,1549.38,329.3,35.84,3.35,50.91,11.78,43.22,53.18-38.4,206.7-73.68,414-110.09,621.05-60.5,344-112.1,689.42-159,1035.53-21.37,157.82-40.39,316-63.28,473.56-5.23,36,9.61,42.06,37.87,41.15,46.7-1.5,88.17-24.22,133.13-33.22,30.94-6.2,46.06-.28,40.28,35.15-11.2,68.62-24.68,137.16-30.47,206.3-10.34,123.37-83.81,194.13-188,244.49-175.78,84.95-364.58,114.57-555.92,133.36-80.72,7.93-161.8,12.28-242.72,18.26h-163.23c-86.81-20-175.5-6.81-263.46-15-195-18.19-387.35-46.32-574.11-105.87-117.29-37.4-229.47-85.32-315.51-178.9-28.86-31.39-45.84-65.83-43.39-110.08,5.26-94.88,4.82-190.23,14.12-284.67C-3341.25,2537.06-3356,2524.47-3387,2516.11Z" transform="translate(3387.01 185.07)"/></g></svg>
+            <svg id="bins" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1404.24 5386.45"><title>flul</title><g id="bNCFqs.tif"><path d="M-2358.79-2012c-55.13-26-76.22,7.38-91.41,52-53.91,158.28-95.47,320.1-137.35,481.77-91.3,352.46-187.86,703.72-270.28,1058.26-126.28,543.23-253.35,1086.42-358.51,1634.36q-135.82,707.65-238,1420.9c-12,82.54-21.36,165.46-30.92,248.33-4.51,39.14-20.43,65.6-59.73,81.32-55.85,22.34-112.81,39.77-170.61,55.74-38.1,10.53-50.56-4.58-46.81-39.46,9.6-89.24,18-178.68,30.56-267.53,38.92-275.94,76.83-552.07,120.2-827.32q74.65-473.74,166.78-944.55c67.57-344.83,145.61-687.4,217.27-1031.32,102-489.56,235.39-971.25,358.2-1455.58,35.21-138.85,72.48-279.19,129.15-410,58.63-135.37,88.66-283.16,173-407.37h28.42a2012,2012,0,0,1,180,303.14Z" transform="translate(3763.02 2362.52)"/></g></svg>
+            <svg id="bcol" fill="white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5512.14 1797.44"><title>flul</title><g id="_0pm75J.tif" data-name="0pm75J.tif"><path d="M288.74-2139.8H755.16c280,48.37,559.79,100.84,827.86,196.08,251.09,89.21,473.81,216.75,525.94,513.8,28.88,164.57,38.75,328.61,9.61,495.36-23.16,132.51-19.69,137-150.36,102.89-154.54-40.33-311-57.67-470.63-61-557.46-11.75-1098.19,95.87-1619,274.54C-581.36-460.38-1048.06-380-1529-358c-283.4,12.94-565.95,25.56-850.81,4.19-345.9-25.95-680.4-83.65-996.17-231.21v-66.63c397-256.77,687.52-599.55,842.92-1049.76,67.52-195.61,89.36-215.06,299.66-219.69,140.45-3.09,281.54,4,421.33-6.61,466.84-35.58,933.81-70.65,1398.74-127.74C-179.4-2084.21,54.7-2111.73,288.74-2139.8Z" transform="translate(3376.01 2139.8)"/></g></svg>
           </section>
           <div class="builder-btns">
             <div class="builder-btn" onclick="collect()">Save and Continue</div>
@@ -1432,8 +2790,16 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
             <input id="input_state" class="builder-input builder-input-full"/>
           </div>
           <div class="cf-input">
+            <p>Zip Code</p>
+            <input id="input_zip" class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
             <p>Country</p>
             <input  id="input_country" class="builder-input builder-input-full"/>
+          </div>
+          <div class="cf-input">
+            <p>Distributer Code</p>
+            <input  id="input_dcode" class="builder-input builder-input-full"/>
           </div>
         </section>
       </section>
@@ -1441,5 +2807,5 @@ Measure lengths to your preferred fitting as your suit will be made to the measu
   </main>
 </body>
 <script src="./js.js"></script>
-<script src="./collect.js"></script>
+<!-- <script src="./collect.js"></script> -->
 </html>

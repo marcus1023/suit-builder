@@ -1,106 +1,122 @@
-if(color === 'brua-aqua'){
+//Front collar
+if(color === 'fc-aqua'){
   console.log('here')
-  document.getElementById('brua-label').style.background = '#129793'
-  document.getElementById("brua-title").innerHTML = "Aqua";
-  document.getElementById('back-left-lower-arm').style.fill = '#129793'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+  document.getElementById('fc-label').style.background = '#129793'
+  document.getElementById("fc-title").innerHTML = "Aqua";
+  document.getElementById('fc').style.fill = '#129793'
+  document.getElementById('bins').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-neon-green'){
-  document.getElementById('brua-label').style.background = '#29f04f'
-  document.getElementById("brua-title").innerHTML = "Neon Green";
-  document.getElementById('back-left-lower-arm').style.fill = '#29f04f'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-neon-green'){
+  document.getElementById('fc-label').style.background = '#29f04f'
+  document.getElementById("fc-title").innerHTML = "Neon Green";
+  document.getElementById('fc').style.fill = '#29f04f'
+  document.getElementById('bins').style.fill = '#29f04f'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-hot-pink'){
-  document.getElementById('brua-label').style.background = '#e929f0'
-  document.getElementById("brua-title").innerHTML = "Hot Pink";
-  document.getElementById('back-left-lower-arm').style.fill = '#e929f0'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-hot-pink'){
+  document.getElementById('fc-label').style.background = '#e929f0'
+  document.getElementById("fc-title").innerHTML = "Hot Pink";
+  document.getElementById('fc').style.fill = '#e929f0'
+  document.getElementById('bins').style.fill = '#e929f0'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-yellow'){
-  document.getElementById('brua-label').style.background = 'yellow'
-  document.getElementById("brua-title").innerHTML = "Yellow";
-  document.getElementById('back-left-lower-arm').style.fill = 'yellow'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-yellow'){
+  document.getElementById('fc-label').style.background = 'yellow'
+  document.getElementById("fc-title").innerHTML = "Yellow";
+  document.getElementById('fc').style.fill = 'yellow'
+  document.getElementById('bins').style.fill = 'yellow'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-maroon'){
-  document.getElementById('brua-label').style.background = '#cb0039'
-  document.getElementById("brua-title").innerHTML = "Maroon";
-  document.getElementById('back-left-lower-arm').style.fill = '#cb0039'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-maroon'){
+  document.getElementById('fc-label').style.background = '#cb0039'
+  document.getElementById("fc-title").innerHTML = "Maroon";
+  document.getElementById('fc').style.fill = '#cb0039'
+  document.getElementById('bins').style.fill = '#cb0039'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-grey'){
-  document.getElementById('brua-label').style.background = '#969696'
-  document.getElementById("brua-title").innerHTML = "Grey";
-  document.getElementById('back-left-lower-arm').style.fill = '#969696'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-grey'){
+  document.getElementById('fc-label').style.background = '#969696'
+  document.getElementById("fc-title").innerHTML = "Grey";
+  document.getElementById('fc').style.fill = '#969696'
+  document.getElementById('bins').style.fill = '#969696'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-navy'){
-  document.getElementById('brua-label').style.background = '#152c91'
-  document.getElementById("brua-title").innerHTML = "Navy";
-  document.getElementById('back-left-lower-arm').style.fill = '#152c91'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-navy'){
+  document.getElementById('fc-label').style.background = '#152c91'
+  document.getElementById("fc-title").innerHTML = "Navy";
+  document.getElementById('fc').style.fill = '#152c91'
+  document.getElementById('bins').style.fill = '#152c91'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-purple'){
-  document.getElementById('brua-label').style.background = 'purple'
-  document.getElementById("brua-title").innerHTML = "Purple";
-  document.getElementById('back-left-lower-arm').style.fill = 'purple'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-purple'){
+  document.getElementById('fc-label').style.background = 'purple'
+  document.getElementById("fc-title").innerHTML = "Purple";
+  document.getElementById('fc').style.fill = 'purple'
+  document.getElementById('bins').style.fill = 'purple'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-darkGreen'){
-  document.getElementById('brua-label').style.background = 'Green'
-  document.getElementById("brua-title").innerHTML = "Green";
-  document.getElementById('back-left-lower-arm').style.fill = 'Green'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-darkGreen'){
+  document.getElementById('fc-label').style.background = 'Green'
+  document.getElementById("fc-title").innerHTML = "Green";
+  document.getElementById('fc').style.fill = 'Green'
+  document.getElementById('bins').style.fill = 'Green'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-darkGrey'){
-  document.getElementById('brua-label').style.background = '#494949'
-  document.getElementById("brua-title").innerHTML = "Dark Grey";
-  document.getElementById('back-left-lower-arm').style.fill = '#494949'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-darkGrey'){
+  document.getElementById('fc-label').style.background = '#494949'
+  document.getElementById("fc-title").innerHTML = "Dark Grey";
+  document.getElementById('fc').style.fill = '#494949'
+  document.getElementById('bins').style.fill = '#494949'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-blue'){
-  document.getElementById('brua-label').style.background = 'blue'
-  document.getElementById("brua-title").innerHTML = "Blue";
-  document.getElementById('back-left-lower-arm').style.fill = 'blue'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-blue'){
+  document.getElementById('fc-label').style.background = 'blue'
+  document.getElementById("fc-title").innerHTML = "Blue";
+  document.getElementById('fc').style.fill = 'blue'
+  document.getElementById('bins').style.fill = 'blue'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-lime'){
-  document.getElementById('brua-label').style.background = '#09b600'
-  document.getElementById("brua-title").innerHTML = "Lime";
-  document.getElementById('back-left-lower-arm').style.fill = '#09b600'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-lime'){
+  document.getElementById('fc-label').style.background = '#09b600'
+  document.getElementById("fc-title").innerHTML = "Lime";
+  document.getElementById('fc').style.fill = '#09b600'
+  document.getElementById('bins').style.fill = '#09b600'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-white'){
-  document.getElementById('brua-label').style.background = 'White'
-  document.getElementById("brua-title").innerHTML = "White";
-  document.getElementById('back-left-lower-arm').style.fill = 'White'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-white'){
+  document.getElementById('fc-label').style.background = 'White'
+  document.getElementById("fc-title").innerHTML = "White";
+  document.getElementById('fc').style.fill = 'White'
+  document.getElementById('bins').style.fill = 'White'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-black'){
-  document.getElementById('brua-label').style.background = 'Black'
-  document.getElementById("brua-title").innerHTML = "Black";
-  document.getElementById('back-left-lower-arm').style.fill = 'Black'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-black'){
+  document.getElementById('fc-label').style.background = 'Black'
+  document.getElementById("fc-title").innerHTML = "Black";
+  document.getElementById('fc').style.fill = 'Black'
+  document.getElementById('bins').style.fill = 'Black'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }
-if(color === 'brua-teal'){
-  document.getElementById('brua-label').style.background = '#00b692'
-  document.getElementById("brua-title").innerHTML = "Teal";
-  document.getElementById('back-left-lower-arm').style.fill = '#00b692'
-  document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+if(color === 'fc-teal'){
+  document.getElementById('fc-label').style.background = '#00b692'
+  document.getElementById("fc-title").innerHTML = "Teal";
+  document.getElementById('fc').style.fill = '#00b692'
+  document.getElementById('bins').style.fill = '#00b692'
+  document.getElementById('color-picker-dropdown-fc').style.display = 'none'
   dropdownCtrl = true
 }

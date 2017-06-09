@@ -6,6 +6,247 @@
 .admin-color-control{
     display:none;
 }
+/*STRIPE*/
+/**/
+/**/
+/*LOADER*/
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #50aaed;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+/**/
+#payment-load-animation *{
+  opacity: 1 !important;
+}
+#payment-load-animation #secure-payment-img{
+  left: 9%;
+  top: -100px;
+}
+#thanks-for-choosing{
+  font-size: 1.1rem;
+  margin: 5px;
+}
+#loading-payment{
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 5000;
+  justify-content: center;
+  align-items: center;
+}
+#payment-load-animation p{
+  font-weight: 400;
+  position: absolute;
+  color: #50aaed;
+  left: 20%;
+  margin: 65px 0 0 0;
+}
+#payment-load-animation{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  /*background: rgba(0,0,0, .1);*/
+  z-index: 5;
+}
+#payment-form-stripe span{
+  color:  #50aaed;
+}
+#payment-form-stripe:hover{
+  opacity: 1;
+}
+#payment-form-stripe{
+  transition: all .4s;
+  opacity: .6;
+  font-style: italic;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: .8rem;
+  color: black;
+}
+#payment-headline{
+  padding: 10px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+#payment-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#type-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#payment-form-exit:hover{
+  background: #50aaed;
+  color: white;
+}
+#payment-form-exit{
+  transition: all .4s;
+  border-radius: 3px;
+  color: #50aaed;
+  font-weight: 400;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 3px 10px 5px 10px;
+  background: white;
+}
+#payment-form{
+  position: absolute;
+  width: 100%;
+  margin: -20px 0 0 0;
+}
+#secure-payment-img-in{
+  width: 50px;
+}
+#secure-payment-img{
+  opacity: .6;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#stripe-form-shade{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .5);
+  height: 100%;
+  width: 100%;
+}
+#stripe-form{
+  z-index: 4000;
+  position: fixed;
+  width: 94%;
+  border-radius: 5px;
+  border: 2px solid #50aaed;
+  left: 3%;
+  top: 25%;
+  height: 300px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#payment-form button:hover{
+  color:  #50aaed;
+  background: white;
+}
+#payment-form button{
+  transition: all .4s;
+  margin: 10px;
+  padding: 10px 15px;
+  border: 2px solid #50aaed;
+  background:  #50aaed;
+  color: white;
+}
+
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.cf-input p{
+    margin: -2px 0 0 0;
+}
+
+.admin-color-control{
+    display:none;
+}
+
 .popup-confirm-section{
   position: fixed;
   top:0;
@@ -47,12 +288,11 @@
 }
 .pop-confirm-info p{
   padding: 10px;
-  font-size: 1rem;
 }
 .pop-confirm-btns{
   display: flex;
   width: 100%;
-  margin: 110px 0 0 0;
+  margin: 70px 0 0 0;
 }
 .cont-edit:hover{
   font-size: 1rem;
@@ -508,6 +748,7 @@ font-size: 1.3rem;
 }
 #down-chevron{
   min-width: 10px;
+  max-width: 10px;
   margin: 0 0 0 20%;
 }
 #front-suit-display{
@@ -636,6 +877,141 @@ top: 23px;
   left: 186px;
   top: 44px;
 }
+/*BACK*/
+#boso{
+  position: absolute;
+  width: 93%;
+  left: 3px;
+  top: 15px;
+  z-index: 2;
+}
+#blla{
+  position: absolute;
+  width: 19.7%;
+  left: 4px;
+  top: 61px;
+}
+#brla{
+  position: absolute;
+  width: 24.6%;
+  left: 174px;
+  top: 46px;
+}
+#bleb{
+  position: absolute;
+  width: 11.9%;
+  left: 8px;
+  top: 129px;
+}
+#breb{
+  position: absolute;
+  width: 13.2%;
+  left: 168px;
+  top: 141px;
+}
+#blua{
+  position: absolute;
+  width: 12.8%;
+  left: 14px;
+  top: 80px;
+}
+#brua{
+  position: absolute;
+  width: 18.8%;
+  left: 148px;
+  top: 67px;
+}
+#blsh{
+  position: absolute;
+  width: 21.2%;
+  left: 43px;
+  top: 31px;
+}
+#brsh{
+  position: absolute;
+  width: 21.3%;
+  left: 133px;
+  top: 29px;
+}
+#back{
+  position: absolute;
+  width: 52.4%;
+  left: 54px;
+  top: 29px;
+}
+#blly{
+  position: absolute;
+  width: 20.4%;
+  left: 47px;
+  top: 313px;
+}
+#brly{
+  position: absolute;
+      width: 22.6%;
+      left: 132px;
+      top: 318px;
+}
+#blcr{
+  position: absolute;
+      width: 18.3%;
+      left: 56px;
+      top: 241px;
+}
+#brcr{
+  position: absolute;
+  width: 22%;
+  left: 107px;
+  top: 236px;
+}
+#blul{
+  position: absolute;
+      width: 21.7%;
+      left: 56px;
+      top: 253px;
+}
+#brul{
+  position: absolute;
+  width: 27.2%;
+  left: 120px;
+  top: 252px;
+}
+#blml{
+  position: absolute;
+  width: 22.7%;
+  left: 49px;
+  top: 268px;
+}
+#brml{
+  position: absolute;
+      width: 25.8%;
+      left: 124px;
+      top: 268px;
+}
+#blll{
+  position: absolute;
+      width: 20.4%;
+      left: 43px;
+      top: 329px;
+}
+#brll{
+  position: absolute;
+      width: 21.6%;
+      left: 135px;
+      top: 333px;
+}
+#bcol{
+  position: absolute;
+      width: 21%;
+      left: 91px;
+      top: 16px;
+}
+#bins{
+  position: absolute;
+  width: 12.1%;
+  left: 89px;
+  top: 270px;
+}
+/*BACK*/
 .suit-display{
   box-shadow: -1px 1px 6px rgba(0,0,0, .3);
   position: relative;
@@ -654,10 +1030,20 @@ top: 23px;
   min-height: 450px;
   max-width: 250px;
   max-height: 450px;
+  margin: 100px 0 0 0;
 }
   @media screen and (max-width: 780px) {
     .zDex-1{
       z-index: 2 !important;
+    }
+    .builder-btns{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+    .suit-display-wrapper{
+    margin: 0 0 -40% 0;
     }
     .picker-dropdown{
         width: 80%;
@@ -671,14 +1057,14 @@ top: 23px;
       margin: 0 0 0 0;
     }
     .build-full{
-      width: 90%;
-      height: 300vh;
+      width: 100%;
+      height: 500vh;
     }
     .suit-display-img{
       margin: 110px 0 0 0;
     }
     .suit-display{
-      min-height: 140vh;
+      min-height: 200vh;
       width: 100%;
       margin: 0 0 0 0;
       flex-direction: column;
@@ -711,13 +1097,18 @@ top: 23px;
       margin:-161px 0 0 33px;
     }
     .pop-confirm-wrap{
-      height: 66vh;
+        top:100px;
+        left: 0px;
+        width:100%;
+      height: 100vh;
       position: fixed;
     }
     .price-banner-wrap{
       top: 52px;
       height: 84px;
-
+    }
+    #front-suit-display{
+    margin: 40px 0 0 0;
     }
   }
 .front-suit-display-wrap{

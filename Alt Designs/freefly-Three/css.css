@@ -5,7 +5,248 @@
 
 .admin-color-control{
     display:none;
+}@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+/*STRIPE*/
+/**/
+/**/
+/*LOADER*/
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
 }
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #50aaed;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+/**/
+#payment-load-animation *{
+  opacity: 1 !important;
+}
+#payment-load-animation #secure-payment-img{
+  left: 9%;
+  top: -100px;
+}
+#thanks-for-choosing{
+  font-size: 1.1rem;
+  margin: 5px;
+}
+#loading-payment{
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 5000;
+  justify-content: center;
+  align-items: center;
+}
+#payment-load-animation p{
+  font-weight: 400;
+  position: absolute;
+  color: #50aaed;
+  left: 20%;
+  margin: 65px 0 0 0;
+}
+#payment-load-animation{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  /*background: rgba(0,0,0, .1);*/
+  z-index: 5;
+}
+#payment-form-stripe span{
+  color:  #50aaed;
+}
+#payment-form-stripe:hover{
+  opacity: 1;
+}
+#payment-form-stripe{
+  transition: all .4s;
+  opacity: .6;
+  font-style: italic;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: .8rem;
+  color: black;
+}
+#payment-headline{
+  padding: 10px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+#payment-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#type-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#payment-form-exit:hover{
+  background: #50aaed;
+  color: white;
+}
+#payment-form-exit{
+  transition: all .4s;
+  border-radius: 3px;
+  color: #50aaed;
+  font-weight: 400;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 3px 10px 5px 10px;
+  background: white;
+}
+#payment-form{
+  position: absolute;
+  width: 100%;
+  margin: -20px 0 0 0;
+}
+#secure-payment-img-in{
+  width: 50px;
+}
+#secure-payment-img{
+  opacity: .6;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#stripe-form-shade{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .5);
+  height: 100%;
+  width: 100%;
+}
+#stripe-form{
+  z-index: 4000;
+  position: fixed;
+  width: 94%;
+  border-radius: 5px;
+  border: 2px solid #50aaed;
+  left: 3%;
+  top: 25%;
+  height: 300px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#payment-form button:hover{
+  color:  #50aaed;
+  background: white;
+}
+#payment-form button{
+  transition: all .4s;
+  margin: 10px;
+  padding: 10px 15px;
+  border: 2px solid #50aaed;
+  background:  #50aaed;
+  color: white;
+}
+
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.cf-input p{
+    margin: -2px 0 0 0;
+}
+
+.admin-color-control{
+    display:none;
+}
+
 .popup-confirm-section{
   position: fixed;
   top:0;
@@ -47,12 +288,11 @@
 }
 .pop-confirm-info p{
   padding: 10px;
-  font-size: 1rem;
 }
 .pop-confirm-btns{
   display: flex;
   width: 100%;
-  margin: 110px 0 0 0;
+  margin: 70px 0 0 0;
 }
 .cont-edit:hover{
   font-size: 1rem;
@@ -536,8 +776,8 @@ font-size: 1.3rem;
 }
 #fc{
   position: absolute;
-  width: 21%;
-  left: 101px;
+  width: 20.6%;
+  left: 102px;
   top: 13px;
 }
 #frla{
@@ -555,7 +795,7 @@ font-size: 1.3rem;
 #frside{
   position: absolute;
   width: 19.7%;
-  left: 54px;
+  left: 55px;
   top: 33px;
 }
 #frc{
@@ -566,14 +806,14 @@ font-size: 1.3rem;
 }
 #flc{
   position: absolute;
-  width: 35.3%;
-  left: 96px;
-  top: 31px;
+  width: 35.5%;
+  left: 97px;
+  top: 30px;
 }
 #flside{
   position: absolute;
   width: 18.5%;
-  left: 145px;
+  left: 146px;
   top: 22px;
 }
 #fls{
@@ -590,13 +830,13 @@ font-size: 1.3rem;
 }
 #frly{
   position: absolute;
-  width: 28%;
+  width: 28.2%;
   left: 48px;
   top: 251px;
 }
 #flly{
   position: absolute;
-  width: 23.3%;
+  width: 23.6%;
   left: 127px;
   top: 287px;
 }
@@ -621,7 +861,7 @@ font-size: 1.3rem;
 #flll{
   position: absolute;
   width: 20.4%;
-  left: 138px;
+  left: 139px;
   top: 359px;
 }
 #frbprev{
@@ -633,9 +873,102 @@ font-size: 1.3rem;
 #flbprev{
   position: absolute;
   width: 9.2%;
-  left: 186px;
+  left: 187px;
   top: 44px;
 }
+/*BACK*/
+#boso{
+  position: absolute;
+  width: 89%;
+  left: 7px;
+  top:15px;
+  z-index: 2;
+}
+#blla{
+  position: absolute;
+  width: 10.8%;
+  left: 8px;
+  top: 133px;
+}
+#brla{
+  position: absolute;
+  width: 19.2%;
+  left: 181px;
+  top: 140px;
+}
+#blua{
+  position: absolute;
+  width: 15.8%;
+  left: 8px;
+  top: 55px;
+}
+#brua{
+  position: absolute;
+      width: 21.2%;
+      left: 162px;
+      top: 48px;
+}
+#blsh{
+  position: absolute;
+  width: 12.4%;
+  left: 39px;
+  top: 35px;
+}
+#brsh{
+  position: absolute;
+  width: 21%;
+  left: 126px;
+  top: 26px;
+}
+#back{
+  position: absolute;
+  width: 48.8%;
+  left: 52px;
+  top: 25px;
+}
+#blly{
+  position: absolute;
+  width: 27.7%;
+  left: 38px;
+  top: 267px;
+}
+#brly{
+  position: absolute;
+  width: 23%;
+  left: 116px;
+  top: 264px;
+}
+#blul{
+  position: absolute;
+  width: 21.8%;
+  left: 47px;
+  top: 286px;
+}
+#brul{
+  position: absolute;
+  width: 21%;
+  left: 120px;
+  top: 288px;
+}
+#blll{
+  position: absolute;
+  width: 20%;
+  left: 38px;
+  top: 332px;
+}
+#brll{
+  position: absolute;
+  width: 18%;
+  left: 125px;
+  top: 346px;
+}
+#bcol{
+  position: absolute;
+  width: 18%;
+  left: 86px;
+  top: 15px;
+}
+/*BACK*/
 .suit-display{
   box-shadow: -1px 1px 6px rgba(0,0,0, .3);
   position: relative;

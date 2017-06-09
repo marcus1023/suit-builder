@@ -1,96 +1,61 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 .cf-input p{
     margin: -2px 0 0 0;
 }
-
+#chute-out-box span{
+  font-size: .4rem;
+  margin: 1px 0 0 0;
+}
+#chute-out-box{
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+      z-index: 5;
+      top: 80px;
+      left: 93px;
+      width: 18%;
+}
+#chute-out-logo{
+  width: 60%;
+  margin: 0 0 2px 0;
+}
+#caos-leg-logo{
+  font-size: .7rem;
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  bottom: 213px;
+  left: 145px;
+  width: 20%;
+  transform: rotate(-9deg);
+}
+#caos-arm-logo{
+  font-size: .7rem;
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  bottom: 283px;
+  left: 194px;
+  width: 20%;
+  transform: rotate(69deg);
+}
 .admin-color-control{
     display:none;
 }
-.popup-confirm-section{
-  position: fixed;
-  top:0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0,0,0, .7);
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#pop-confirm-wrap-p{
-  padding: 10px;
-  margin: -40px 0 0 0;
-  font-size: 1rem;
-}
-.pop-confirm-wrap{
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 70%;
-  height: 60vh;
-  background: white;
-  z-index: 15;
-  border-radius: 5px;
-}
-#blue-check-mark{
-  transition: all .6s;
-  opacity: 0;
-  position: absolute;
-  top: 55%;
-  left: 45%;
-  width: 80px;
-}
-.pop-confirm-info p{
-  padding: 10px;
-  font-size: 1rem;
-}
-.pop-confirm-btns{
-  display: flex;
-  width: 100%;
-  margin: 110px 0 0 0;
-}
-.cont-edit:hover{
-  font-size: 1rem;
-  background: white;
-  color: black;
-}
-.cont-edit{
-  position: absolute;
-  transition: all .4s;
-  padding: 5px 15px;
-  border: 1px solid rgba(0,0,0, .5);
-  border-radius: 3px;
-  margin: 1.9% 0 0 -5.5% ;
-  background: black;
-  color: white;
-}
-.vid-btn:hover{
-  background: white;
-  color: #50aaed;
-}
-.vid-btn{
-  margin:10px auto 40px;
-  transition: all .4s;
-  width: 35%;
-  text-align: center;
-  color: white;
-  font-size: 1.2rem;
-  border: 2px solid #50aaed;
-  border-radius: 3px;
-  padding: 10px 25px;
-  background: #50aaed;
-}
-.pop-confirm-info h4{
-  font-size: 2rem;
-}
-.pop-confirm-info{
-  padding: 10px;
-}
+
+
 #color-picker-colors-back{
   display: none;
   flex-wrap: wrap;
@@ -331,7 +296,7 @@ h1{
   transition: all .4s;
 }
 .color-single-display{
-  width: 15px;
+  min-width: 15px;
   height: 15px;
   margin: 0 0 0 5px;
   border: 1px solid rgba(0,0,0, .3);
@@ -349,7 +314,8 @@ h1{
 
 
 .price-banner-wrap h2{
-font-size: 1.3rem;
+  font-size: 2.5rem;
+  margin: 10px -5px;
 }
 .price-banner-wrap{
   transition: all .8s;
@@ -360,7 +326,7 @@ font-size: 1.3rem;
   height: 40px;
   background: #50aaed;
   color: white;
-  display: none;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
@@ -524,8 +490,12 @@ font-size: 1.3rem;
   width: 85%;
   position: absolute;
   z-index: 2;
+  top: 25px;
+  left: 38px;
 }
 #back-lineing{
+  top: 56px;
+  left: 0px;
   width: 85%;
   position: absolute;
   z-index: 2;
@@ -561,7 +531,7 @@ font-size: 1.3rem;
    left: 204px;
 }
 #front-left-lower-arm{
-  width: 11.5%;
+  width: 12%;
   position: absolute;
   top: 140px;
   left: 40px;
@@ -579,13 +549,13 @@ font-size: 1.3rem;
   left: 89px;
 }
 #front-right-upper-leg{
-  width: 24%;
+  width: 25%;
   position: absolute;
-  top: 240px;
+  top: 239px;
   left: 146px;
 }
 #front-left-knee{
-  width: 17%;
+  width: 18%;
   position: absolute;
   top: 304px;
   left: 99px;
@@ -611,8 +581,8 @@ font-size: 1.3rem;
 #front-left-lower-leg{
   width: 22.3%;
   position: absolute;
-  top: 324px;
-  left: 94px;
+  top: 326px;
+  left: 95px;
 }
 #front-right-lower-leg{
   width: 32.3%;
@@ -646,9 +616,9 @@ font-size: 1.3rem;
   left: 168px;
 }
 #back-left-upper-arm{
-  width: 18.5%;
+  width: 19%;
   position: absolute;
-  top: 89px;
+  top: 90px;
   left: 3px;
 }
 #back-right-upper-arm{
@@ -672,7 +642,7 @@ font-size: 1.3rem;
 #back-legs{
   width: 49.5%;
   position: absolute;
-  top: 174px;
+  top: 175px;
   left: 38px;
 }
 #back-leg-grippers{
@@ -709,6 +679,12 @@ font-size: 1.3rem;
   @media screen and (max-width: 780px) {
     .zDex-1{
       z-index: 2 !important;
+    }
+    .builder-btns{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
     .picker-dropdown{
         width: 80%;
@@ -762,15 +738,258 @@ font-size: 1.3rem;
       margin:-161px 0 0 33px;
     }
     .pop-confirm-wrap{
-      height: 66vh;
+      display: none;
+        top:100px;
+        left: 0px;
+        width:100%;
+      height: 100vh;
       position: fixed;
+    }
+    .price-banner-wrap{
+      font-size: 1.3rem;
     }
     .price-banner-wrap{
       top: 52px;
       height: 84px;
 
     }
+    #front-suit-display{
+        margin: 40px 0 0 0;
+    }
   }
 .front-suit-display-wrap{
   border: 1px solid black;
+}
+/**/
+/*STRIPE*/
+/**/
+/**/
+/*LOADER*/
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #50aaed;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  }
+}
+/**/
+#payment-load-animation *{
+  opacity: 1 !important;
+}
+#payment-load-animation #secure-payment-img{
+  left: 9%;
+  top: -100px;
+}
+#thanks-for-choosing{
+  font-size: 1.1rem;
+  margin: 5px;
+}
+#loading-payment{
+  position: relative;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 5000;
+  justify-content: center;
+  align-items: center;
+}
+#payment-load-animation p{
+  font-weight: 400;
+  position: absolute;
+  color: #50aaed;
+  left: 20%;
+  margin: 65px 0 0 0;
+}
+#payment-load-animation{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  /*background: rgba(0,0,0, .1);*/
+  z-index: 5;
+}
+#payment-form-stripe span{
+  color:  #50aaed;
+}
+#payment-form-stripe:hover{
+  opacity: 1;
+}
+#payment-form-stripe{
+  transition: all .4s;
+  opacity: .6;
+  font-style: italic;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: .8rem;
+  color: black;
+}
+#payment-headline{
+  padding: 10px;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+#payment-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#type-confirm{
+  color: #50aaed;
+  font-weight: 400;
+}
+#payment-form-exit:hover{
+  background: #50aaed;
+  color: white;
+}
+#payment-form-exit{
+  transition: all .4s;
+  border-radius: 3px;
+  color: #50aaed;
+  font-weight: 400;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 3px 10px 5px 10px;
+  background: white;
+}
+#payment-form{
+  position: absolute;
+  width: 100%;
+  margin: -20px 0 0 0;
+}
+#secure-payment-img-in{
+  width: 50px;
+}
+#secure-payment-img{
+  opacity: .6;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+#stripe-form-shade{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .5);
+  height: 100%;
+  width: 100%;
+}
+#stripe-form{
+  z-index: 4000;
+  position: fixed;
+  width: 94%;
+  border-radius: 5px;
+  border: 2px solid #50aaed;
+  left: 3%;
+  top: 25%;
+  height: 300px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#payment-form button:hover{
+  color:  #50aaed;
+  background: white;
+}
+#payment-form button{
+  transition: all .4s;
+  margin: 10px;
+  padding: 10px 15px;
+  border: 2px solid #50aaed;
+  background:  #50aaed;
+  color: white;
+}
+
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
 }

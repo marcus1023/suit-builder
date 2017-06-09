@@ -1,7 +1,13 @@
 function collect(){
-
- document.getElementById('pop-confirm-wrap').style.display = 'flex'
- document.getElementById('popup-confirm-section').style.display = 'flex'
+  function checkCollect(){
+    if(document.getElementById("select-tfab-title").innerHTML && document.getElementById("select-lafab-title").innerHTML && document.getElementById("HIPS_CIRCUMFERENCE").value && document.getElementById("IN_SEAM_LENGTH").value && document.getElementById("THIGH_CIRCUMFERENCE").value && document.getElementById("CALF_CIRCUMFERENCE").value && document.getElementById("CROTCH_TO_KNEE_LENGTH").value && document.getElementById("LOWER_LEG_LENGTH").value && document.getElementById("ANKLE_CIRCUMFERENCE").value && document.getElementById("FULL_ARM_BENT_90_LENGTH").value && document.getElementById("BICEP_CIRCUMFERENCE").value && document.getElementById("FOREARM_CIRCUMFERENCE").value && document.getElementById("WRIST_CIRCUMFERENCE").value && document.getElementById("FOOT_TO_SHOULDER_LENGTH").value && document.getElementById("WAIST_CIRCUMFERENCE").value && document.getElementById("NECK_CIRCUMFERENCE").value && document.getElementById("SHOULDER_TO_SHOULDER").value && document.getElementById("SHOULDER_TO_ELBOW_LENGTH").value && document.getElementById("ELBOW_TO_WRIST_LENGTH").value && document.getElementById("CHEST_CIRCUMFERENCE").value && document.getElementById("input-name").value && document.getElementById("input-email").value && document.getElementById("input_phone").value && document.getElementById("input_address").value && document.getElementById("input_city").value && document.getElementById("input_state").value && document.getElementById("input_country").value && document.getElementById("input_zip").value){
+      document.getElementById('pop-confirm-wrap').style.display = 'flex'
+      document.getElementById('popup-confirm-section').style.display = 'flex'
+    }else{
+      alert('Please Fill out all Measurements and Contact Info before continuing to checkout')
+    }
+  }
+  checkCollect();
 // Front
   let frontGrippers = " Gripers Color: " + document.getElementById("gripers-title").innerHTML + " / "
   let frontCollar = " Collar Color: " + document.getElementById("collar-title").innerHTML + " / "
@@ -33,28 +39,44 @@ function collect(){
   let SHOULDER_TO_ELBOW_LENGTH = " SHOULDER_TO_ELBOW_LENGTH: " + document.getElementById("SHOULDER_TO_ELBOW_LENGTH").value + " / "
   let ELBOW_TO_WRIST_LENGTH = " ELBOW_TO_WRIST_LENGTH: " + document.getElementById("ELBOW_TO_WRIST_LENGTH").value + " / "
   let CHEST_CIRCUMFERENCE = " CHEST_CIRCUMFERENCE: " + document.getElementById("CHEST_CIRCUMFERENCE").value + " / "
+
   let TORSO_LENGTH = " TORSO_LENGTH: " + document.getElementById("TORSO_LENGTH").value + " / "
+
   let FULL_ARM_BENT_90_LENGTH = " FULL_ARM_BENT_90_LENGTH: " + document.getElementById("FULL_ARM_BENT_90_LENGTH").value + " / "
+
   let BICEP_CIRCUMFERENCE = " BICEP_CIRCUMFERENCE: " + document.getElementById("BICEP_CIRCUMFERENCE").value + " / "
+
   let FOREARM_CIRCUMFERENCE = " FOREARM_CIRCUMFERENCE: " + document.getElementById("FOREARM_CIRCUMFERENCE").value + " / "
+
   let WRIST_CIRCUMFERENCE = " WRIST_CIRCUMFERENCE: " + document.getElementById("WRIST_CIRCUMFERENCE").value + " / "
+
   let FOOT_TO_SHOULDER_LENGTH = " FOOT_TO_SHOULDER_LENGTH: " + document.getElementById("FOOT_TO_SHOULDER_LENGTH").value + " / "
+
   let WAIST_CIRCUMFERENCE = " WAIST_CIRCUMFERENCE: " + document.getElementById("WAIST_CIRCUMFERENCE").value + " / "
+
   let HIPS_CIRCUMFERENCE = " HIPS_CIRCUMFERENCE: " + document.getElementById("HIPS_CIRCUMFERENCE").value + " / "
+
   let IN_SEAM_LENGTH = " IN_SEAM_LENGTH: " + document.getElementById("IN_SEAM_LENGTH").value + " / "
+
   let THIGH_CIRCUMFERENCE = " THIGH_CIRCUMFERENCE: " + document.getElementById("THIGH_CIRCUMFERENCE").value + " / "
+
   let CALF_CIRCUMFERENCE = " CALF_CIRCUMFERENCE: " + document.getElementById("CALF_CIRCUMFERENCE").value + " / "
+
   let CROTCH_TO_KNEE_LENGTH = " CROTCH_TO_KNEE_LENGTH: " + document.getElementById("CROTCH_TO_KNEE_LENGTH").value + " / "
+
   let LOWER_LEG_LENGTH = " LOWER_LEG_LENGTH: " + document.getElementById("LOWER_LEG_LENGTH").value + " / "
+
   let ANKLE_CIRCUMFERENCE = " ANKLE_CIRCUMFERENCE: " + document.getElementById("ANKLE_CIRCUMFERENCE").value + " / "
+
   let FOOT_LENGTH_SIZE = " FOOT_LENGTH_SIZE: " + document.getElementById("FOOT_LENGTH_SIZE").value + " / "
+
   let tm = " TORSO MATERIAL: " + document.getElementById("select-tfab-title").innerHTML + " / "
   let lam = " LOWER ARMS MATERIAL: " + document.getElementById("select-lafab-title").innerHTML + " / "
 
   let allMeasurements = NECK_CIRCUMFERENCE + SHOULDER_TO_SHOULDER+SHOULDER_TO_ELBOW_LENGTH+ELBOW_TO_WRIST_LENGTH+CHEST_CIRCUMFERENCE+FULL_ARM_BENT_90_LENGTH+BICEP_CIRCUMFERENCE+FOREARM_CIRCUMFERENCE+WRIST_CIRCUMFERENCE+FOOT_TO_SHOULDER_LENGTH+WAIST_CIRCUMFERENCE+HIPS_CIRCUMFERENCE+IN_SEAM_LENGTH+THIGH_CIRCUMFERENCE+CALF_CIRCUMFERENCE+CROTCH_TO_KNEE_LENGTH+LOWER_LEG_LENGTH+ANKLE_CIRCUMFERENCE+FOOT_LENGTH_SIZE+tm+lam
-  document.getElementById("form-group-company").getElementsByClassName("form-control")[0].value = allFrontValues
+  document.getElementById("form-group-c_33n7r").getElementsByClassName("form-control")[0].value = allFrontValues
   document.getElementById("form-group-comment").getElementsByClassName("form-control")[0].value = allBackValues
-  document.getElementById("form-group-organization").getElementsByClassName("form-control")[0].value = allMeasurements
+  document.getElementById("form-group-c_z8zee").getElementsByClassName("form-control")[0].value = allMeasurements
 
 // contact Info
   let nameI = " Full Name: " + document.getElementById("input-name").value + " / "
@@ -64,16 +86,19 @@ function collect(){
   let input_city = " City: " + document.getElementById("input_city").value + " / "
   let input_state = " State: " + document.getElementById("input_state").value + " / "
   let input_country = " Country: " + document.getElementById("input_country").value + " / "
+  let input_zip = " Zip: " + document.getElementById("input_zip").value + " / "
+  let input_dcode = " Distributor Code: " + document.getElementById("input_dcode").value + " / "
+  let randNum = Math.random()*100000000000000;
 
-  let contactInfo = nameI+emailI+input_phone+input_address+input_city+input_state+input_country
+  let contactInfo = nameI+emailI+input_phone+input_address+input_city+input_state+input_country+input_zip+input_dcode
   document.getElementById("form-group-c_d9lp9").getElementsByClassName("form-control")[0].value = contactInfo
 
 console.log(allFrontValues)
 console.log(allBackValues)
 console.log(allMeasurements)
   document.getElementById("form-group-name_first").getElementsByClassName("form-control")[0].value = nameI
-  document.getElementById("form-group-email").getElementsByClassName("form-control")[0].value = emailI
-
+  document.getElementById("form-group-email").getElementsByClassName("form-control")[0].value = "Ignore@email"+randNum+".com"
+  document.getElementById("form-group-c_9cadg").getElementsByClassName("form-control")[0].value = emailI
 }
 // colorPickerDropdownBack middler
 function colorPickerDropdownBack(drop){
@@ -244,6 +269,15 @@ function colorPickerSelectFront(color){
     document.getElementById('color-picker-dropdown-collar').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'c-red'){
+    console.log('here')
+    document.getElementById('collar-label').style.background = 'red'
+    document.getElementById("collar-title").innerHTML = "Red";
+    document.getElementById('front-collar').style.fill = 'red'
+    document.getElementById('back-collar').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-collar').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'c-neon-green'){
     document.getElementById('collar-label').style.background = '#29f04f'
     document.getElementById("collar-title").innerHTML = "Neon Green";
@@ -371,6 +405,20 @@ function colorPickerSelectFront(color){
     document.getElementById('color-picker-dropdown-grippers').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'grip-red'){
+    console.log('here')
+    document.getElementById('gripers-label').style.background = 'red'
+    document.getElementById("gripers-title").innerHTML = 'Red';
+    document.getElementById('front-left-arm-gripper').style.fill = 'red'
+    document.getElementById('front-right-arm-gripper').style.fill = 'red'
+    document.getElementById('front-left-leg-gripper').style.fill = 'red'
+    document.getElementById('front-right-leg-gripper').style.fill = 'red'
+    document.getElementById('back-left-arm-griper').style.fill = 'red'
+    document.getElementById('back-right-arm-griper').style.fill = 'red'
+    document.getElementById('back-leg-grippers').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-grippers').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'grip-neon-green'){
     document.getElementById('gripers-label').style.background = '#29f04f'
     document.getElementById("gripers-title").innerHTML = "Neon Green";
@@ -384,16 +432,29 @@ function colorPickerSelectFront(color){
     document.getElementById('color-picker-dropdown-grippers').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'grip-red'){
+    document.getElementById('gripers-label').style.background = 'red'
+    document.getElementById("gripers-title").innerHTML = "Red";
+    document.getElementById('front-left-arm-gripper').style.fill = 'red'
+    document.getElementById('front-right-arm-gripper').style.fill = 'red'
+    document.getElementById('front-left-leg-gripper').style.fill = 'red'
+    document.getElementById('front-right-leg-gripper').style.fill = 'red'
+    document.getElementById('back-left-arm-griper').style.fill = 'red'
+    document.getElementById('back-right-arm-griper').style.fill = 'red'
+    document.getElementById('back-leg-grippers').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-grippers').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'grip-hot-pink'){
     document.getElementById('gripers-label').style.background = '#e929f0'
     document.getElementById("gripers-title").innerHTML = "Hot Pink";
     document.getElementById('front-left-arm-gripper').style.fill = '#e929f0'
-    document.getElementById('front-right-arm-gripper').style.fill = '#29f04f'
-    document.getElementById('front-left-leg-gripper').style.fill = '#29f04f'
-    document.getElementById('front-right-leg-gripper').style.fill = '#29f04f'
-    document.getElementById('back-left-arm-griper').style.fill = '#29f04f'
-    document.getElementById('back-right-arm-griper').style.fill = '#29f04f'
-    document.getElementById('back-leg-grippers').style.fill = '#29f04f'
+    document.getElementById('front-right-arm-gripper').style.fill = '#e929f0'
+    document.getElementById('front-left-leg-gripper').style.fill = '#e929f0'
+    document.getElementById('front-right-leg-gripper').style.fill = '#e929f0'
+    document.getElementById('back-left-arm-griper').style.fill = '#e929f0'
+    document.getElementById('back-right-arm-griper').style.fill = '#e929f0'
+    document.getElementById('back-leg-grippers').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-grippers').style.display = 'none'
     dropdownCtrl = true
   }
@@ -559,6 +620,16 @@ if(color === 'front-left-aqua'){
   document.getElementById('front-left-label').style.background = '#129793'
   document.getElementById("front-left-title").innerHTML = "Aqua";
   document.getElementById('front-left-chest').style.fill = '#129793'
+  document.getElementById('chute-out-text').style.color = 'white'
+  document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'front-left-red'){
+  console.log('here')
+  document.getElementById('front-left-label').style.background = 'red'
+  document.getElementById("front-left-title").innerHTML = "Red";
+  document.getElementById('front-left-chest').style.fill = 'red'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -566,6 +637,7 @@ if(color === 'front-left-neon-green'){
   document.getElementById('front-left-label').style.background = '#29f04f'
   document.getElementById("front-left-title").innerHTML = "Neon Green";
   document.getElementById('front-left-chest').style.fill = '#29f04f'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -573,6 +645,7 @@ if(color === 'front-left-hot-pink'){
   document.getElementById('front-left-label').style.background = '#e929f0'
   document.getElementById("front-left-title").innerHTML = "Hot Pink";
   document.getElementById('front-left-chest').style.fill = '#e929f0'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -580,6 +653,7 @@ if(color === 'front-left-yellow'){
   document.getElementById('front-left-label').style.background = 'yellow'
   document.getElementById("front-left-title").innerHTML = "Yellow";
   document.getElementById('front-left-chest').style.fill = 'yellow'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -587,6 +661,7 @@ if(color === 'front-left-maroon'){
   document.getElementById('front-left-label').style.background = '#cb0039'
   document.getElementById("front-left-title").innerHTML = "Maroon";
   document.getElementById('front-left-chest').style.fill = '#cb0039'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -594,6 +669,7 @@ if(color === 'front-left-grey'){
   document.getElementById('front-left-label').style.background = '#969696'
   document.getElementById("front-left-title").innerHTML = "Grey";
   document.getElementById('front-left-chest').style.fill = '#969696'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -601,6 +677,7 @@ if(color === 'front-left-navy'){
   document.getElementById('front-left-label').style.background = '#152c91'
   document.getElementById("front-left-title").innerHTML = "Navy";
   document.getElementById('front-left-chest').style.fill = '#152c91'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -615,6 +692,7 @@ if(color === 'front-left-darkGreen'){
   document.getElementById('front-left-label').style.background = 'Green'
   document.getElementById("front-left-title").innerHTML = "Green";
   document.getElementById('front-left-chest').style.fill = 'Green'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -622,6 +700,7 @@ if(color === 'front-left-darkGrey'){
   document.getElementById('front-left-label').style.background = '#494949'
   document.getElementById("front-left-title").innerHTML = "Dark Grey";
   document.getElementById('front-left-chest').style.fill = '#494949'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -629,6 +708,7 @@ if(color === 'front-left-blue'){
   document.getElementById('front-left-label').style.background = 'blue'
   document.getElementById("front-left-title").innerHTML = "Blue";
   document.getElementById('front-left-chest').style.fill = 'blue'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -636,6 +716,7 @@ if(color === 'front-left-lime'){
   document.getElementById('front-left-label').style.background = '#09b600'
   document.getElementById("front-left-title").innerHTML = "Lime";
   document.getElementById('front-left-chest').style.fill = '#09b600'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -643,6 +724,7 @@ if(color === 'front-left-white'){
   document.getElementById('front-left-label').style.background = 'White'
   document.getElementById("front-left-title").innerHTML = "White";
   document.getElementById('front-left-chest').style.fill = 'White'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -650,6 +732,7 @@ if(color === 'front-left-black'){
   document.getElementById('front-left-label').style.background = 'Black'
   document.getElementById("front-left-title").innerHTML = "Black";
   document.getElementById('front-left-chest').style.fill = 'Black'
+  document.getElementById('chute-out-text').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -657,6 +740,7 @@ if(color === 'front-left-teal'){
   document.getElementById('front-left-label').style.background = '#00b692'
   document.getElementById("front-left-title").innerHTML = "Teal";
   document.getElementById('front-left-chest').style.fill = '#00b692'
+  document.getElementById('chute-out-text').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-right').style.display = 'none'
   dropdownCtrl = true
 }
@@ -666,6 +750,16 @@ if(color === 'front-right-aqua'){
   document.getElementById('front-right-label').style.background = '#129793'
   document.getElementById("front-right-title").innerHTML = "Aqua";
   document.getElementById('front-right-chest').style.fill = '#129793'
+  document.getElementById('caos-leg-logo').style.color = 'white'
+  document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'front-right-red'){
+  console.log('here')
+  document.getElementById('front-right-label').style.background = 'red'
+  document.getElementById("front-right-title").innerHTML = "Red";
+  document.getElementById('front-right-chest').style.fill = 'red'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -673,6 +767,7 @@ if(color === 'front-right-neon-green'){
   document.getElementById('front-right-label').style.background = '#29f04f'
   document.getElementById("front-right-title").innerHTML = "Neon Green";
   document.getElementById('front-right-chest').style.fill = '#29f04f'
+  document.getElementById('caos-leg-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -680,6 +775,7 @@ if(color === 'front-right-hot-pink'){
   document.getElementById('front-right-label').style.background = '#e929f0'
   document.getElementById("front-right-title").innerHTML = "Hot Pink";
   document.getElementById('front-right-chest').style.fill = '#e929f0'
+  document.getElementById('caos-leg-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -687,6 +783,7 @@ if(color === 'front-right-yellow'){
   document.getElementById('front-right-label').style.background = 'yellow'
   document.getElementById("front-right-title").innerHTML = "Yellow";
   document.getElementById('front-right-chest').style.fill = 'yellow'
+  document.getElementById('caos-leg-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -694,6 +791,7 @@ if(color === 'front-right-maroon'){
   document.getElementById('front-right-label').style.background = '#cb0039'
   document.getElementById("front-right-title").innerHTML = "Maroon";
   document.getElementById('front-right-chest').style.fill = '#cb0039'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -701,6 +799,7 @@ if(color === 'front-right-grey'){
   document.getElementById('front-right-label').style.background = '#969696'
   document.getElementById("front-right-title").innerHTML = "Grey";
   document.getElementById('front-right-chest').style.fill = '#969696'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -708,6 +807,7 @@ if(color === 'front-right-navy'){
   document.getElementById('front-right-label').style.background = '#152c91'
   document.getElementById("front-right-title").innerHTML = "Navy";
   document.getElementById('front-right-chest').style.fill = '#152c91'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -715,6 +815,7 @@ if(color === 'front-right-purple'){
   document.getElementById('front-right-label').style.background = 'purple'
   document.getElementById("front-right-title").innerHTML = "Purple";
   document.getElementById('front-right-chest').style.fill = 'purple'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -722,6 +823,7 @@ if(color === 'front-right-darkGreen'){
   document.getElementById('front-right-label').style.background = 'Green'
   document.getElementById("front-right-title").innerHTML = "Green";
   document.getElementById('front-right-chest').style.fill = 'Green'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -729,6 +831,7 @@ if(color === 'front-right-darkGrey'){
   document.getElementById('front-right-label').style.background = '#494949'
   document.getElementById("front-right-title").innerHTML = "Dark Grey";
   document.getElementById('front-right-chest').style.fill = '#494949'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -736,6 +839,7 @@ if(color === 'front-right-blue'){
   document.getElementById('front-right-label').style.background = 'blue'
   document.getElementById("front-right-title").innerHTML = "Blue";
   document.getElementById('front-right-chest').style.fill = 'blue'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -743,6 +847,7 @@ if(color === 'front-right-lime'){
   document.getElementById('front-right-label').style.background = '#09b600'
   document.getElementById("front-right-title").innerHTML = "Lime";
   document.getElementById('front-right-chest').style.fill = '#09b600'
+  document.getElementById('caos-leg-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -750,6 +855,7 @@ if(color === 'front-right-white'){
   document.getElementById('front-right-label').style.background = 'White'
   document.getElementById("front-right-title").innerHTML = "White";
   document.getElementById('front-right-chest').style.fill = 'White'
+  document.getElementById('caos-leg-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -757,6 +863,7 @@ if(color === 'front-right-black'){
   document.getElementById('front-right-label').style.background = 'Black'
   document.getElementById("front-right-title").innerHTML = "Black";
   document.getElementById('front-right-chest').style.fill = 'Black'
+  document.getElementById('caos-leg-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-front-left').style.display = 'none'
   dropdownCtrl = true
 }
@@ -773,6 +880,14 @@ if(color === 'flla-aqua'){
   document.getElementById('front-left-lower-arm-label').style.background = '#129793'
   document.getElementById("front-left-lower-arm-title").innerHTML = "Aqua";
   document.getElementById('front-left-lower-arm').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-flla').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'flla-red'){
+  console.log('here')
+  document.getElementById('front-left-lower-arm-label').style.background = 'red'
+  document.getElementById("front-left-lower-arm-title").innerHTML = "Red";
+  document.getElementById('front-left-lower-arm').style.fill = 'red'
   document.getElementById('color-picker-dropdown-flla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -880,6 +995,16 @@ if(color === 'frla-aqua'){
   document.getElementById('front-right-lower-arm-label').style.background = '#129793'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Aqua";
   document.getElementById('front-right-lower-arm').style.fill = '#129793'
+  document.getElementById('caos-leg-logo').style.color = 'white'
+  document.getElementById('color-picker-dropdown-frla').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'frla-red'){
+  console.log('here')
+  document.getElementById('front-right-lower-arm-label').style.background = 'red'
+  document.getElementById("front-right-lower-arm-title").innerHTML = "Red";
+  document.getElementById('front-right-lower-arm').style.fill = 'red'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -887,6 +1012,7 @@ if(color === 'frla-neon-green'){
   document.getElementById('front-right-lower-arm-label').style.background = '#29f04f'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Neon Green";
   document.getElementById('front-right-lower-arm').style.fill = '#29f04f'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -894,6 +1020,7 @@ if(color === 'frla-hot-pink'){
   document.getElementById('front-right-lower-arm-label').style.background = '#e929f0'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Hot Pink";
   document.getElementById('front-right-lower-arm').style.fill = '#e929f0'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -901,6 +1028,7 @@ if(color === 'frla-yellow'){
   document.getElementById('front-right-lower-arm-label').style.background = 'yellow'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Yellow";
   document.getElementById('front-right-lower-arm').style.fill = 'yellow'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -908,6 +1036,7 @@ if(color === 'frla-maroon'){
   document.getElementById('front-right-lower-arm-label').style.background = '#cb0039'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Maroon";
   document.getElementById('front-right-lower-arm').style.fill = '#cb0039'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -915,6 +1044,7 @@ if(color === 'frla-grey'){
   document.getElementById('front-right-lower-arm-label').style.background = '#969696'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Grey";
   document.getElementById('front-right-lower-arm').style.fill = '#969696'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -922,6 +1052,7 @@ if(color === 'frla-navy'){
   document.getElementById('front-right-lower-arm-label').style.background = '#152c91'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Navy";
   document.getElementById('front-right-lower-arm').style.fill = '#152c91'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -929,6 +1060,7 @@ if(color === 'frla-purple'){
   document.getElementById('front-right-lower-arm-label').style.background = 'purple'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Purple";
   document.getElementById('front-right-lower-arm').style.fill = 'purple'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -936,6 +1068,7 @@ if(color === 'frla-darkGreen'){
   document.getElementById('front-right-lower-arm-label').style.background = 'Green'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Green";
   document.getElementById('front-right-lower-arm').style.fill = 'Green'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -943,6 +1076,7 @@ if(color === 'frla-darkGrey'){
   document.getElementById('front-right-lower-arm-label').style.background = '#494949'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Dark Grey";
   document.getElementById('front-right-lower-arm').style.fill = '#494949'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -950,6 +1084,7 @@ if(color === 'frla-blue'){
   document.getElementById('front-right-lower-arm-label').style.background = 'blue'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Blue";
   document.getElementById('front-right-lower-arm').style.fill = 'blue'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -957,6 +1092,7 @@ if(color === 'frla-lime'){
   document.getElementById('front-right-lower-arm-label').style.background = '#09b600'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Lime";
   document.getElementById('front-right-lower-arm').style.fill = '#09b600'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -964,6 +1100,7 @@ if(color === 'frla-white'){
   document.getElementById('front-right-lower-arm-label').style.background = 'White'
   document.getElementById("front-right-lower-arm-title").innerHTML = "White";
   document.getElementById('front-right-lower-arm').style.fill = 'White'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -971,6 +1108,7 @@ if(color === 'frla-black'){
   document.getElementById('front-right-lower-arm-label').style.background = 'Black'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Black";
   document.getElementById('front-right-lower-arm').style.fill = 'Black'
+  document.getElementById('caos-arm-logo').style.color = 'white'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -978,6 +1116,7 @@ if(color === 'frla-teal'){
   document.getElementById('front-right-lower-arm-label').style.background = '#00b692'
   document.getElementById("front-right-lower-arm-title").innerHTML = "Teal";
   document.getElementById('front-right-lower-arm').style.fill = '#00b692'
+  document.getElementById('caos-arm-logo').style.color = 'black'
   document.getElementById('color-picker-dropdown-frla').style.display = 'none'
   dropdownCtrl = true
 }
@@ -987,6 +1126,14 @@ if(color === 'flul-aqua'){
   document.getElementById('front-left-upper-leg-label').style.background = '#129793'
   document.getElementById("front-left-upper-leg-title").innerHTML = "Aqua";
   document.getElementById('front-left-upper-leg').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-flul').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'flul-red'){
+  console.log('here')
+  document.getElementById('front-left-upper-leg-label').style.background = 'red'
+  document.getElementById("front-left-upper-leg-title").innerHTML = "Red";
+  document.getElementById('front-left-upper-leg').style.fill = 'red'
   document.getElementById('color-picker-dropdown-flul').style.display = 'none'
   dropdownCtrl = true
 }
@@ -1097,6 +1244,14 @@ if(color === 'frul-aqua'){
   document.getElementById('color-picker-dropdown-frul').style.display = 'none'
   dropdownCtrl = true
 }
+if(color === 'frul-red'){
+  console.log('here')
+  document.getElementById('front-right-upper-leg-label').style.background = 'red'
+  document.getElementById("front-right-upper-leg-title").innerHTML = "Red";
+  document.getElementById('front-right-upper-leg').style.fill = 'red'
+  document.getElementById('color-picker-dropdown-frul').style.display = 'none'
+  dropdownCtrl = true
+}
 if(color === 'frul-neon-green'){
   document.getElementById('front-right-upper-leg-label').style.background = '#29f04f'
   document.getElementById("front-right-upper-leg-title").innerHTML = "Neon Green";
@@ -1201,6 +1356,14 @@ if(color === 'flk-aqua'){
   document.getElementById('flk-label').style.background = '#129793'
   document.getElementById("flk-title").innerHTML = "Aqua";
   document.getElementById('front-left-knee').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-flk').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'flk-red'){
+  console.log('here')
+  document.getElementById('flk-label').style.background = 'red'
+  document.getElementById("flk-title").innerHTML = "Red";
+  document.getElementById('front-left-knee').style.fill = 'red'
   document.getElementById('color-picker-dropdown-flk').style.display = 'none'
   dropdownCtrl = true
 }
@@ -1311,6 +1474,14 @@ if(color === 'frk-aqua'){
   document.getElementById('color-picker-dropdown-frk').style.display = 'none'
   dropdownCtrl = true
 }
+if(color === 'frk-red'){
+  console.log('here')
+  document.getElementById('frk-label').style.background = 'red'
+  document.getElementById("frk-title").innerHTML = "Red";
+  document.getElementById('front-right-knee').style.fill = 'red'
+  document.getElementById('color-picker-dropdown-frk').style.display = 'none'
+  dropdownCtrl = true
+}
 if(color === 'frk-neon-green'){
   document.getElementById('frk-label').style.background = '#29f04f'
   document.getElementById("frk-title").innerHTML = "Neon Green";
@@ -1418,6 +1589,14 @@ if(color === 'flll-aqua'){
   document.getElementById('color-picker-dropdown-flll').style.display = 'none'
   dropdownCtrl = true
 }
+if(color === 'flll-red'){
+  console.log('here')
+  document.getElementById('flll-label').style.background = 'red'
+  document.getElementById("flll-title").innerHTML = "Red";
+  document.getElementById('front-left-lower-leg').style.fill = 'red'
+  document.getElementById('color-picker-dropdown-flll').style.display = 'none'
+  dropdownCtrl = true
+}
 if(color === 'flll-neon-green'){
   document.getElementById('flll-label').style.background = '#29f04f'
   document.getElementById("flll-title").innerHTML = "Neon Green";
@@ -1522,6 +1701,14 @@ if(color === 'frll-aqua'){
   document.getElementById('frll-label').style.background = '#129793'
   document.getElementById("frll-title").innerHTML = "Aqua";
   document.getElementById('front-right-lower-leg').style.fill = '#129793'
+  document.getElementById('color-picker-dropdown-frll').style.display = 'none'
+  dropdownCtrl = true
+}
+if(color === 'frll-red'){
+  console.log('here')
+  document.getElementById('frll-label').style.background = 'red'
+  document.getElementById("frll-title").innerHTML = "Red";
+  document.getElementById('front-right-lower-leg').style.fill = 'red'
   document.getElementById('color-picker-dropdown-frll').style.display = 'none'
   dropdownCtrl = true
 }
@@ -1653,6 +1840,14 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-b').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'b-red'){
+    console.log('here')
+    document.getElementById('b-label').style.background = 'red'
+    document.getElementById("b-title").innerHTML = "Red";
+    document.getElementById('back-body').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-b').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'b-neon-green'){
     document.getElementById('b-label').style.background = '#29f04f'
     document.getElementById("b-title").innerHTML = "Neon Green";
@@ -1760,6 +1955,14 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-blua').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'blua-red'){
+    console.log('here')
+    document.getElementById('blua-label').style.background = 'red'
+    document.getElementById("blua-title").innerHTML = "Red";
+    document.getElementById('back-left-upper-arm').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'blua-neon-green'){
     document.getElementById('blua-label').style.background = '#29f04f'
     document.getElementById("blua-title").innerHTML = "Neon Green";
@@ -1844,7 +2047,7 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-blua').style.display = 'none'
     dropdownCtrl = true
   }
-  if(color === 'bluablualack'){
+  if(color === 'blua-black'){
     document.getElementById('blua-label').style.background = 'Black'
     document.getElementById("blua-title").innerHTML = "Black";
     document.getElementById('back-left-upper-arm').style.fill = 'Black'
@@ -1863,6 +2066,14 @@ function colorPickerSelectBack(color){
     document.getElementById('brua-label').style.background = '#129793'
     document.getElementById("brua-title").innerHTML = "Aqua";
     document.getElementById('back-right-upper-arm').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-red'){
+    console.log('here')
+    document.getElementById('brua-label').style.background = 'red'
+    document.getElementById("brua-title").innerHTML = "Red";
+    document.getElementById('back-right-upper-arm').style.fill = 'red'
     document.getElementById('color-picker-dropdown-brua').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1972,6 +2183,14 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-blla').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'blla-red'){
+    console.log('here')
+    document.getElementById('blla-label').style.background = 'red'
+    document.getElementById("blla-title").innerHTML = "Red";
+    document.getElementById('back-left-lower-arm').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'blla-neon-green'){
     document.getElementById('blla-label').style.background = '#29f04f'
     document.getElementById("blla-title").innerHTML = "Neon Green";
@@ -2075,6 +2294,14 @@ function colorPickerSelectBack(color){
     document.getElementById('brla-label').style.background = '#129793'
     document.getElementById("brla-title").innerHTML = "Aqua";
     document.getElementById('back-right-lower-arm').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-red'){
+    console.log('here')
+    document.getElementById('brla-label').style.background = 'red'
+    document.getElementById("brla-title").innerHTML = "Red";
+    document.getElementById('back-right-lower-arm').style.fill = 'red'
     document.getElementById('color-picker-dropdown-brla').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2184,6 +2411,14 @@ function colorPickerSelectBack(color){
     document.getElementById('color-picker-dropdown-bl').style.display = 'none'
     dropdownCtrl = true
   }
+  if(color === 'bl-red'){
+    console.log('here')
+    document.getElementById('bl-label').style.background = 'red'
+    document.getElementById("bl-title").innerHTML = "Red";
+    document.getElementById('back-legs').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-bl').style.display = 'none'
+    dropdownCtrl = true
+  }
   if(color === 'bl-neon-green'){
     document.getElementById('bl-label').style.background = '#29f04f'
     document.getElementById("bl-title").innerHTML = "Neon Green";
@@ -2287,6 +2522,14 @@ function colorPickerSelectBack(color){
     document.getElementById('bh-label').style.background = '#129793'
     document.getElementById("bh-title").innerHTML = "Aqua";
     document.getElementById('back-hips').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-bh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bh-red'){
+    console.log('here')
+    document.getElementById('bh-label').style.background = 'red'
+    document.getElementById("bh-title").innerHTML = "Red";
+    document.getElementById('back-hips').style.fill = 'red'
     document.getElementById('color-picker-dropdown-bh').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2398,3 +2641,113 @@ function colorPickerSelectBack(color){
 
 
 // color picker menu dropdown Back
+//
+//
+//
+//
+//
+//
+//STRIPE
+//STRIPE
+//STRIPE
+
+let suitPrice = 0
+let suitType = "x"
+function openStripeForm(price, type){
+  suitPrice = price
+  suitType = type
+  document.getElementById('payment-confirm').innerHTML = "$" + suitPrice + "(AUD)"
+  document.getElementById('type-confirm').innerHTML = suitType
+  console.log(suitPrice, suitType)
+  document.getElementById('stripe-form').style.display = 'flex'
+  document.getElementById('stripe-form-shade').style.display = 'flex'
+}
+let stripe = Stripe('pk_test_kA3wS31hOAFKooRGLboUrLWf');
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+var style = {
+  base: {
+    // Add your base input styles here. For example:
+    fontSize: '16px',
+    lineHeight: '24px'
+  }
+};
+
+// Create an instance of the card Element
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+card.addEventListener('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Create a token or display an error when the form is submitted.
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      alert('Oh Dear, Seems something went wrong! Try again and double check your card info!')
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+
+      console.log(result)
+      // Send the token to your server
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+//I'm the server ;)
+function apiPoster(info){
+  console.log('info in poster',info)
+  document.getElementById('loading-payment').style.display = 'flex'
+  $.ajax('https://www.discovercs.com/api/apetest',{
+   data : JSON.stringify(info),
+   contentType : 'application/json',
+   type : 'POST',
+ }).then(function(res){
+   console.log(res.charge.id)
+   console.log(res.charge)
+   let newCustomer = {
+     id: res.charge.id,
+     amount: res.charge.amount/100,
+     paid: res.charge.paid,
+   }
+   hideConfirmPop()
+   document.getElementById('loading-payment').style.display = 'none'
+   alert('Congrats! you just got yourself a new suit! you paied $' + newCustomer.amount + ' (AUD). your customer satisfaction ID is '+ newCustomer.id )
+   document.getElementById("landingFormValidate_ul_page_9205_submit").click();
+  //  location.redirect
+   let url = "https://chuteoutsports.dev.userlite.com/website"
+   window.location = url;
+ });
+}
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+  console.log('submitted and done', token)
+  let charger = {}
+  charger.amount = suitPrice * 100
+  charger.token = token.id
+  apiPoster(charger)
+}
+
+function hideStripeForm(){
+  document.getElementById('stripe-form').style.display = 'none'
+  document.getElementById('stripe-form-shade').style.display = 'none'
+  console.log('tester')
+}

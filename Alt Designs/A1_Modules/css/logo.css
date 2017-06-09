@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+#chute-out-box span{
+  font-size: .4rem;
+  margin: 1px 0 0 0;
+}
+#chute-out-box{
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+      z-index: 5;
+      top: 80px;
+      left: 93px;
+      width: 18%;
+}
+#chute-out-logo{
+  width: 60%;
+  margin: 0 0 2px 0;
+}
+#caos-leg-logo{
+  font-size: .7rem;
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  bottom: 213px;
+  left: 145px;
+  width: 20%;
+  transform: rotate(-9deg);
+}
+#caos-arm-logo{
+  font-size: .7rem;
+  font-family: 'audiowide';
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  bottom: 283px;
+  left: 194px;
+  width: 20%;
+  transform: rotate(69deg);
+}

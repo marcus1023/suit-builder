@@ -1,7 +1,2006 @@
-// colorPickerDropdownBack middler
+
+function collect(){
+  function checkCollect(){
+    if(document.getElementById("input-name").value && document.getElementById("input-email").value && document.getElementById("input_phone").value && document.getElementById("input_address").value && document.getElementById("input_city").value && document.getElementById("input_state").value && document.getElementById("input_country").value && document.getElementById("input_zip").value){
+      document.getElementById('pop-confirm-wrap').style.display = 'flex'
+      document.getElementById('popup-confirm-section').style.display = 'flex'
+    }else{
+      alert('Please Fill out all Measurements and Contact Info before continuing to checkout')
+    }
+  }
+  checkCollect();
+// Front
+  let fc = " Collar: " + document.getElementById("fc-title").innerHTML + " / "
+  let frla = " Front Right Lower Arm: " + document.getElementById("frla-title").innerHTML + " / "
+  let frs = " Front Right Sholder: " + document.getElementById("frs-title").innerHTML + " / "
+  let frside = " Front Right Side: " + document.getElementById("frside-title").innerHTML + " / "
+  let frc = " Front Right Chest: " + document.getElementById("frc-title").innerHTML + " / "
+  let flc = " Front Left Chest: " + document.getElementById("flc-title").innerHTML + " / "
+  let flside = " Front Left Side: " + document.getElementById("flside-title").innerHTML + " / "
+  let fls = " Front Left Sholder: " + document.getElementById("fls-title").innerHTML + " / "
+  let flla = " Front Left Lower Arm: " + document.getElementById("flla-title").innerHTML + " / "
+  let frly = " Front Right Lyrica: " + document.getElementById("frly-title").innerHTML + " / "
+  let flly = " Front Left Lyrica: " + document.getElementById("flly-title").innerHTML + " / "
+  let frul = " Front Right Upper Leg: " + document.getElementById("frul-title").innerHTML + " / "
+  let flul = " Front Left Upper Leg: " + document.getElementById("flul-title").innerHTML + " / "
+  let frll = " Front Right Lower Leg: " + document.getElementById("frll-title").innerHTML + " / "
+  let flll = " Front Left Lower Leg: " + document.getElementById("flll-title").innerHTML + " / "
+  let line = " Lineing: " + document.getElementById("line-title").innerHTML + " / "
+  let pipe = " Front Pipeing: " + document.getElementById("pipe-title").innerHTML + " / "
+
+
+
+
+  let allFrontValues = frla+frs+frside+frc+flc+flside+fls+flla+frly+flly+frul+flul+frll+flll+line+pipe
+// Back
+  let bback = " Back: " + document.getElementById("back-title").innerHTML + " / "
+  let blla = " Back Left Arm: " + document.getElementById("blla-title").innerHTML + " / "
+  let brla = " Back Right Arm: " + document.getElementById("brla-title").innerHTML + " / "
+  let blua = " Back Left Upper Arm: " + document.getElementById("blua-title").innerHTML + " / "
+  let brua = " Back Right Upper Arm: " + document.getElementById("brua-title").innerHTML + " / "
+  let brsh = " Back Right Sholder: " + document.getElementById("brsh-title").innerHTML + " / "
+  let blsh = " Back Right Upper Arm: " + document.getElementById("blsh-title").innerHTML + " / "
+  let blly = " Back Left Leg: " + document.getElementById("blly-title").innerHTML + " / "
+  let brly = " Back Right Leg: " + document.getElementById("brly-title").innerHTML + " / "
+  // let blul = " Back Left Upper Leg: " + document.getElementById("blul-title").innerHTML + " / "
+  // let brul = " Back Right Upper Leg: " + document.getElementById("brul-title").innerHTML + " / "
+  // let blll = " Back Left Lower Leg: " + document.getElementById("blll-title").innerHTML + " / "
+  // let brll = " Back Right Lower Leg: " + document.getElementById("brll-title").innerHTML + " / "
+
+  let allBackValues = bback+blla+brla+blua+brua+brsh+blsh+blly+brly
+//Measurements
+  let NECK_CIRCUMFERENCE = " NECK_CIRCUMFERENCE: " + document.getElementById("NECK_CIRCUMFERENCE").value + " / "
+  let SHOULDER_TO_SHOULDER = " SHOULDER_TO_SHOULDER: " + document.getElementById("SHOULDER_TO_SHOULDER").value + " / "
+  let SHOULDER_TO_ELBOW_LENGTH = " SHOULDER_TO_ELBOW_LENGTH: " + document.getElementById("SHOULDER_TO_ELBOW_LENGTH").value + " / "
+  let CHEST_CIRCUMFERENCE = " CHEST_CIRCUMFERENCE: " + document.getElementById("CHEST_CIRCUMFERENCE").value + " / "
+  let TORSO_LENGTH = " TORSO_LENGTH: " + document.getElementById("TORSO_LENGTH").value + " / "
+  let BICEP_CIRCUMFERENCE = " BICEP_CIRCUMFERENCE: " + document.getElementById("BICEP_CIRCUMFERENCE").value + " / "
+  let WAIST_CIRCUMFERENCE = " WAIST_CIRCUMFERENCE: " + document.getElementById("WAIST_CIRCUMFERENCE").value + " / "
+  let HIPS_CIRCUMFERENCE = " HIPS_CIRCUMFERENCE: " + document.getElementById("HIPS_CIRCUMFERENCE").value + " / "
+  let THIGH_CIRCUMFERENCE = " THIGH_CIRCUMFERENCE: " + document.getElementById("THIGH_CIRCUMFERENCE").value + " / "
+  let CROTCH_TO_KNEE_LENGTH = " CROTCH_TO_KNEE_LENGTH: " + document.getElementById("CROTCH_TO_KNEE_LENGTH").value + " / "
+
+  let ELBOW_TO_WRIST_LENGTH = " ELBOW_TO_WRIST_LENGTH: " + document.getElementById("ELBOW_TO_WRIST_LENGTH").value + " / "
+  let FULL_ARM_BENT_LENGTH = " FULL_ARM_BENT_LENGTH: " + document.getElementById("FULL_ARM_BENT_LENGTH").value + " / "
+  let IN_SEAM_LENGTH = " IN_SEAM_LENGTH: " + document.getElementById("IN_SEAM_LENGTH").value + " / "
+  let CALF_CIRCUMFERENCE = " CALF_CIRCUMFERENCE: " + document.getElementById("CALF_CIRCUMFERENCE").value + " / "
+  let LOWER_LEG_LENGTH = " LOWER_LEG_LENGTH: " + document.getElementById("LOWER_LEG_LENGTH").value + " / "
+  let ANKLE_CIRCUMFERENCE = " ANKLE_CIRCUMFERENCE: " + document.getElementById("ANKLE_CIRCUMFERENCE").value + " / "
+  let FOOT_LENGTH_SIZE = " FOOT_LENGTH_SIZE: " + document.getElementById("FOOT_LENGTH_SIZE").value + " / "
+
+  let tm = " TORSO MATERIAL: " + document.getElementById("select-lafab-title").innerHTML + " / "
+
+  let allMeasurements = NECK_CIRCUMFERENCE+SHOULDER_TO_SHOULDER+SHOULDER_TO_ELBOW_LENGTH+CHEST_CIRCUMFERENCE+TORSO_LENGTH+BICEP_CIRCUMFERENCE+WAIST_CIRCUMFERENCE+HIPS_CIRCUMFERENCE+THIGH_CIRCUMFERENCE+CROTCH_TO_KNEE_LENGTH+ELBOW_TO_WRIST_LENGTH+FULL_ARM_BENT_LENGTH+IN_SEAM_LENGTH+CALF_CIRCUMFERENCE+LOWER_LEG_LENGTH+ANKLE_CIRCUMFERENCE+FOOT_LENGTH_SIZE
+  document.getElementById("form-group-c_33n7r").getElementsByClassName("form-control")[0].value = allFrontValues
+  document.getElementById("form-group-comment").getElementsByClassName("form-control")[0].value = allBackValues
+  document.getElementById("form-group-c_z8zee").getElementsByClassName("form-control")[0].value = allMeasurements
+
+// contact Info
+  let nameI = " Full Name: " + document.getElementById("input-name").value + " / "
+  let emailI = " Email: " + document.getElementById("input-email").value + " / "
+  let input_phone = " Phone: " + document.getElementById("input_phone").value + " / "
+  let input_address = " Address: " + document.getElementById("input_address").value + " / "
+  let input_city = " City: " + document.getElementById("input_city").value + " / "
+  let input_state = " State: " + document.getElementById("input_state").value + " / "
+  let input_country = " Country: " + document.getElementById("input_country").value + " / "
+  let input_zip = " Zip: " + document.getElementById("input_zip").value + " / "
+  let input_dcode = " Distributor Code: " + document.getElementById("input_dcode").value + " / "
+
+  let contactInfo = nameI+emailI+input_phone+input_address+input_city+input_state+input_country+input_zip+input_dcode
+  document.getElementById("form-group-c_d9lp9").getElementsByClassName("form-control")[0].value = contactInfo
+  let randNum = Math.random()*100000000000000;
+
+console.log(allFrontValues)
+console.log(allBackValues)
+console.log(allMeasurements)
+document.getElementById("form-group-name_first").getElementsByClassName("form-control")[0].value = nameI
+document.getElementById("form-group-email").getElementsByClassName("form-control")[0].value = "Ignore@email"+randNum+".com"
+document.getElementById("form-group-c_9cadg").getElementsByClassName("form-control")[0].value = emailI
+
+}
 function colorPickerDropdownBack(drop){
+  if(drop === 'back'){
+    document.getElementById('color-picker-dropdown-back').style.display = 'flex'
+  }
+  if(drop === 'blla'){
+    document.getElementById('color-picker-dropdown-blla').style.display = 'flex'
+  }
+  if(drop === 'brla'){
+    document.getElementById('color-picker-dropdown-brla').style.display = 'flex'
+  }
+  if(drop === 'ble'){
+    document.getElementById('color-picker-dropdown-ble').style.display = 'flex'
+  }
+  if(drop === 'bre'){
+    document.getElementById('color-picker-dropdown-bre').style.display = 'flex'
+  }
   if(drop === 'blua'){
     document.getElementById('color-picker-dropdown-blua').style.display = 'flex'
+  }
+  if(drop === 'brua'){
+    document.getElementById('color-picker-dropdown-brua').style.display = 'flex'
+  }
+  if(drop === 'blsh'){
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'flex'
+  }
+  if(drop === 'brsh'){
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'flex'
+  }
+  if(drop === 'brsh'){
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'flex'
+  }
+  if(drop === 'blly'){
+    document.getElementById('color-picker-dropdown-blly').style.display = 'flex'
+  }
+  if(drop === 'brly'){
+    document.getElementById('color-picker-dropdown-brly').style.display = 'flex'
+  }
+  if(drop === 'blul'){
+    document.getElementById('color-picker-dropdown-blul').style.display = 'flex'
+  }
+  if(drop === 'brul'){
+    document.getElementById('color-picker-dropdown-brul').style.display = 'flex'
+  }
+  if(drop === 'blll'){
+    document.getElementById('color-picker-dropdown-blll').style.display = 'flex'
+  }
+  if(drop === 'brll'){
+    document.getElementById('color-picker-dropdown-brll').style.display = 'flex'
+  }
+}
+function colorPickerSelectBack(color){
+  if(color === 'tfab-polycot'){
+    document.getElementById("select-tfab-title").innerHTML = "Polycotton";
+    document.getElementById('color-picker-dropdown-tfab').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'tfab-taslan'){
+    document.getElementById("select-tfab-title").innerHTML = "Taslan";
+    document.getElementById('color-picker-dropdown-tfab').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'lafab-polycot'){
+    document.getElementById("select-lafab-title").innerHTML = "Polycotton";
+    document.getElementById('color-picker-dropdown-lafab').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'lafab-taslan'){
+    document.getElementById("select-lafab-title").innerHTML = "Taslan";
+    document.getElementById('color-picker-dropdown-lafab').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-aqua'){
+    console.log('here')
+    document.getElementById('back-label').style.background = '#129793'
+    document.getElementById("back-title").innerHTML = "Aqua";
+    document.getElementById('back').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-neon-green'){
+    document.getElementById('back-label').style.background = '#29f04f'
+    document.getElementById("back-title").innerHTML = "Neon Green";
+    document.getElementById('back').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-hot-pink'){
+    document.getElementById('back-label').style.background = '#e929f0'
+    document.getElementById("back-title").innerHTML = "Hot Pink";
+    document.getElementById('back').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-yellow'){
+    document.getElementById('back-label').style.background = 'yellow'
+    document.getElementById("back-title").innerHTML = "Yellow";
+    document.getElementById('back').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-maroon'){
+    document.getElementById('back-label').style.background = '#cb0039'
+    document.getElementById("back-title").innerHTML = "Maroon";
+    document.getElementById('back').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-grey'){
+    document.getElementById('back-label').style.background = '#969696'
+    document.getElementById("back-title").innerHTML = "Grey";
+    document.getElementById('back').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-navy'){
+    document.getElementById('back-label').style.background = '#152c91'
+    document.getElementById("back-title").innerHTML = "Navy";
+    document.getElementById('back').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-purple'){
+    document.getElementById('back-label').style.background = 'purple'
+    document.getElementById("back-title").innerHTML = "Purple";
+    document.getElementById('back').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-darkGreen'){
+    document.getElementById('back-label').style.background = 'Green'
+    document.getElementById("back-title").innerHTML = "Green";
+    document.getElementById('back').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-darkGrey'){
+    document.getElementById('back-label').style.background = '#494949'
+    document.getElementById("back-title").innerHTML = "Dark Grey";
+    document.getElementById('back').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-blue'){
+    document.getElementById('back-label').style.background = 'blue'
+    document.getElementById("back-title").innerHTML = "Blue";
+    document.getElementById('back').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-lime'){
+    document.getElementById('back-label').style.background = '#09b600'
+    document.getElementById("back-title").innerHTML = "Lime";
+    document.getElementById('back').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-white'){
+    document.getElementById('back-label').style.background = 'White'
+    document.getElementById("back-title").innerHTML = "White";
+    document.getElementById('back').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-black'){
+    document.getElementById('back-label').style.background = 'Black'
+    document.getElementById("back-title").innerHTML = "Black";
+    document.getElementById('back').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'back-teal'){
+    document.getElementById('back-label').style.background = '#00b692'
+    document.getElementById("back-title").innerHTML = "Teal";
+    document.getElementById('back').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-back').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-aqua'){
+    console.log('here')
+    document.getElementById('blla-label').style.background = '#129793'
+    document.getElementById("blla-title").innerHTML = "Aqua";
+    document.getElementById('blla').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-neon-green'){
+    document.getElementById('blla-label').style.background = '#29f04f'
+    document.getElementById("blla-title").innerHTML = "Neon Green";
+    document.getElementById('blla').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-hot-pink'){
+    document.getElementById('blla-label').style.background = '#e929f0'
+    document.getElementById("blla-title").innerHTML = "Hot Pink";
+    document.getElementById('blla').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-yellow'){
+    document.getElementById('blla-label').style.background = 'yellow'
+    document.getElementById("blla-title").innerHTML = "Yellow";
+    document.getElementById('blla').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-maroon'){
+    document.getElementById('blla-label').style.background = '#cb0039'
+    document.getElementById("blla-title").innerHTML = "Maroon";
+    document.getElementById('blla').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-red'){
+    document.getElementById('blla-label').style.background = 'red'
+    document.getElementById("blla-title").innerHTML = "Red";
+    document.getElementById('blla').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-grey'){
+    document.getElementById('blla-label').style.background = '#969696'
+    document.getElementById("blla-title").innerHTML = "Grey";
+    document.getElementById('blla').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-navy'){
+    document.getElementById('blla-label').style.background = '#152c91'
+    document.getElementById("blla-title").innerHTML = "Navy";
+    document.getElementById('blla').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-purple'){
+    document.getElementById('blla-label').style.background = 'purple'
+    document.getElementById("blla-title").innerHTML = "Purple";
+    document.getElementById('blla').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-darkGreen'){
+    document.getElementById('blla-label').style.background = 'Green'
+    document.getElementById("blla-title").innerHTML = "Green";
+    document.getElementById('blla').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-darkGrey'){
+    document.getElementById('blla-label').style.background = '#494949'
+    document.getElementById("blla-title").innerHTML = "Dark Grey";
+    document.getElementById('blla').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-blue'){
+    document.getElementById('blla-label').style.background = 'blue'
+    document.getElementById("blla-title").innerHTML = "Blue";
+    document.getElementById('blla').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-lime'){
+    document.getElementById('blla-label').style.background = '#09b600'
+    document.getElementById("blla-title").innerHTML = "Lime";
+    document.getElementById('blla').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-white'){
+    document.getElementById('blla-label').style.background = 'White'
+    document.getElementById("blla-title").innerHTML = "White";
+    document.getElementById('blla').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-black'){
+    document.getElementById('blla-label').style.background = 'Black'
+    document.getElementById("blla-title").innerHTML = "Black";
+    document.getElementById('blla').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blla-teal'){
+    document.getElementById('blla-label').style.background = '#00b692'
+    document.getElementById("blla-title").innerHTML = "Teal";
+    document.getElementById('blla').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-aqua'){
+    console.log('here')
+    document.getElementById('brla-label').style.background = '#129793'
+    document.getElementById("brla-title").innerHTML = "Aqua";
+    document.getElementById('brla').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-neon-green'){
+    document.getElementById('brla-label').style.background = '#29f04f'
+    document.getElementById("brla-title").innerHTML = "Neon Green";
+    document.getElementById('brla').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-hot-pink'){
+    document.getElementById('brla-label').style.background = '#e929f0'
+    document.getElementById("brla-title").innerHTML = "Hot Pink";
+    document.getElementById('brla').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-yellow'){
+    document.getElementById('brla-label').style.background = 'yellow'
+    document.getElementById("brla-title").innerHTML = "Yellow";
+    document.getElementById('brla').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-maroon'){
+    document.getElementById('brla-label').style.background = '#cb0039'
+    document.getElementById("brla-title").innerHTML = "Maroon";
+    document.getElementById('brla').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-red'){
+    document.getElementById('brla-label').style.background = 'red'
+    document.getElementById("brla-title").innerHTML = "Red";
+    document.getElementById('brla').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-grey'){
+    document.getElementById('brla-label').style.background = '#969696'
+    document.getElementById("brla-title").innerHTML = "Grey";
+    document.getElementById('brla').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-navy'){
+    document.getElementById('brla-label').style.background = '#152c91'
+    document.getElementById("brla-title").innerHTML = "Navy";
+    document.getElementById('brla').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-purple'){
+    document.getElementById('brla-label').style.background = 'purple'
+    document.getElementById("brla-title").innerHTML = "Purple";
+    document.getElementById('brla').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-darkGreen'){
+    document.getElementById('brla-label').style.background = 'Green'
+    document.getElementById("brla-title").innerHTML = "Green";
+    document.getElementById('brla').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-darkGrey'){
+    document.getElementById('brla-label').style.background = '#494949'
+    document.getElementById("brla-title").innerHTML = "Dark Grey";
+    document.getElementById('brla').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-blue'){
+    document.getElementById('brla-label').style.background = 'blue'
+    document.getElementById("brla-title").innerHTML = "Blue";
+    document.getElementById('brla').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-lime'){
+    document.getElementById('brla-label').style.background = '#09b600'
+    document.getElementById("brla-title").innerHTML = "Lime";
+    document.getElementById('brla').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-white'){
+    document.getElementById('brla-label').style.background = 'White'
+    document.getElementById("brla-title").innerHTML = "White";
+    document.getElementById('brla').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-black'){
+    document.getElementById('brla-label').style.background = 'Black'
+    document.getElementById("brla-title").innerHTML = "Black";
+    document.getElementById('brla').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brla-teal'){
+    document.getElementById('brla-label').style.background = '#00b692'
+    document.getElementById("brla-title").innerHTML = "Teal";
+    document.getElementById('brla').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brla').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-aqua'){
+    console.log('here')
+    document.getElementById('ble-label').style.background = '#129793'
+    document.getElementById("ble-title").innerHTML = "Aqua";
+    document.getElementById('ble').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-neon-green'){
+    document.getElementById('ble-label').style.background = '#29f04f'
+    document.getElementById("ble-title").innerHTML = "Neon Green";
+    document.getElementById('ble').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-hot-pink'){
+    document.getElementById('ble-label').style.background = '#e929f0'
+    document.getElementById("ble-title").innerHTML = "Hot Pink";
+    document.getElementById('ble').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-yellow'){
+    document.getElementById('ble-label').style.background = 'yellow'
+    document.getElementById("ble-title").innerHTML = "Yellow";
+    document.getElementById('ble').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-maroon'){
+    document.getElementById('ble-label').style.background = '#cb0039'
+    document.getElementById("ble-title").innerHTML = "Maroon";
+    document.getElementById('ble').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-red'){
+    document.getElementById('ble-label').style.background = 'red'
+    document.getElementById("ble-title").innerHTML = "Red";
+    document.getElementById('ble').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-grey'){
+    document.getElementById('ble-label').style.background = '#969696'
+    document.getElementById("ble-title").innerHTML = "Grey";
+    document.getElementById('ble').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-navy'){
+    document.getElementById('ble-label').style.background = '#152c91'
+    document.getElementById("ble-title").innerHTML = "Navy";
+    document.getElementById('ble').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-purple'){
+    document.getElementById('ble-label').style.background = 'purple'
+    document.getElementById("ble-title").innerHTML = "Purple";
+    document.getElementById('ble').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-darkGreen'){
+    document.getElementById('ble-label').style.background = 'Green'
+    document.getElementById("ble-title").innerHTML = "Green";
+    document.getElementById('ble').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-darkGrey'){
+    document.getElementById('ble-label').style.background = '#494949'
+    document.getElementById("ble-title").innerHTML = "Dark Grey";
+    document.getElementById('ble').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-blue'){
+    document.getElementById('ble-label').style.background = 'blue'
+    document.getElementById("ble-title").innerHTML = "Blue";
+    document.getElementById('ble').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-lime'){
+    document.getElementById('ble-label').style.background = '#09b600'
+    document.getElementById("ble-title").innerHTML = "Lime";
+    document.getElementById('ble').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-white'){
+    document.getElementById('ble-label').style.background = 'White'
+    document.getElementById("ble-title").innerHTML = "White";
+    document.getElementById('ble').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-black'){
+    document.getElementById('ble-label').style.background = 'Black'
+    document.getElementById("ble-title").innerHTML = "Black";
+    document.getElementById('ble').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'ble-teal'){
+    document.getElementById('ble-label').style.background = '#00b692'
+    document.getElementById("ble-title").innerHTML = "Teal";
+    document.getElementById('ble').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-ble').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-aqua'){
+    console.log('here')
+    document.getElementById('bre-label').style.background = '#129793'
+    document.getElementById("bre-title").innerHTML = "Aqua";
+    document.getElementById('bre').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-neon-green'){
+    document.getElementById('bre-label').style.background = '#29f04f'
+    document.getElementById("bre-title").innerHTML = "Neon Green";
+    document.getElementById('bre').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-hot-pink'){
+    document.getElementById('bre-label').style.background = '#e929f0'
+    document.getElementById("bre-title").innerHTML = "Hot Pink";
+    document.getElementById('bre').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-yellow'){
+    document.getElementById('bre-label').style.background = 'yellow'
+    document.getElementById("bre-title").innerHTML = "Yellow";
+    document.getElementById('bre').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-maroon'){
+    document.getElementById('bre-label').style.background = '#cb0039'
+    document.getElementById("bre-title").innerHTML = "Maroon";
+    document.getElementById('bre').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-red'){
+    document.getElementById('bre-label').style.background = 'red'
+    document.getElementById("bre-title").innerHTML = "Red";
+    document.getElementById('bre').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-grey'){
+    document.getElementById('bre-label').style.background = '#969696'
+    document.getElementById("bre-title").innerHTML = "Grey";
+    document.getElementById('bre').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-navy'){
+    document.getElementById('bre-label').style.background = '#152c91'
+    document.getElementById("bre-title").innerHTML = "Navy";
+    document.getElementById('bre').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-purple'){
+    document.getElementById('bre-label').style.background = 'purple'
+    document.getElementById("bre-title").innerHTML = "Purple";
+    document.getElementById('bre').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-darkGreen'){
+    document.getElementById('bre-label').style.background = 'Green'
+    document.getElementById("bre-title").innerHTML = "Green";
+    document.getElementById('bre').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-darkGrey'){
+    document.getElementById('bre-label').style.background = '#494949'
+    document.getElementById("bre-title").innerHTML = "Dark Grey";
+    document.getElementById('bre').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-blue'){
+    document.getElementById('bre-label').style.background = 'blue'
+    document.getElementById("bre-title").innerHTML = "Blue";
+    document.getElementById('bre').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-lime'){
+    document.getElementById('bre-label').style.background = '#09b600'
+    document.getElementById("bre-title").innerHTML = "Lime";
+    document.getElementById('bre').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-white'){
+    document.getElementById('bre-label').style.background = 'White'
+    document.getElementById("bre-title").innerHTML = "White";
+    document.getElementById('bre').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-black'){
+    document.getElementById('bre-label').style.background = 'Black'
+    document.getElementById("bre-title").innerHTML = "Black";
+    document.getElementById('bre').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'bre-teal'){
+    document.getElementById('bre-label').style.background = '#00b692'
+    document.getElementById("bre-title").innerHTML = "Teal";
+    document.getElementById('bre').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-bre').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-aqua'){
+    console.log('here')
+    document.getElementById('blua-label').style.background = '#129793'
+    document.getElementById("blua-title").innerHTML = "Aqua";
+    document.getElementById('blua').style.fill = '#129793'
+    document.getElementById('frbprev').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-neon-green'){
+    document.getElementById('blua-label').style.background = '#29f04f'
+    document.getElementById("blua-title").innerHTML = "Neon Green";
+    document.getElementById('blua').style.fill = '#29f04f'
+    document.getElementById('frbprev').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-hot-pink'){
+    document.getElementById('blua-label').style.background = '#e929f0'
+    document.getElementById("blua-title").innerHTML = "Hot Pink";
+    document.getElementById('blua').style.fill = '#e929f0'
+    document.getElementById('frbprev').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-yellow'){
+    document.getElementById('blua-label').style.background = 'yellow'
+    document.getElementById("blua-title").innerHTML = "Yellow";
+    document.getElementById('blua').style.fill = 'yellow'
+    document.getElementById('frbprev').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-maroon'){
+    document.getElementById('blua-label').style.background = '#cb0039'
+    document.getElementById("blua-title").innerHTML = "Maroon";
+    document.getElementById('blua').style.fill = '#cb0039'
+    document.getElementById('frbprev').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-red'){
+    document.getElementById('blua-label').style.background = 'red'
+    document.getElementById("blua-title").innerHTML = "Red";
+    document.getElementById('blua').style.fill = 'red'
+    document.getElementById('frbprev').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-grey'){
+    document.getElementById('blua-label').style.background = '#969696'
+    document.getElementById("blua-title").innerHTML = "Grey";
+    document.getElementById('blua').style.fill = '#969696'
+    document.getElementById('frbprev').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-navy'){
+    document.getElementById('blua-label').style.background = '#152c91'
+    document.getElementById("blua-title").innerHTML = "Navy";
+    document.getElementById('blua').style.fill = '#152c91'
+    document.getElementById('frbprev').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-purple'){
+    document.getElementById('blua-label').style.background = 'purple'
+    document.getElementById("blua-title").innerHTML = "Purple";
+    document.getElementById('blua').style.fill = 'purple'
+    document.getElementById('frbprev').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-darkGreen'){
+    document.getElementById('blua-label').style.background = 'Green'
+    document.getElementById("blua-title").innerHTML = "Green";
+    document.getElementById('blua').style.fill = 'Green'
+    document.getElementById('frbprev').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-darkGrey'){
+    document.getElementById('blua-label').style.background = '#494949'
+    document.getElementById("blua-title").innerHTML = "Dark Grey";
+    document.getElementById('blua').style.fill = '#494949'
+    document.getElementById('frbprev').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-blue'){
+    document.getElementById('blua-label').style.background = 'blue'
+    document.getElementById("blua-title").innerHTML = "Blue";
+    document.getElementById('blua').style.fill = 'blue'
+    document.getElementById('frbprev').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-lime'){
+    document.getElementById('blua-label').style.background = '#09b600'
+    document.getElementById("blua-title").innerHTML = "Lime";
+    document.getElementById('blua').style.fill = '#09b600'
+    document.getElementById('frbprev').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-white'){
+    document.getElementById('blua-label').style.background = 'White'
+    document.getElementById("blua-title").innerHTML = "White";
+    document.getElementById('blua').style.fill = 'White'
+    document.getElementById('frbprev').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-black'){
+    document.getElementById('blua-label').style.background = 'Black'
+    document.getElementById("blua-title").innerHTML = "Black";
+    document.getElementById('blua').style.fill = 'Black'
+    document.getElementById('frbprev').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blua-teal'){
+    document.getElementById('blua-label').style.background = '#00b692'
+    document.getElementById("blua-title").innerHTML = "Teal";
+    document.getElementById('blua').style.fill = '#00b692'
+    document.getElementById('frbprev').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-aqua'){
+    console.log('here')
+    document.getElementById('brua-label').style.background = '#129793'
+    document.getElementById("brua-title").innerHTML = "Aqua";
+    document.getElementById('brua').style.fill = '#129793'
+    document.getElementById('flbprev').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-neon-green'){
+    document.getElementById('brua-label').style.background = '#29f04f'
+    document.getElementById("brua-title").innerHTML = "Neon Green";
+    document.getElementById('brua').style.fill = '#29f04f'
+    document.getElementById('flbprev').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-hot-pink'){
+    document.getElementById('brua-label').style.background = '#e929f0'
+    document.getElementById("brua-title").innerHTML = "Hot Pink";
+    document.getElementById('brua').style.fill = '#e929f0'
+    document.getElementById('flbprev').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-yellow'){
+    document.getElementById('brua-label').style.background = 'yellow'
+    document.getElementById("brua-title").innerHTML = "Yellow";
+    document.getElementById('brua').style.fill = 'yellow'
+    document.getElementById('flbprev').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-maroon'){
+    document.getElementById('brua-label').style.background = '#cb0039'
+    document.getElementById("brua-title").innerHTML = "Maroon";
+    document.getElementById('brua').style.fill = '#cb0039'
+    document.getElementById('flbprev').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-red'){
+    document.getElementById('brua-label').style.background = 'red'
+    document.getElementById("brua-title").innerHTML = "Red";
+    document.getElementById('brua').style.fill = 'red'
+    document.getElementById('flbprev').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-grey'){
+    document.getElementById('brua-label').style.background = '#969696'
+    document.getElementById("brua-title").innerHTML = "Grey";
+    document.getElementById('brua').style.fill = '#969696'
+    document.getElementById('flbprev').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-navy'){
+    document.getElementById('brua-label').style.background = '#152c91'
+    document.getElementById("brua-title").innerHTML = "Navy";
+    document.getElementById('brua').style.fill = '#152c91'
+    document.getElementById('flbprev').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-purple'){
+    document.getElementById('brua-label').style.background = 'purple'
+    document.getElementById("brua-title").innerHTML = "Purple";
+    document.getElementById('brua').style.fill = 'purple'
+    document.getElementById('flbprev').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-darkGreen'){
+    document.getElementById('brua-label').style.background = 'Green'
+    document.getElementById("brua-title").innerHTML = "Green";
+    document.getElementById('brua').style.fill = 'Green'
+    document.getElementById('flbprev').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-darkGrey'){
+    document.getElementById('brua-label').style.background = '#494949'
+    document.getElementById("brua-title").innerHTML = "Dark Grey";
+    document.getElementById('brua').style.fill = '#494949'
+    document.getElementById('flbprev').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-blue'){
+    document.getElementById('brua-label').style.background = 'blue'
+    document.getElementById("brua-title").innerHTML = "Blue";
+    document.getElementById('brua').style.fill = 'blue'
+    document.getElementById('flbprev').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-lime'){
+    document.getElementById('brua-label').style.background = '#09b600'
+    document.getElementById("brua-title").innerHTML = "Lime";
+    document.getElementById('brua').style.fill = '#09b600'
+    document.getElementById('flbprev').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-white'){
+    document.getElementById('brua-label').style.background = 'White'
+    document.getElementById("brua-title").innerHTML = "White";
+    document.getElementById('brua').style.fill = 'White'
+    document.getElementById('flbprev').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-black'){
+    document.getElementById('brua-label').style.background = 'Black'
+    document.getElementById("brua-title").innerHTML = "Black";
+    document.getElementById('brua').style.fill = 'Black'
+    document.getElementById('flbprev').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-teal'){
+    document.getElementById('brua-label').style.background = '#00b692'
+    document.getElementById("brua-title").innerHTML = "Teal";
+    document.getElementById('brua').style.fill = '#00b692'
+    document.getElementById('flbprev').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-aqua'){
+    console.log('here')
+    document.getElementById('blsh-label').style.background = '#129793'
+    document.getElementById("blsh-title").innerHTML = "Aqua";
+    document.getElementById('blsh').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-neon-green'){
+    document.getElementById('blsh-label').style.background = '#29f04f'
+    document.getElementById("blsh-title").innerHTML = "Neon Green";
+    document.getElementById('blsh').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-hot-pink'){
+    document.getElementById('blsh-label').style.background = '#e929f0'
+    document.getElementById("blsh-title").innerHTML = "Hot Pink";
+    document.getElementById('blsh').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-yellow'){
+    document.getElementById('blsh-label').style.background = 'yellow'
+    document.getElementById("blsh-title").innerHTML = "Yellow";
+    document.getElementById('blsh').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-maroon'){
+    document.getElementById('blsh-label').style.background = '#cb0039'
+    document.getElementById("blsh-title").innerHTML = "Maroon";
+    document.getElementById('blsh').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-red'){
+    document.getElementById('blsh-label').style.background = 'red'
+    document.getElementById("blsh-title").innerHTML = "Red";
+    document.getElementById('blsh').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-grey'){
+    document.getElementById('blsh-label').style.background = '#969696'
+    document.getElementById("blsh-title").innerHTML = "Grey";
+    document.getElementById('blsh').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-navy'){
+    document.getElementById('blsh-label').style.background = '#152c91'
+    document.getElementById("blsh-title").innerHTML = "Navy";
+    document.getElementById('blsh').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-purple'){
+    document.getElementById('blsh-label').style.background = 'purple'
+    document.getElementById("blsh-title").innerHTML = "Purple";
+    document.getElementById('blsh').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-darkGreen'){
+    document.getElementById('blsh-label').style.background = 'Green'
+    document.getElementById("blsh-title").innerHTML = "Green";
+    document.getElementById('blsh').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-darkGrey'){
+    document.getElementById('blsh-label').style.background = '#494949'
+    document.getElementById("blsh-title").innerHTML = "Dark Grey";
+    document.getElementById('blsh').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-blue'){
+    document.getElementById('blsh-label').style.background = 'blue'
+    document.getElementById("blsh-title").innerHTML = "Blue";
+    document.getElementById('blsh').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-lime'){
+    document.getElementById('blsh-label').style.background = '#09b600'
+    document.getElementById("blsh-title").innerHTML = "Lime";
+    document.getElementById('blsh').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-white'){
+    document.getElementById('blsh-label').style.background = 'White'
+    document.getElementById("blsh-title").innerHTML = "White";
+    document.getElementById('blsh').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-black'){
+    document.getElementById('blsh-label').style.background = 'Black'
+    document.getElementById("blsh-title").innerHTML = "Black";
+    document.getElementById('blsh').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blsh-teal'){
+    document.getElementById('blsh-label').style.background = '#00b692'
+    document.getElementById("blsh-title").innerHTML = "Teal";
+    document.getElementById('blsh').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-aqua'){
+    console.log('here')
+    document.getElementById('brsh-label').style.background = '#129793'
+    document.getElementById("brsh-title").innerHTML = "Aqua";
+    document.getElementById('brsh').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-neon-green'){
+    document.getElementById('brsh-label').style.background = '#29f04f'
+    document.getElementById("brsh-title").innerHTML = "Neon Green";
+    document.getElementById('brsh').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-hot-pink'){
+    document.getElementById('brsh-label').style.background = '#e929f0'
+    document.getElementById("brsh-title").innerHTML = "Hot Pink";
+    document.getElementById('brsh').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-yellow'){
+    document.getElementById('brsh-label').style.background = 'yellow'
+    document.getElementById("brsh-title").innerHTMLx = "Yellow";
+    document.getElementById('brsh').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-maroon'){
+    document.getElementById('brsh-label').style.background = '#cb0039'
+    document.getElementById("brsh-title").innerHTML = "Maroon";
+    document.getElementById('brsh').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-red'){
+    document.getElementById('brsh-label').style.background = 'red'
+    document.getElementById("brsh-title").innerHTML = "Red";
+    document.getElementById('brsh').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-grey'){
+    document.getElementById('brsh-label').style.background = '#969696'
+    document.getElementById("brsh-title").innerHTML = "Grey";
+    document.getElementById('brsh').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-navy'){
+    document.getElementById('brsh-label').style.background = '#152c91'
+    document.getElementById("brsh-title").innerHTML = "Navy";
+    document.getElementById('brsh').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-purple'){
+    document.getElementById('brsh-label').style.background = 'purple'
+    document.getElementById("brsh-title").innerHTML = "Purple";
+    document.getElementById('brsh').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-darkGreen'){
+    document.getElementById('brsh-label').style.background = 'Green'
+    document.getElementById("brsh-title").innerHTML = "Green";
+    document.getElementById('brsh').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-darkGrey'){
+    document.getElementById('brsh-label').style.background = '#494949'
+    document.getElementById("brsh-title").innerHTML = "Dark Grey";
+    document.getElementById('brsh').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-blue'){
+    document.getElementById('brsh-label').style.background = 'blue'
+    document.getElementById("brsh-title").innerHTML = "Blue";
+    document.getElementById('brsh').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-lime'){
+    document.getElementById('brsh-label').style.background = '#09b600'
+    document.getElementById("brsh-title").innerHTML = "Lime";
+    document.getElementById('brsh').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-white'){
+    document.getElementById('brsh-label').style.background = 'White'
+    document.getElementById("brsh-title").innerHTML = "White";
+    document.getElementById('brsh').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-black'){
+    document.getElementById('brsh-label').style.background = 'Black'
+    document.getElementById("brsh-title").innerHTML = "Black";
+    document.getElementById('brsh').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brsh-teal'){
+    document.getElementById('brsh-label').style.background = '#00b692'
+    document.getElementById("brsh-title").innerHTML = "Teal";
+    document.getElementById('brsh').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brsh').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-aqua'){
+    console.log('here')
+    document.getElementById('brua-label').style.background = '#129793'
+    document.getElementById("brua-title").innerHTML = "Aqua";
+    document.getElementById('brua').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-neon-green'){
+    document.getElementById('brua-label').style.background = '#29f04f'
+    document.getElementById("brua-title").innerHTML = "Neon Green";
+    document.getElementById('brua').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-hot-pink'){
+    document.getElementById('brua-label').style.background = '#e929f0'
+    document.getElementById("brua-title").innerHTML = "Hot Pink";
+    document.getElementById('brua').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-yellow'){
+    document.getElementById('brua-label').style.background = 'yellow'
+    document.getElementById("brua-title").innerHTMLx = "Yellow";
+    document.getElementById('brua').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-maroon'){
+    document.getElementById('brua-label').style.background = '#cb0039'
+    document.getElementById("brua-title").innerHTML = "Maroon";
+    document.getElementById('brua').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-red'){
+    document.getElementById('brua-label').style.background = 'red'
+    document.getElementById("brua-title").innerHTML = "Red";
+    document.getElementById('brua').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-grey'){
+    document.getElementById('brua-label').style.background = '#969696'
+    document.getElementById("brua-title").innerHTML = "Grey";
+    document.getElementById('brua').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-navy'){
+    document.getElementById('brua-label').style.background = '#152c91'
+    document.getElementById("brua-title").innerHTML = "Navy";
+    document.getElementById('brua').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-purple'){
+    document.getElementById('brua-label').style.background = 'purple'
+    document.getElementById("brua-title").innerHTML = "Purple";
+    document.getElementById('brua').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-darkGreen'){
+    document.getElementById('brua-label').style.background = 'Green'
+    document.getElementById("brua-title").innerHTML = "Green";
+    document.getElementById('brua').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-darkGrey'){
+    document.getElementById('brua-label').style.background = '#494949'
+    document.getElementById("brua-title").innerHTML = "Dark Grey";
+    document.getElementById('brua').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-blue'){
+    document.getElementById('brua-label').style.background = 'blue'
+    document.getElementById("brua-title").innerHTML = "Blue";
+    document.getElementById('brua').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-lime'){
+    document.getElementById('brua-label').style.background = '#09b600'
+    document.getElementById("brua-title").innerHTML = "Lime";
+    document.getElementById('brua').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-white'){
+    document.getElementById('brua-label').style.background = 'White'
+    document.getElementById("brua-title").innerHTML = "White";
+    document.getElementById('brua').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-black'){
+    document.getElementById('brua-label').style.background = 'Black'
+    document.getElementById("brua-title").innerHTML = "Black";
+    document.getElementById('brua').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brua-teal'){
+    document.getElementById('brua-label').style.background = '#00b692'
+    document.getElementById("brua-title").innerHTML = "Teal";
+    document.getElementById('brua').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brua').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-aqua'){
+    console.log('here')
+    document.getElementById('blly-label').style.background = '#129793'
+    document.getElementById("blly-title").innerHTML = "Aqua";
+    document.getElementById('blly').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-neon-green'){
+    document.getElementById('blly-label').style.background = '#29f04f'
+    document.getElementById("blly-title").innerHTML = "Neon Green";
+    document.getElementById('blly').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-hot-pink'){
+    document.getElementById('blly-label').style.background = '#e929f0'
+    document.getElementById("blly-title").innerHTML = "Hot Pink";
+    document.getElementById('blly').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-yellow'){
+    document.getElementById('blly-label').style.background = 'yellow'
+    document.getElementById("blly-title").innerHTMLx = "Yellow";
+    document.getElementById('blly').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-maroon'){
+    document.getElementById('blly-label').style.background = '#cb0039'
+    document.getElementById("blly-title").innerHTML = "Maroon";
+    document.getElementById('blly').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-red'){
+    document.getElementById('blly-label').style.background = 'red'
+    document.getElementById("blly-title").innerHTML = "Red";
+    document.getElementById('blly').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-grey'){
+    document.getElementById('blly-label').style.background = '#969696'
+    document.getElementById("blly-title").innerHTML = "Grey";
+    document.getElementById('blly').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-navy'){
+    document.getElementById('blly-label').style.background = '#152c91'
+    document.getElementById("blly-title").innerHTML = "Navy";
+    document.getElementById('blly').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-purple'){
+    document.getElementById('blly-label').style.background = 'purple'
+    document.getElementById("blly-title").innerHTML = "Purple";
+    document.getElementById('blly').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-darkGreen'){
+    document.getElementById('blly-label').style.background = 'Green'
+    document.getElementById("blly-title").innerHTML = "Green";
+    document.getElementById('blly').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-darkGrey'){
+    document.getElementById('blly-label').style.background = '#494949'
+    document.getElementById("blly-title").innerHTML = "Dark Grey";
+    document.getElementById('blly').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-blue'){
+    document.getElementById('blly-label').style.background = 'blue'
+    document.getElementById("blly-title").innerHTML = "Blue";
+    document.getElementById('blly').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-lime'){
+    document.getElementById('blly-label').style.background = '#09b600'
+    document.getElementById("blly-title").innerHTML = "Lime";
+    document.getElementById('blly').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-white'){
+    document.getElementById('blly-label').style.background = 'White'
+    document.getElementById("blly-title").innerHTML = "White";
+    document.getElementById('blly').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-black'){
+    document.getElementById('blly-label').style.background = 'Black'
+    document.getElementById("blly-title").innerHTML = "Black";
+    document.getElementById('blly').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blly-teal'){
+    document.getElementById('blly-label').style.background = '#00b692'
+    document.getElementById("blly-title").innerHTML = "Teal";
+    document.getElementById('blly').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-aqua'){
+    console.log('here')
+    document.getElementById('brly-label').style.background = '#129793'
+    document.getElementById("brly-title").innerHTML = "Aqua";
+    document.getElementById('brly').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-neon-green'){
+    document.getElementById('brly-label').style.background = '#29f04f'
+    document.getElementById("brly-title").innerHTML = "Neon Green";
+    document.getElementById('brly').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-hot-pink'){
+    document.getElementById('brly-label').style.background = '#e929f0'
+    document.getElementById("brly-title").innerHTML = "Hot Pink";
+    document.getElementById('brly').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-yellow'){
+    document.getElementById('brly-label').style.background = 'yellow'
+    document.getElementById("brly-title").innerHTMLx = "Yellow";
+    document.getElementById('brly').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-maroon'){
+    document.getElementById('brly-label').style.background = '#cb0039'
+    document.getElementById("brly-title").innerHTML = "Maroon";
+    document.getElementById('brly').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-red'){
+    document.getElementById('brly-label').style.background = 'red'
+    document.getElementById("brly-title").innerHTML = "Red";
+    document.getElementById('brly').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-grey'){
+    document.getElementById('brly-label').style.background = '#969696'
+    document.getElementById("brly-title").innerHTML = "Grey";
+    document.getElementById('brly').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-navy'){
+    document.getElementById('brly-label').style.background = '#152c91'
+    document.getElementById("brly-title").innerHTML = "Navy";
+    document.getElementById('brly').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-purple'){
+    document.getElementById('brly-label').style.background = 'purple'
+    document.getElementById("brly-title").innerHTML = "Purple";
+    document.getElementById('brly').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-darkGreen'){
+    document.getElementById('brly-label').style.background = 'Green'
+    document.getElementById("brly-title").innerHTML = "Green";
+    document.getElementById('brly').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-darkGrey'){
+    document.getElementById('brly-label').style.background = '#494949'
+    document.getElementById("brly-title").innerHTML = "Dark Grey";
+    document.getElementById('brly').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-blue'){
+    document.getElementById('brly-label').style.background = 'blue'
+    document.getElementById("brly-title").innerHTML = "Blue";
+    document.getElementById('brly').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-lime'){
+    document.getElementById('brly-label').style.background = '#09b600'
+    document.getElementById("brly-title").innerHTML = "Lime";
+    document.getElementById('brly').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-white'){
+    document.getElementById('brly-label').style.background = 'White'
+    document.getElementById("brly-title").innerHTML = "White";
+    document.getElementById('brly').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-black'){
+    document.getElementById('brly-label').style.background = 'Black'
+    document.getElementById("brly-title").innerHTML = "Black";
+    document.getElementById('brly').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brly-teal'){
+    document.getElementById('brly-label').style.background = '#00b692'
+    document.getElementById("brly-title").innerHTML = "Teal";
+    document.getElementById('brly').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brly').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-aqua'){
+    console.log('here')
+    document.getElementById('blul-label').style.background = '#129793'
+    document.getElementById("blul-title").innerHTML = "Aqua";
+    document.getElementById('blul').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-neon-green'){
+    document.getElementById('blul-label').style.background = '#29f04f'
+    document.getElementById("blul-title").innerHTML = "Neon Green";
+    document.getElementById('blul').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-hot-pink'){
+    document.getElementById('blul-label').style.background = '#e929f0'
+    document.getElementById("blul-title").innerHTML = "Hot Pink";
+    document.getElementById('blul').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-yellow'){
+    document.getElementById('blul-label').style.background = 'yellow'
+    document.getElementById("blul-title").innerHTMLx = "Yellow";
+    document.getElementById('blul').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-maroon'){
+    document.getElementById('blul-label').style.background = '#cb0039'
+    document.getElementById("blul-title").innerHTML = "Maroon";
+    document.getElementById('blul').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-red'){
+    document.getElementById('blul-label').style.background = 'red'
+    document.getElementById("blul-title").innerHTML = "Red";
+    document.getElementById('blul').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-grey'){
+    document.getElementById('blul-label').style.background = '#969696'
+    document.getElementById("blul-title").innerHTML = "Grey";
+    document.getElementById('blul').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-navy'){
+    document.getElementById('blul-label').style.background = '#152c91'
+    document.getElementById("blul-title").innerHTML = "Navy";
+    document.getElementById('blul').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-purple'){
+    document.getElementById('blul-label').style.background = 'purple'
+    document.getElementById("blul-title").innerHTML = "Purple";
+    document.getElementById('blul').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-darkGreen'){
+    document.getElementById('blul-label').style.background = 'Green'
+    document.getElementById("blul-title").innerHTML = "Green";
+    document.getElementById('blul').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-darkGrey'){
+    document.getElementById('blul-label').style.background = '#494949'
+    document.getElementById("blul-title").innerHTML = "Dark Grey";
+    document.getElementById('blul').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-blue'){
+    document.getElementById('blul-label').style.background = 'blue'
+    document.getElementById("blul-title").innerHTML = "Blue";
+    document.getElementById('blul').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-lime'){
+    document.getElementById('blul-label').style.background = '#09b600'
+    document.getElementById("blul-title").innerHTML = "Lime";
+    document.getElementById('blul').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-white'){
+    document.getElementById('blul-label').style.background = 'White'
+    document.getElementById("blul-title").innerHTML = "White";
+    document.getElementById('blul').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-black'){
+    document.getElementById('blul-label').style.background = 'Black'
+    document.getElementById("blul-title").innerHTML = "Black";
+    document.getElementById('blul').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blul-teal'){
+    document.getElementById('blul-label').style.background = '#00b692'
+    document.getElementById("blul-title").innerHTML = "Teal";
+    document.getElementById('blul').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-aqua'){
+    console.log('here')
+    document.getElementById('brul-label').style.background = '#129793'
+    document.getElementById("brul-title").innerHTML = "Aqua";
+    document.getElementById('brul').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-neon-green'){
+    document.getElementById('brul-label').style.background = '#29f04f'
+    document.getElementById("brul-title").innerHTML = "Neon Green";
+    document.getElementById('brul').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-hot-pink'){
+    document.getElementById('brul-label').style.background = '#e929f0'
+    document.getElementById("brul-title").innerHTML = "Hot Pink";
+    document.getElementById('brul').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-yellow'){
+    document.getElementById('brul-label').style.background = 'yellow'
+    document.getElementById("brul-title").innerHTMLx = "Yellow";
+    document.getElementById('brul').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-maroon'){
+    document.getElementById('brul-label').style.background = '#cb0039'
+    document.getElementById("brul-title").innerHTML = "Maroon";
+    document.getElementById('brul').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-red'){
+    document.getElementById('brul-label').style.background = 'red'
+    document.getElementById("brul-title").innerHTML = "Red";
+    document.getElementById('brul').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-grey'){
+    document.getElementById('brul-label').style.background = '#969696'
+    document.getElementById("brul-title").innerHTML = "Grey";
+    document.getElementById('brul').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-navy'){
+    document.getElementById('brul-label').style.background = '#152c91'
+    document.getElementById("brul-title").innerHTML = "Navy";
+    document.getElementById('brul').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-purple'){
+    document.getElementById('brul-label').style.background = 'purple'
+    document.getElementById("brul-title").innerHTML = "Purple";
+    document.getElementById('brul').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-darkGreen'){
+    document.getElementById('brul-label').style.background = 'Green'
+    document.getElementById("brul-title").innerHTML = "Green";
+    document.getElementById('brul').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-darkGrey'){
+    document.getElementById('brul-label').style.background = '#494949'
+    document.getElementById("brul-title").innerHTML = "Dark Grey";
+    document.getElementById('brul').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-blue'){
+    document.getElementById('brul-label').style.background = 'blue'
+    document.getElementById("brul-title").innerHTML = "Blue";
+    document.getElementById('brul').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-lime'){
+    document.getElementById('brul-label').style.background = '#09b600'
+    document.getElementById("brul-title").innerHTML = "Lime";
+    document.getElementById('brul').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-white'){
+    document.getElementById('brul-label').style.background = 'White'
+    document.getElementById("brul-title").innerHTML = "White";
+    document.getElementById('brul').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-black'){
+    document.getElementById('brul-label').style.background = 'Black'
+    document.getElementById("brul-title").innerHTML = "Black";
+    document.getElementById('brul').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brul-teal'){
+    document.getElementById('brul-label').style.background = '#00b692'
+    document.getElementById("brul-title").innerHTML = "Teal";
+    document.getElementById('brul').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brul').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-aqua'){
+    console.log('here')
+    document.getElementById('blll-label').style.background = '#129793'
+    document.getElementById("blll-title").innerHTML = "Aqua";
+    document.getElementById('blll').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-neon-green'){
+    document.getElementById('blll-label').style.background = '#29f04f'
+    document.getElementById("blll-title").innerHTML = "Neon Green";
+    document.getElementById('blll').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-hot-pink'){
+    document.getElementById('blll-label').style.background = '#e929f0'
+    document.getElementById("blll-title").innerHTML = "Hot Pink";
+    document.getElementById('blll').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-yellow'){
+    document.getElementById('blll-label').style.background = 'yellow'
+    document.getElementById("blll-title").innerHTMLx = "Yellow";
+    document.getElementById('blll').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-maroon'){
+    document.getElementById('blll-label').style.background = '#cb0039'
+    document.getElementById("blll-title").innerHTML = "Maroon";
+    document.getElementById('blll').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-red'){
+    document.getElementById('blll-label').style.background = 'red'
+    document.getElementById("blll-title").innerHTML = "Red";
+    document.getElementById('blll').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-grey'){
+    document.getElementById('blll-label').style.background = '#969696'
+    document.getElementById("blll-title").innerHTML = "Grey";
+    document.getElementById('blll').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-navy'){
+    document.getElementById('blll-label').style.background = '#152c91'
+    document.getElementById("blll-title").innerHTML = "Navy";
+    document.getElementById('blll').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-purple'){
+    document.getElementById('blll-label').style.background = 'purple'
+    document.getElementById("blll-title").innerHTML = "Purple";
+    document.getElementById('blll').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-darkGreen'){
+    document.getElementById('blll-label').style.background = 'Green'
+    document.getElementById("blll-title").innerHTML = "Green";
+    document.getElementById('blll').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-darkGrey'){
+    document.getElementById('blll-label').style.background = '#494949'
+    document.getElementById("blll-title").innerHTML = "Dark Grey";
+    document.getElementById('blll').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-blue'){
+    document.getElementById('blll-label').style.background = 'blue'
+    document.getElementById("blll-title").innerHTML = "Blue";
+    document.getElementById('blll').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-lime'){
+    document.getElementById('blll-label').style.background = '#09b600'
+    document.getElementById("blll-title").innerHTML = "Lime";
+    document.getElementById('blll').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-white'){
+    document.getElementById('blll-label').style.background = 'White'
+    document.getElementById("blll-title").innerHTML = "White";
+    document.getElementById('blll').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-black'){
+    document.getElementById('blll-label').style.background = 'Black'
+    document.getElementById("blll-title").innerHTML = "Black";
+    document.getElementById('blll').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'blll-teal'){
+    document.getElementById('blll-label').style.background = '#00b692'
+    document.getElementById("blll-title").innerHTML = "Teal";
+    document.getElementById('blll').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-blll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-aqua'){
+    console.log('here')
+    document.getElementById('brll-label').style.background = '#129793'
+    document.getElementById("brll-title").innerHTML = "Aqua";
+    document.getElementById('brll').style.fill = '#129793'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-neon-green'){
+    document.getElementById('brll-label').style.background = '#29f04f'
+    document.getElementById("brll-title").innerHTML = "Neon Green";
+    document.getElementById('brll').style.fill = '#29f04f'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-hot-pink'){
+    document.getElementById('brll-label').style.background = '#e929f0'
+    document.getElementById("brll-title").innerHTML = "Hot Pink";
+    document.getElementById('brll').style.fill = '#e929f0'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-yellow'){
+    document.getElementById('brll-label').style.background = 'yellow'
+    document.getElementById("brll-title").innerHTMLx = "Yellow";
+    document.getElementById('brll').style.fill = 'yellow'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-maroon'){
+    document.getElementById('brll-label').style.background = '#cb0039'
+    document.getElementById("brll-title").innerHTML = "Maroon";
+    document.getElementById('brll').style.fill = '#cb0039'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-red'){
+    document.getElementById('brll-label').style.background = 'red'
+    document.getElementById("brll-title").innerHTML = "Red";
+    document.getElementById('brll').style.fill = 'red'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-grey'){
+    document.getElementById('brll-label').style.background = '#969696'
+    document.getElementById("brll-title").innerHTML = "Grey";
+    document.getElementById('brll').style.fill = '#969696'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-navy'){
+    document.getElementById('brll-label').style.background = '#152c91'
+    document.getElementById("brll-title").innerHTML = "Navy";
+    document.getElementById('brll').style.fill = '#152c91'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-purple'){
+    document.getElementById('brll-label').style.background = 'purple'
+    document.getElementById("brll-title").innerHTML = "Purple";
+    document.getElementById('brll').style.fill = 'purple'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-darkGreen'){
+    document.getElementById('brll-label').style.background = 'Green'
+    document.getElementById("brll-title").innerHTML = "Green";
+    document.getElementById('brll').style.fill = 'Green'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-darkGrey'){
+    document.getElementById('brll-label').style.background = '#494949'
+    document.getElementById("brll-title").innerHTML = "Dark Grey";
+    document.getElementById('brll').style.fill = '#494949'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-blue'){
+    document.getElementById('brll-label').style.background = 'blue'
+    document.getElementById("brll-title").innerHTML = "Blue";
+    document.getElementById('brll').style.fill = 'blue'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-lime'){
+    document.getElementById('brll-label').style.background = '#09b600'
+    document.getElementById("brll-title").innerHTML = "Lime";
+    document.getElementById('brll').style.fill = '#09b600'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-white'){
+    document.getElementById('brll-label').style.background = 'White'
+    document.getElementById("brll-title").innerHTML = "White";
+    document.getElementById('brll').style.fill = 'White'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-black'){
+    document.getElementById('brll-label').style.background = 'Black'
+    document.getElementById("brll-title").innerHTML = "Black";
+    document.getElementById('brll').style.fill = 'Black'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
+  }
+  if(color === 'brll-teal'){
+    document.getElementById('brll-label').style.background = '#00b692'
+    document.getElementById("brll-title").innerHTML = "Teal";
+    document.getElementById('brll').style.fill = '#00b692'
+    document.getElementById('color-picker-dropdown-brll').style.display = 'none'
+    dropdownCtrl = true
   }
 }
 // ###############
@@ -1881,6 +3880,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#129793'
     document.getElementById("fc-title").innerHTML = "Aqua";
     document.getElementById('fc').style.fill = '#129793'
+    document.getElementById('bcol').style.fill = '#129793'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1888,6 +3888,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#29f04f'
     document.getElementById("fc-title").innerHTML = "Neon Green";
     document.getElementById('fc').style.fill = '#29f04f'
+    document.getElementById('bcol').style.fill = '#29f04f'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1895,6 +3896,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#e929f0'
     document.getElementById("fc-title").innerHTML = "Hot Pink";
     document.getElementById('fc').style.fill = '#e929f0'
+    document.getElementById('bcol').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1902,6 +3904,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'yellow'
     document.getElementById("fc-title").innerHTML = "Yellow";
     document.getElementById('fc').style.fill = 'yellow'
+    document.getElementById('bcol').style.fill = 'yellow'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1909,6 +3912,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#cb0039'
     document.getElementById("fc-title").innerHTML = "Maroon";
     document.getElementById('fc').style.fill = '#cb0039'
+    document.getElementById('bcol').style.fill = '#cb0039'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1916,6 +3920,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#969696'
     document.getElementById("fc-title").innerHTML = "Grey";
     document.getElementById('fc').style.fill = '#969696'
+    document.getElementById('bcol').style.fill = '#969696'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1923,6 +3928,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#152c91'
     document.getElementById("fc-title").innerHTML = "Navy";
     document.getElementById('fc').style.fill = '#152c91'
+    document.getElementById('bcol').style.fill = '#152c91'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1930,6 +3936,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'purple'
     document.getElementById("fc-title").innerHTML = "Purple";
     document.getElementById('fc').style.fill = 'purple'
+    document.getElementById('bcol').style.fill = 'purple'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1937,6 +3944,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'Green'
     document.getElementById("fc-title").innerHTML = "Green";
     document.getElementById('fc').style.fill = 'Green'
+    document.getElementById('bcol').style.fill = 'Green'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1944,6 +3952,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#494949'
     document.getElementById("fc-title").innerHTML = "Dark Grey";
     document.getElementById('fc').style.fill = '#494949'
+    document.getElementById('bcol').style.fill = '#494949'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1951,6 +3960,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'blue'
     document.getElementById("fc-title").innerHTML = "Blue";
     document.getElementById('fc').style.fill = 'blue'
+    document.getElementById('bcol').style.fill = 'blue'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1958,6 +3968,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#09b600'
     document.getElementById("fc-title").innerHTML = "Lime";
     document.getElementById('fc').style.fill = '#09b600'
+    document.getElementById('bcol').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1965,6 +3976,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'White'
     document.getElementById("fc-title").innerHTML = "White";
     document.getElementById('fc').style.fill = 'White'
+    document.getElementById('bcol').style.fill = 'White'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1972,6 +3984,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = 'Black'
     document.getElementById("fc-title").innerHTML = "Black";
     document.getElementById('fc').style.fill = 'Black'
+    document.getElementById('bcol').style.fill = 'Black'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -1979,6 +3992,7 @@ function colorPickerSelectFront(color){
     document.getElementById('fc-label').style.background = '#00b692'
     document.getElementById("fc-title").innerHTML = "Teal";
     document.getElementById('fc').style.fill = '#00b692'
+    document.getElementById('bcol').style.fill = '#00b692'
     document.getElementById('color-picker-dropdown-fc').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2096,6 +4110,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#129793'
     document.getElementById("line-title").innerHTML = "Aqua";
     document.getElementById('front-lineing').style.fill = '#129793'
+    document.getElementById('boso').style.fill = '#129793'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2103,6 +4118,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#29f04f'
     document.getElementById("line-title").innerHTML = "Neon Green";
     document.getElementById('front-lineing').style.fill = '#29f04f'
+    document.getElementById('boso').style.fill = '#29f04f'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2110,6 +4126,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#e929f0'
     document.getElementById("line-title").innerHTML = "Hot Pink";
     document.getElementById('front-lineing').style.fill = '#e929f0'
+    document.getElementById('boso').style.fill = '#e929f0'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2117,6 +4134,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'yellow'
     document.getElementById("line-title").innerHTML = "Yellow";
     document.getElementById('front-lineing').style.fill = 'yellow'
+    document.getElementById('boso').style.fill = 'yellow'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2124,6 +4142,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#cb0039'
     document.getElementById("line-title").innerHTML = "Maroon";
     document.getElementById('front-lineing').style.fill = '#cb0039'
+    document.getElementById('boso').style.fill = '#cb0039'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2131,6 +4150,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#969696'
     document.getElementById("line-title").innerHTML = "Grey";
     document.getElementById('front-lineing').style.fill = '#969696'
+    document.getElementById('boso').style.fill = '#969696'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2138,6 +4158,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#152c91'
     document.getElementById("line-title").innerHTML = "Navy";
     document.getElementById('front-lineing').style.fill = '#152c91'
+    document.getElementById('boso').style.fill = '#152c91'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2145,6 +4166,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'purple'
     document.getElementById("line-title").innerHTML = "Purple";
     document.getElementById('front-lineing').style.fill = 'purple'
+    document.getElementById('boso').style.fill = 'purple'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2152,6 +4174,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'Green'
     document.getElementById("line-title").innerHTML = "Green";
     document.getElementById('front-lineing').style.fill = 'Green'
+    document.getElementById('boso').style.fill = 'Green'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2159,6 +4182,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#494949'
     document.getElementById("line-title").innerHTML = "Dark Grey";
     document.getElementById('front-lineing').style.fill = '#494949'
+    document.getElementById('boso').style.fill = '#494949'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2166,6 +4190,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'blue'
     document.getElementById("line-title").innerHTML = "Blue";
     document.getElementById('front-lineing').style.fill = 'blue'
+    document.getElementById('boso').style.fill = 'blue'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2173,6 +4198,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#09b600'
     document.getElementById("line-title").innerHTML = "Lime";
     document.getElementById('front-lineing').style.fill = '#09b600'
+    document.getElementById('boso').style.fill = '#09b600'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2180,6 +4206,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'White'
     document.getElementById("line-title").innerHTML = "White";
     document.getElementById('front-lineing').style.fill = 'White'
+    document.getElementById('boso').style.fill = 'White'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2187,6 +4214,7 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = 'Black'
     document.getElementById("line-title").innerHTML = "Black";
     document.getElementById('front-lineing').style.fill = 'Black'
+    document.getElementById('boso').style.fill = 'Black'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
@@ -2194,142 +4222,115 @@ function colorPickerSelectFront(color){
     document.getElementById('line-label').style.background = '#00b692'
     document.getElementById("line-title").innerHTML = "Teal";
     document.getElementById('front-lineing').style.fill = '#00b692'
+    document.getElementById('boso').style.fill = '#00b692'
     document.getElementById('color-picker-dropdown-line').style.display = 'none'
     dropdownCtrl = true
   }
-}
-function colorPickerSelectBack(color){
-  if(color === 'tfab-polycot'){
-    document.getElementById("select-tfab-title").innerHTML = "Polycotton";
-    document.getElementById('color-picker-dropdown-tfab').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'tfab-taslan'){
-    document.getElementById("select-tfab-title").innerHTML = "Taslan";
-    document.getElementById('color-picker-dropdown-tfab').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'lafab-polycot'){
-    document.getElementById("select-lafab-title").innerHTML = "Polycotton";
-    document.getElementById('color-picker-dropdown-lafab').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'lafab-taslan'){
-    document.getElementById("select-lafab-title").innerHTML = "Taslan";
-    document.getElementById('color-picker-dropdown-lafab').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-aqua'){
-    console.log('here')
-    document.getElementById('b-label').style.background = '#129793'
-    document.getElementById("b-title").innerHTML = "Aqua";
-    document.getElementById('back-body').style.fill = '#129793'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-neon-green'){
-    document.getElementById('b-label').style.background = '#29f04f'
-    document.getElementById("b-title").innerHTML = "Neon Green";
-    document.getElementById('back-body').style.fill = '#29f04f'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-hot-pink'){
-    document.getElementById('b-label').style.background = '#e929f0'
-    document.getElementById("b-title").innerHTML = "Hot Pink";
-    document.getElementById('back-body').style.fill = '#e929f0'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-yellow'){
-    document.getElementById('b-label').style.background = 'yellow'
-    document.getElementById("b-title").innerHTML = "Yellow";
-    document.getElementById('back-body').style.fill = 'yellow'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-maroon'){
-    document.getElementById('b-label').style.background = '#cb0039'
-    document.getElementById("b-title").innerHTML = "Maroon";
-    document.getElementById('back-body').style.fill = '#cb0039'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-grey'){
-    document.getElementById('b-label').style.background = '#969696'
-    document.getElementById("b-title").innerHTML = "Grey";
-    document.getElementById('back-body').style.fill = '#969696'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-navy'){
-    document.getElementById('b-label').style.background = '#152c91'
-    document.getElementById("b-title").innerHTML = "Navy";
-    document.getElementById('back-body').style.fill = '#152c91'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-purple'){
-    document.getElementById('b-label').style.background = 'purple'
-    document.getElementById("b-title").innerHTML = "Purple";
-    document.getElementById('back-body').style.fill = 'purple'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-darkGreen'){
-    document.getElementById('b-label').style.background = 'Green'
-    document.getElementById("b-title").innerHTML = "Green";
-    document.getElementById('back-body').style.fill = 'Green'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-darkGrey'){
-    document.getElementById('b-label').style.background = '#494949'
-    document.getElementById("b-title").innerHTML = "Dark Grey";
-    document.getElementById('back-body').style.fill = '#494949'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-blue'){
-    document.getElementById('b-label').style.background = 'blue'
-    document.getElementById("b-title").innerHTML = "Blue";
-    document.getElementById('back-body').style.fill = 'blue'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-lime'){
-    document.getElementById('b-label').style.background = '#09b600'
-    document.getElementById("b-title").innerHTML = "Lime";
-    document.getElementById('back-body').style.fill = '#09b600'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-white'){
-    document.getElementById('b-label').style.background = 'White'
-    document.getElementById("b-title").innerHTML = "White";
-    document.getElementById('back-body').style.fill = 'White'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-black'){
-    document.getElementById('b-label').style.background = 'Black'
-    document.getElementById("b-title").innerHTML = "Black";
-    document.getElementById('back-body').style.fill = 'Black'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-  if(color === 'b-teal'){
-    document.getElementById('b-label').style.background = '#00b692'
-    document.getElementById("b-title").innerHTML = "Teal";
-    document.getElementById('back-body').style.fill = '#00b692'
-    document.getElementById('color-picker-dropdown-b').style.display = 'none'
-    dropdownCtrl = true
-  }
-
-
 
 }
 
 
 
 // color picker menu dropdown Back
+//STRIPE
+
+let suitPrice = 0
+let suitType = "x"
+function openStripeForm(price, type){
+  suitPrice = price
+  suitType = type
+  document.getElementById('payment-confirm').innerHTML = "$" + suitPrice + "(AUD)"
+  document.getElementById('type-confirm').innerHTML = suitType
+  console.log(suitPrice, suitType)
+  document.getElementById('stripe-form').style.display = 'flex'
+  document.getElementById('stripe-form-shade').style.display = 'flex'
+}
+let stripe = Stripe('pk_test_kA3wS31hOAFKooRGLboUrLWf');
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+var style = {
+  base: {
+    // Add your base input styles here. For example:
+    fontSize: '16px',
+    lineHeight: '24px'
+  }
+};
+
+// Create an instance of the card Element
+var card = elements.create('card', {style: style});
+
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+card.addEventListener('change', function(event) {
+  var displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+});
+
+// Create a token or display an error when the form is submitted.
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      alert('Oh Dear, Seems something went wrong! Try again and double check your card info!')
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+
+      console.log(result)
+      // Send the token to your server
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+//I'm the server ;)
+function apiPoster(info){
+  console.log('info in poster',info)
+  $.ajax('https://www.discovercs.com/api/apetest',{
+   data : JSON.stringify(info),
+   contentType : 'application/json',
+   type : 'POST',
+ }).then(function(res){
+   console.log(res.charge.id)
+   console.log(res.charge)
+   let newCustomer = {
+     id: res.charge.id,
+     amount: res.charge.amount/100,
+     paid: res.charge.paid,
+   }
+   hideConfirmPop()
+   document.getElementById('loading-payment').style.display = 'none'
+   alert('Congrats! you just got yourself a new suit! you paied $' + newCustomer.amount + ' (AUD). your customer satisfaction ID is '+ newCustomer.id )
+   document.getElementById("landingFormValidate_ul_page_9205_submit").click();
+  //  location.redirect
+   let url = "https://chuteoutsports.dev.userlite.com/website"
+  //  window.location = url;
+ });
+ document.getElementById('loading-payment').style.display = 'flex'
+}
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+  console.log('submitted and done', token)
+  let charger = {}
+  charger.amount = suitPrice * 100
+  charger.token = token.id
+  apiPoster(charger)
+}
+
+function hideStripeForm(){
+  document.getElementById('stripe-form').style.display = 'none'
+  document.getElementById('stripe-form-shade').style.display = 'none'
+  console.log('tester')
+}
